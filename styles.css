@@ -1,0 +1,78 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  position: relative; /* Make sure the jumbotron is a positioned container */
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #ffffff00;
+  overflow: hidden; /* Ensure any overflowing content inside jumbotron is hidden */
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  color: white; /* Set text color to white */
+  font-weight: 600; /* Increase font weight */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.728); /* Add text shadow */
+}
+
+h2.jumbotron-heading {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+h2.jumbotron-heading::before,
+h2.jumbotron-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+h2.jumbotron-heading::before {
+  bottom: 0;
+}
+
+h2.jumbotron-heading::after {
+  bottom: -2px;
+}
+
+
+
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+canvas {
+  display: block;
+}
+
+/* Position the particles.js container */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the canvas stays behind the content */
+  background-color: #b61924; /* Fallback color */
+  background-image: url(""); /* Fallback image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
