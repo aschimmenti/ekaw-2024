@@ -1,173 +1,69 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Add Three.js Stats CDN -->
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <style>
-        body {
-            background-color: black;
-            height: 100vh;
-            margin: 0rem;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        .ekaw-font {
-            font-family: "PT Serif Caption", serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        #main-content {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            z-index: 5;
-        }
-
-        nav {
-            background-color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-right: 1rem;
-        }
-
-        nav ul li a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .hero {
-            text-align: center;
-            margin-top: 80px;
-            /* Adjust this value to make space for the navbar */
-        }
-
-        .content {
-            text-align: center;
-            margin-top: 20px;
-            color: white;
-        }
-
-        @keyframes rotate {
-            from {
-                rotate: 0deg;
-            }
-
-            50% {
-                scale: 1 1.5;
-            }
-
-            to {
-                rotate: 360deg;
-            }
-        }
-
-        #blob {
-            background-color: white;
-            height: 17vmax;
-            aspect-ratio: 1;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            translate: -50% -50%;
-            border-radius: 50%;
-            background: linear-gradient(to right, rgb(255, 146, 127), rgb(216, 112, 112));
-            animation: rotate 20s infinite;
-            opacity: 0.8;
-            z-index: 1;
-            /* Ensure blob stays in the background */
-        }
-
-        #blur {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            z-index: 2;
-            backdrop-filter: blur(12vmax);
-        }
-    </style>
-</head>
-
-<body>
-    <div id="particles-js"></div>
-    <div id="main-content">
-        
-        <div class="d-flex h-100 text-center text-white ">
-            <div class="cover-container d-flex w-100 h-100 flex-column">
-                <main class="m-5">
-                    <h1 class="ekaw-font ">24th International Conference on Knowledge Engineering and Knowledge
-                        Management</h1>
-                    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download,
-                        edit the
-                        text, and add your own fullscreen background photo to make it your own.</p>
-                    <p class="lead">
-                    </p>
-                </main>
-            </div>
-        </div>
-
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Create the first div
-            var blobDiv = document.createElement("div");
-            blobDiv.setAttribute("id", "blob");
-
-            // Create the second div
-            var blurDiv = document.createElement("div");
-            blurDiv.setAttribute("id", "blur");
-
-            // Append the divs to the body of the document
-            document.body.appendChild(blobDiv);
-            document.body.appendChild(blurDiv);
-
-            const blob = document.getElementById("blob");
-
-            window.onpointermove = event => {
-                const { clientX, clientY } = event;
-
-                blob.animate({
-                    left: `${clientX}px`,
-                    top: `${clientY}px`
-                }, { duration: 3000, fill: "forwards" });
-            }
-        });
-    </script>
-
-    <script src="" async defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-    
-</body>
-
-</html>
+<ul>
+    <li>Knowledge and (Small/Large) Language Models (LMs)</li>
+</ul>
+<ul>
+    <li>LM-enhanced ontology and knowledge engineering methodologies and tools</li>
+    <li>Ontology evaluation via LMs</li>
+    <li>(Ontological) knowledge memorization in LMs</li>
+    <li>Knowledge-based techniques for LMs (Retrieval Augmented Generation based approaches, fact-checking, and bias mitigation)</li>
+    <li>Question answering over knowledge graphs via LMs</li>
+</ul>
+<ul>
+    <li>Knowledge Engineering and Acquisition</li>
+</ul>
+<ul>
+    <li>Methods, techniques, and tools for knowledge acquisition and ontology engineering (e.g., ontology learning and population, ontology design patterns)</li>
+    <li>Ontology mapping and alignment</li>
+    <li>Ontology evaluation and metrics</li>
+    <li>Collaborative knowledge engineering</li>
+    <li>Multimodal Knowledge Engineering and Acquisition</li>
+</ul>
+<ul>
+    <li>Knowledge Management and Governance</li>
+</ul>
+<ul>
+    <li>Methods, techniques, and tools for knowledge management and ontology governance</li>
+    <li>Knowledge evolution, maintenance, and preservation</li>
+    <li>Knowledge sharing and distribution</li>
+    <li>Methods for accelerating take-up of knowledge management technologies</li>
+</ul>
+<ul>
+    <li>Ethical and Trustworthy Knowledge Engineering</li>
+</ul>
+<ul>
+    <li>Ethics, trust, and privacy in knowledge representation and reasoning</li>
+    <li>Explainable AI</li>
+    <li>Provenance, trust, and transparency in knowledge management</li>
+    <li>FAIR data and FAIR knowledge</li>
+    <li>Inclusivity and diversity in knowledge representation</li>
+</ul>
+<ul>
+    <li>Social and Cognitive Aspects of Knowledge Engineering</li>
+</ul>
+<ul>
+    <li>Knowledge representation inspired by cognitive science</li>
+    <li>Synergies between humans and machines</li>
+    <li>Knowledge emerging from user interaction and (social) networks</li>
+    <li>Knowledge ecosystems</li>
+    <li>Crowdsourcing in knowledge management</li>
+</ul>
+<ul>
+    <li>Knowledge discovery</li>
+</ul>
+<ul>
+    <li>Data mining for knowledge construction</li>
+    <li>Text mining and ontology engineering</li>
+    <li>Classification and clustering for knowledge management</li>
+    <li>Mining patterns and association rules</li>
+    <li>Neuro-symbolic Artificial Intelligence</li>
+</ul>
+<ul>
+    <li>Applications in specific domains such as:</li>
+</ul>
+<ul>
+    <li>eGovernment and public administration</li>
+    <li>Life sciences, health, and medicine</li>
+    <li>Humanities and Social Sciences</li>
+    <li>Cultural Heritage and Digital Libraries</li>
+    <li>ICT4D (Knowledge in the developing world)</li>
+</ul>
