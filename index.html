@@ -19,44 +19,39 @@
     src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1162.0" data-gr-ext-installed="">
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="ekaw_2024_logo.png" alt="Logo" width="100vw" class="navbar-logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="ekaw_2024_logo.png" alt="Logo" width="100vw" class="navbar-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">EKAW-24</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-link">Call for Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#topics-link">Topics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dates-link">Important Dates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#papers-link">Types of Papers</a>
+          </li>
+          <!-- More nav items here -->
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+  
   <div class="jumbotron text-center">
     <div id="particles-js"></div>
     <div class="container">
@@ -67,48 +62,49 @@
       <h3 class="jumbotron-heading">November 26-28, 2024</h3>
 
       <p>
-        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-outline-light btn-lg">Main call to
+        <a href="cfp.html" class="btn btn-outline-light btn-lg">Main call to
           action</a>
-        <a href="https://getbootstrap.com/docs/4.0/examples/album/#" class="btn btn-outline-light btn-lg">Secondary
+        <a href="about.html" class="btn btn-outline-light btn-lg">Secondary
           action</a>
       </p>
     </div>
   </div>
   <div class="m-2 p-2 bg-transparent text-justify">
     <div class="container">
-      <div class="row">
+      <div class="row" role="main">
         <div class="col-lg-2 col-md-2 col-sm-12">
-          <h2>About EKAW 2024</h2>
+          <h2 id="about-link" tabindex="0">About EKAW 2024</h2>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-12">
-          <p style="  text-align: justify          ;">
-            The 24th International Conference on Knowledge Engineering and Knowledge Management (EKAW-24) encompasses
+          <p style="text-align: justify;" role="article">
+            The <strong>24th International Conference on Knowledge Engineering and Knowledge Management (EKAW-24)</strong> encompasses
             the diverse realms of eliciting, acquiring, modeling, and managing knowledge. The conference addresses the
-            pivotal role of knowledge in constructing systems and services for the semantic web, knowledge management,
-            knowledge discovery, information integration, natural language processing, intelligent systems,
-            e-business, e-health, humanities, cultural heritage, and beyond.
+            pivotal role of knowledge in constructing systems and services for the <em>semantic web</em>, <em>knowledge management</em>,
+            <em>knowledge discovery</em>, <em>information integration</em>, <em>natural language processing</em>, <em>intelligent systems</em>,
+            <em>e-business</em>, <em>e-health</em>, humanities, cultural heritage, and beyond.
           </p>
-          <p style="  text-align: justify          ;">
-            EKAW-24's Special Theme: Knowledge in the Age of Language Models (LMs). In addition to the topics above,
+          <p style="text-align: justify;" role="article">
+            EKAW-24's Special Theme: <strong>Knowledge in the Age of Language Models (LMs)</strong>. In addition to the topics above,
             this year's conference invites research articles focusing on algorithms, tools, methodologies, and
             applications that leverage the interplay between knowledge and LMs. The contributions should deepen our
             understanding of how LMs contribute to the dynamic landscape of knowledge acquisition and engineering and
             vice versa.
           </p>
-          <p style="  text-align: justify          ;">
-            All submissions, including those related to LMs, should establish a clear connection to Knowledge
-            Engineering and Knowledge Management or demonstrate a significant impact on the field. While acknowledging
+          <p style="text-align: justify;" role="article">
+            All submissions, including those related to LMs, should establish a clear connection to <u>Knowledge
+            Engineering and Knowledge Management</u> or demonstrate a significant impact on the field. While acknowledging
             the interdisciplinary nature of knowledge and its interplay with other disciplines and technologies, such
-            as Machine Learning, Natural Language Processing, and Computer Vision, contributions lacking direct
+            as <em>Machine Learning</em>, <em>Natural Language Processing</em>, and <em>Computer Vision</em>, contributions lacking direct
             relevance to Knowledge Engineering and Knowledge Management will not be considered pertinent to the EKAW
-            conference.</p>
+            conference.
           </p>
         </div>
       </div>
+      
       <hr class="colored-break">
       <div class="row">
         <div class="col-lg-2 col-sm-12">
-          <h2>Topics of interest</h2>
+          <h2 id="topics-link">Topics of interest</h2>
         </div>
         <div class="col-lg-10 col-sm-12">
           <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
@@ -117,8 +113,9 @@
                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseOne">
-                  <img src="chatbot.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Knowledge and (Small/Large) Language Models (LMs)</span>              
+                  <img src="chatbot.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;"
+                    alt="KG Icon">
+                  <span style="vertical-align: middle;">Knowledge and (Small/Large) Language Models (LMs)</span>
                 </button>
 
               </h2>
@@ -140,8 +137,9 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseTwo">
-                  
-                  <img src="kg.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+
+                  <img src="kg.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;"
+                    alt="KG Icon">
                   <span style="vertical-align: middle;">Knowledge Engineering and Acquisition </span></button>
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
@@ -162,7 +160,8 @@
                 <button class="accordion-button custom-btn collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseThree">
-                  <img src="management.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                  <img src="management.png"
+                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
                   <span style="vertical-align: middle;">Knowledge Management and Governance</span>
                 </button>
               </h2>
@@ -182,7 +181,8 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseFour">
-                  <img src="trustful.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                  <img src="trustful.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;"
+                    alt="KG Icon">
                   <span style="vertical-align: middle;">Ethical and Trustworthy Knowledge Engineering</span>
                 </button>
               </h2>
@@ -203,8 +203,10 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseFive">
-                  <img src="network.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Social and Cognitive Aspects of Knowledge Engineering </span></button>
+                  <img src="network.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;"
+                    alt="KG Icon">
+                  <span style="vertical-align: middle;">Social and Cognitive Aspects of Knowledge Engineering
+                  </span></button>
               </h2>
               <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                 <div class="accordion-body">
@@ -223,7 +225,8 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseSix">
-                  <img src="discovery.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                  <img src="discovery.png"
+                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
                   <span style="vertical-align: middle;">Knowledge discovery</span> </button>
               </h2>
               <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
@@ -243,7 +246,8 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseSeven">
-                  <img src="globe.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                  <img src="globe.png" style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;"
+                    alt="KG Icon">
                   <span style="vertical-align: middle;">Domain-specific Applications</span></button>
               </h2>
               <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
@@ -261,8 +265,102 @@
           </div>
         </div>
       </div>
+      <hr class="colored-break">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-12">
+          <h2 id="dates-link">Conference Timeline</h2>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12">
+          <section class="timeline-container" role="contentinfo" aria-label="Conference timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+            
+            <!-- Timeline item -->
+            <article class="timeline-item" role="listitem">
+                <div class="timeline-card left">
+                    <div class="card" aria-label="Abstract submission deadline">
+                        <div class="card-body">
+                            <h5>Abstract Submission Deadline</h5>
+                            <time datetime="2024-07-01">July 01, 2024</time>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+            <!-- Timeline item -->
+            <article class="timeline-item" role="listitem">
+                <div class="timeline-card right">
+                    <div class="card" aria-label="Full paper submission deadline">
+                        <div class="card-body">
+                            <h5>Full Paper Submission Deadline</h5>
+                            <time datetime="2024-07-05">July 05, 2024</time>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+            <!-- Timeline item -->
+            <article class="timeline-item" role="listitem">
+                <div class="timeline-card left">
+                    <div class="card" aria-label="Notification of acceptance">
+                        <div class="card-body">
+                            <h5>Notification of Acceptance</h5>
+                            <time datetime="2024-09-04">September 04, 2024</time>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+            <!-- Timeline item -->
+            <article class="timeline-item" role="listitem">
+                <div class="timeline-card right">
+                    <div class="card" aria-label="Conference days">
+                        <div class="card-body">
+                            <h5>Conference Days</h5>
+                            <time datetime="2024-11-26">November 26-28, 2024</time>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        </div>
+        
+
+        </div>
+      </div>
+      <hr class="colored-break">
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-12">
+        <h2 id="papers-link">Types of papers</h2>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-12">
+        <p style="  text-align: justify          ;">
+          EKAW-24 distinguishes between research, in-use, and position papers. The papers will all have the same status and follow the same formatting guidelines in the proceedings but will receive special treatment during the reviewing phase. In particular, each paper type will be subject to its own evaluation criteria:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <strong>Research papers</strong>: These are standard papers presenting a novel method, technique, or analysis with appropriate empirical or other types of evaluation as a proof-of-concept. The main evaluation criteria here will be originality, technical soundness, and validation.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>In-use papers</strong>: These are papers describing knowledge management and engineering applications in real environments. Applications must address a sufficiently interesting and challenging problem, work with real-world data, and involve real users. The focus is less on the originality of the approach and more on presenting systems that solve a significant problem while addressing the particular challenges that come with the use of real-world data. Evaluations are essential for this type of paper and should involve a representative subset of the actual users of the system.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Position papers</strong>: These are papers describing novel, innovative, and disruptive ideas. Position papers may also comprise an analysis of currently unsolved problems or review these problems from a new perspective to contribute to their better understanding within the research community. We expect that such papers will guide future research by highlighting critical assumptions, motivating the difficulty of a specific problem, or explaining why current techniques are not sufficient, possibly corroborated by quantitative and qualitative arguments.
+            </p>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
 
   <footer class="text-muted">
     <div class="container">
@@ -272,11 +370,57 @@
       <p>EKAW 2024</p>
       <p>24th International Conference on Knowledge Engineering and Knowledge
         Management</p>
-      <a href="https://www.flaticon.com/free-icons/share" title="share icons">Share icons created by Freepik - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/share" title="share icons">Share icons created by Freepik -
+        Flaticon</a>
     </div>
   </footer>
 
 </body>
+<script> 
+  function updateTimelineStatus() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const currentDate = new Date(); // Fake current date for testing
+  
+    let firstPendingFound = false;
+  
+    timelineItems.forEach(item => {
+      const timeElement = item.querySelector('time');
+      const deadlineDate = new Date(timeElement.getAttribute('datetime'));
+      const card = item.querySelector('.timeline-card');
+  
+      if (currentDate < deadlineDate) {
+        if (!firstPendingFound) {
+          // The first pending date
+          card.classList.add('pulsating-border-pending');
+          card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
+          firstPendingFound = true;
+        } else {
+          // Upcoming dates after the first pending
+          card.classList.add('pulsating-border-upcoming');
+          card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
+        }
+      } else {
+        // Dates that have passed
+        card.classList.add('opaque');
+        card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
+      }
+    });
+  }
+  
+  
+  // Invoke the function when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', updateTimelineStatus);
+  
+window.addEventListener('DOMContentLoaded', (event) => {
+  const navbar = document.querySelector('.navbar'); 
+  console.log(navbar)
+  if(navbar) {
+      const navbarHeight = navbar.offsetHeight;
+      document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+  }
+});
+
+</script>
 <script src="./particle_animation.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
