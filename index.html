@@ -22,7 +22,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="./images/ekaw_2024_logo.png" alt="Logo" width="100vw" class="navbar-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -32,23 +32,21 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">EKAW-24</a>
+            <a class="nav-link active" aria-current="page" href="index.html">EKAW-24</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cfp.html">Call for Papers</a>
+            <a class="nav-link" href="cfp.html#">Call for Papers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#topics-link">Topics</a>
+            <a class="nav-link" href="cfp.html#dates-link">Important Dates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#dates-link">Important Dates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#papers-link">Types of Papers</a>
+            <a class="nav-link" href="cfp.html#papers-link">Types of Papers</a>
           </li>
           <!-- More nav items here -->
         </ul>
       </div>
+
     </div>
   </nav>
 
@@ -61,20 +59,19 @@
       <h3 class="jumbotron-heading">Amsterdam, Netherlands</h3>
       <h3 class="jumbotron-heading">November 26-28, 2024</h3>
 
-      <a role="button" href="cfp.html" class="btn btn-outline-light btn-lg">Main call to
-        action</a>
+      <a role="button" href="cfp.html" class="btn btn-outline-light btn-lg">Call for Papers</a>
     </div>
   </div>
   <div class="m-2 p-2 bg-transparent text-justify">
     <div class="container">
       <div class="row" role="main">
-        <div class="col-lg-2 col-md-12 col-sm-12">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
           <h2 id="about-link" tabindex="0">About EKAW 2024</h2>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12">
-          <h3 id="ekaw-about">EKAW</h3>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+          <h3 id="ekaw-about">The Conference</h3>
           <p style="text-align: justify;" role="article">
-            EKAW (pronounced "eco") conference serves as a premier gathering for scholars, researchers, and
+            EKAW (pronounced /ˈiːkoʊ/) conference serves as a premier gathering for scholars, researchers, and
             practitioners in the fields of knowledge engineering and knowledge management.
             The <strong>24th International Conference on Knowledge Engineering and Knowledge Management
               (EKAW-24)</strong> will take place in Amsterdam, the Netherlands (in-person conference).
@@ -100,8 +97,13 @@
             vice versa.
           </p>
         </div>
-        <div class="col-lg-4 col-md-12 col-sm-12">
-          <section class="timeline-container" role="contentinfo" aria-label="Conference timeline">
+        <hr class="colored-break">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+          <h2>Timeline</h2>
+          <p>&#x26A0; This section will be updated with specific dates for each track.</p>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+          <section id="dates-link" class="timeline-container" role="contentinfo" aria-label="Conference timeline">
             <div class="timeline-line" aria-hidden="true"></div>
 
             <!-- Timeline item -->
@@ -157,10 +159,10 @@
 
       <hr class="colored-break">
       <div class="row">
-        <div class="col-lg-2 col-md-12 col-sm-12">
+        <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
           <h2 id="topics-link">Topics of interest</h2>
         </div>
-        <div class="col-lg-10 col-md-12 col-sm-12">
+        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
           <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -321,77 +323,68 @@
       </div>
       <hr class="colored-break">
       <div class="row">
-        <div class="col-lg-2 col-md-12 col-sm-12">
-          <h2 id="dates-link">Conference Timeline</h2>
+        <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
+          <h2 id="venue-heading">Conference Venue</h2> <!-- Ensure IDs are unique and descriptive -->
         </div>
-        <div class="col-lg-10 col-md-12 col-sm-12">
-
-
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
+          <h3 id="ekaw-location">CWI Building</h3>
+          <p>
+            Join us at the prestigious CWI Building, nestled in the heart of the vibrant Amsterdam Science Park.
+            Renowned as the birthplace of Python, this iconic venue is a nexus of scientific progress and innovation.
+            Whether you're here to share knowledge or simply soak in the atmosphere of discovery, the location promises
+            to make this event memorable.
+          </p>
         </div>
-
-
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
+          <iframe 
+            title="Map of CWI Building, Amsterdam Science Park"
+            width="100%" 
+            height="450" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=4.95067024230957%2C52.35508346590936%2C4.953469753265381%2C52.35787610809302&layer=mapnik&marker=52.35648%2C4.95207"
+            style="border: 1px solid black">
+          </iframe>
+          <br />
+          <small>
+            <a href="https://www.openstreetmap.org/way/57861985#map=19/52.35648/4.95207" target="_blank" rel="noopener noreferrer">
+              View Larger Map
+            </a>
+          </small> <!-- Added rel="noopener noreferrer" for security and accessibility -->
+        </div>
       </div>
-    </div>
-    <hr class="colored-break">
-  </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-md-12 col-sm-12">
-        <h2 id="papers-link">Types of papers</h2>
-      </div>
-      <div class="col-lg-10 col-md-12 col-sm-12">
-        <p style=" text-align: justify;">
-          EKAW-24 distinguishes between research, in-use, and position papers. The papers will all have the same status
-          and follow the same formatting guidelines in the proceedings but will receive special treatment during the
-          reviewing phase. In particular, each paper type will be subject to its own evaluation criteria:
-        </p>
-        <ul>
-          <li>
-            <p style=" text-align: justify;">
-              <strong>Research papers</strong>: These are standard papers presenting a novel method, technique, or
-              analysis with appropriate empirical or other types of evaluation as a proof-of-concept. The main
-              evaluation criteria here will be originality, technical soundness, and validation.
-            </p>
-          </li>
-          <li>
-            <p style=" text-align: justify;">
-              <strong>In-use papers</strong>: These are papers describing knowledge management and engineering
-              applications in real environments. Applications must address a sufficiently interesting and challenging
-              problem, work with real-world data, and involve real users. The focus is less on the originality of the
-              approach and more on presenting systems that solve a significant problem while addressing the particular
-              challenges that come with the use of real-world data. Evaluations are essential for this type of paper and
-              should involve a representative subset of the actual users of the system.
-            </p>
-          </li>
-          <li>
-            <p style=" text-align: justify;">
-              <strong>Position papers</strong>: These are papers describing novel, innovative, and disruptive ideas.
-              Position papers may also comprise an analysis of currently unsolved problems or review these problems from
-              a new perspective to contribute to their better understanding within the research community. We expect
-              that such papers will guide future research by highlighting critical assumptions, motivating the
-              difficulty of a specific problem, or explaining why current techniques are not sufficient, possibly
-              corroborated by quantitative and qualitative arguments.
-            </p>
-          </li>
-
-
-        </ul>
-      </div>
+      
     </div>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>EKAW 2024</p>
-        <p>24th International Conference on Knowledge Engineering and Knowledge
-          Management</p>
-        <a href="https://www.flaticon.com/free-icons/share" title="share icons">Share icons created by Freepik -
-          Flaticon</a>
+  </div>
+  <footer class="bg-dark text-light pt-4 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <img src="images/ekaw_2024_logo.png" alt="Your Logo" class="footer-logo mb-2" style="max-width: 150px;">
+          <p>24th International Conference on Knowledge Engineering and Knowledge Management</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-danger">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="cfp.html" class="footer-link">Call for Papers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-danger">Follow Us</h5>
+          <div>
+            <a href="https://twitter.com/ekawconference" target="_blank" "me-2 footer-link">X</a>
+            <a href="#" class="me-2 footer-link" aria-disabled="true">Mastodon</a>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </footer>
+  
+
 
 </body>
 <script>

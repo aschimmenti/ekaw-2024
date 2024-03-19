@@ -11,7 +11,7 @@ body {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background: linear-gradient(#CB212D 50%, black 50%); /* Split background top/bottom */
+  background: linear-gradient(#CF1D29 50%, black 50%); /* Split background top/bottom */
   position: relative; /* Positioning context for absolute children */
   width: 100%; /* Full width */
   padding-top: 17.85%; /* Half the height of the image's aspect ratio to maintain it and approximate the desired 30% of the viewport height */
@@ -53,6 +53,11 @@ body {
   color: white; /* Set text color to white */
   font-weight: 600; /* Increase font weight */
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.728); /* Add text shadow */
+}
+
+
+h1.jumbotron-heading {
+  font-size: 4rem;
 }
 
 h2.jumbotron-heading {
@@ -98,72 +103,29 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1; /* Ensure the canvas stays behind the content */
-  background-color: #CB212D; /* Fallback color */
+  background-color: #CF1D29; /* Fallback color */
   background-image: url(""); /* Fallback image */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.horizontal-timeline .items {
-  border-top: 3px solid #e9ecef;
-}
-
-.horizontal-timeline .items .items-list {
-  display: block;
-  position: relative;
-  text-align: center;
-  padding-top: 70px;
-  margin-right: 0;
-}
-
-.horizontal-timeline .items .items-list:before {
-  content: "";
-  position: absolute;
-  height: 36px;
-  border-right: 2px dashed #dee2e6;
-  top: 0;
-}
-
-.horizontal-timeline .items .items-list .event-date {
-  position: absolute;
-  top: 36px;
-  left: 0;
-  right: 0;
-  width: 75px;
-  margin: 0 auto;
-  font-size: 0.9rem;
-  padding-top: 8px;
-}
-
-@media (min-width: 1140px) {
-  .horizontal-timeline .items .items-list {
-    display: inline-block;
-    width: 24%;
-    padding-top: 45px;
-  }
-
-  .horizontal-timeline .items .items-list .event-date {
-    top: -40px;
-  }
-}
 
 .accordion {
-  --bs-accordion-active-bg: #CB212D;
-  --bs-accordion-btn-focus-box-shadow: #CB212D;
-  --bs-accordion-border-color: #CB212D;
+  --bs-accordion-active-bg: #CF1D29;
+  --bs-accordion-btn-focus-box-shadow: #CF1D29;
+  --bs-accordion-border-color: #CF1D29;
   --bs-accordion-active-color: white;
 }
 
 .colored-break {
-  background-color: #CB212D; /* Replace with your desired color */
+  background-color: #CF1D29; /* Replace with your desired color */
 }
-
-
 
 .timeline-container {
   position: relative;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
 }
@@ -171,59 +133,57 @@ canvas {
 .timeline-line {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 50%;
   width: 2px;
-  background: #CB212D;
+  background: #CF1D29;
   transform: translateX(-50%);
   z-index: 1;
+  height: calc(100% - 50px); /* Manual adjustment, tweak based on actual content */
 }
 
 .timeline-item {
   position: relative;
   display: flex;
-  justify-content: flex-end; /* For items on the right */
+  justify-content: center;
   margin-bottom: 2rem;
-  width: 100%;
-}
-
-.timeline-item:nth-child(even) {
-  justify-content: flex-start; /* For items on the left */
+  width: 70vw; /* Updated width */
 }
 
 .timeline-card {
   position: relative;
-  width: calc(50% - 4px); /* To prevent overlap with the line */
+  width: calc(50% - 4px); /* Adjust based on new .timeline-item width if needed */
   z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
   width: 100%;
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 800px) {
   .timeline-line {
-      left: 50%;
-      transform: translateX(-50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .timeline-item {
-      justify-content: center; /* Center the cards on mobile */
-      margin-bottom: 2rem;
+    width: 80vw; /* Adjust the width for smaller screens */
+    margin-bottom: 2rem;
   }
 
   .timeline-card {
-      width: 80%; /* Adjust width for mobile devices */
-      max-width: 340px; /* Optional: you can set a max-width for aesthetics */
-      margin-left: auto;
-      margin-right: auto;
+    width: calc(80% - 4px); /* Adjust based on the new width of .timeline-item */
+    max-width: 340px; /* Keep the max-width to ensure cards don't get too large on smaller screens */
   }
-
 }
+
+
 
 @keyframes pulsate-border-pending {
   0% {
-    box-shadow: 0 0 0 0 #CB212D;
+    box-shadow: 0 0 0 0 #CF1D29;
   }
   50% {
     box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
@@ -246,13 +206,39 @@ canvas {
 }
 
 .pulsating-border-pending {
+  border-radius: 5px;
   animation: pulsate-border-pending 2s infinite;
 }
 
 .pulsating-border-upcoming {
+  border-radius: 5px;
+
   animation: pulsate-border-upcoming 2s infinite;
 }
 
 .opaque {
   opacity: 0.5;
+}
+
+
+.footer-link {
+  color: #C0BEBE; /* Gray color for links */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover, .footer-link:focus {
+  color: #ffffff; /* White on hover/focus */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.bg-dark {
+  background-color: #060606 !important; /* Ensure the background color is black */
+}
+
+.text-light {
+  color: #C0BEBE !important; /* Light text color for better readability */
+}
+
+.text-danger {
+  color: #CF1D29 !important; /* Red color for emphasis */
 }
