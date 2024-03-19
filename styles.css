@@ -24,7 +24,7 @@ body {
   }
 }
 
-.jumbotron p:last-child {
+.jumbotron button:last-child {
   margin-bottom: 0;
 }
 
@@ -142,7 +142,6 @@ canvas {
 
 .timeline-container {
   position: relative;
-  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +162,7 @@ canvas {
   position: relative;
   display: flex;
   justify-content: flex-end; /* For items on the right */
-  margin-bottom: 2rem;
+  margin-bottom: -2rem;
   width: 100%;
 }
 
@@ -189,6 +188,7 @@ canvas {
 
   .timeline-item {
       justify-content: center; /* Center the cards on mobile */
+      margin-bottom: 2rem;
   }
 
   .timeline-card {
