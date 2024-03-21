@@ -2,10 +2,8 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,16 +12,69 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <!-- Add Three.js Stats CDN -->
   <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  <link href="./styles.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
   <script charset="utf-8"
     src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
+  <title>EKAW 2024 - 24th International Conference on Knowledge Engineering and Knowledge Management</title>
+  <meta name="description"
+    content="Join us at EKAW 2024 in Amsterdam, the Netherlands, from November 26-28, 2024, for the 24th International Conference on Knowledge Engineering and Knowledge Management. Explore the special theme: Knowledge in the Age of Language Models.">
+  <meta name="keywords"
+    content="EKAW 2024, Knowledge Engineering, Knowledge Management, International Conference, Amsterdam, Language Models, Semantic Web, Knowledge Discovery, Information Integration">
+  <meta name="author" content="EKAW 2024 Organizing Committee">
+  <meta property="og:title"
+    content="EKAW 2024 - 24th International Conference on Knowledge Engineering and Knowledge Management">
+  <meta property="og:description"
+    content="Join us at EKAW 2024 in Amsterdam, the Netherlands, from November 26-28, 2024, for the 24th International Conference on Knowledge Engineering and Knowledge Management. Explore the special theme: Knowledge in the Age of Language Models.">
+  <meta property="og:image" content="URL_TO_IMAGE">
+  <meta property="og:url" content="https://event.cwi.nl/ekaw2024/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="URL_TO_IMAGE">
+  <meta name="twitter:title"
+    content="EKAW 2024 - 24th International Conference on Knowledge Engineering and Knowledge Management">
+  <meta name="twitter:description"
+    content="Join us at EKAW 2024 in Amsterdam, the Netherlands, from November 26-28, 2024, for the 24th International Conference on Knowledge Engineering and Knowledge Management. Explore the special theme: Knowledge in the Age of Language Models.">
+  <meta name="twitter:image" content="URL_TO_IMAGE">
+  <!-- replace URL_TO_IMAGE to ../images/ekaw-twitter-banner.png, depending on where the folder will end up in -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "name": "EKAW 2024",
+    "startDate": "2024-11-26T00:00",
+    "endDate": "2024-11-28T23:59",
+    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "CWI Building",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Science Park 123",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1098 XG",
+        "addressCountry": "NL"
+      }
+    },
+    "description": "The 24th International Conference on Knowledge Engineering and Knowledge Management."
+    "performer": {
+      "@type": "PerformingGroup",
+      "name": "Keynote Speakers"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "EKAW 2024 Organizing Committee",
+      "url": "https://ekaw.org/"
+    }
+  }
+  </script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img src="./images/ekaw_2024_logo.png" alt="Logo" width="100vw" class="navbar-logo">
+        <img src="./images/ekaw_2024_logo.png" alt="EKAW 2024 Logo" width="100vw" class="navbar-logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,331 +85,357 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">EKAW-24</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cfp.html#">Call for Papers</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Call for Papers
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" aria-current="page" href="cfp.html">Call for Papers</a></li>
+              <li><a class="dropdown-item" aria-current="page" href="cfp.html#dates-link">Timeline</a></li>
+              <li><a class="dropdown-item" aria-current="page"
+                      href="cfp.html#topics-link">Topics of Interest
+                      types</a></li>
+              <li><a class="dropdown-item" aria-current="page" href="cfp.html#contributions-link">Contribution Types</a></li>
+          </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cfp.html#dates-link">Important Dates</a>
+            <a class="nav-link" aria-current="page" href="index.html#venue-heading">Venue</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cfp.html#papers-link">Types of Papers</a>
-          </li>
-          <!-- More nav items here -->
         </ul>
       </div>
 
     </div>
   </nav>
+  <header>
+    <div class="jumbotron text-center">
+      <div id="particles-js"></div>
+      <div class="container">
+        <h1 class="jumbotron-heading">EKAW-24</h1>
+        <h2 class="jumbotron-heading">24th International Conference on Knowledge Engineering and Knowledge
+          Management</h2>
+        <h3 class="jumbotron-heading">Amsterdam, Netherlands</h3>
+        <h3 class="jumbotron-heading">November 26-28, 2024</h3>
 
-  <div class="jumbotron text-center">
-    <div id="particles-js"></div>
-    <div class="container">
-      <h1 class="jumbotron-heading">EKAW-24</h1>
-      <h2 class="jumbotron-heading">24th International Conference on Knowledge Engineering and Knowledge
-        Management</h2>
-      <h3 class="jumbotron-heading">Amsterdam, Netherlands</h3>
-      <h3 class="jumbotron-heading">November 26-28, 2024</h3>
-
-      <a role="button" href="cfp.html" class="btn btn-outline-light btn-lg">Call for Papers</a>
-    </div>
-  </div>
-  <div class="m-2 p-2 bg-transparent text-justify">
-    <div class="container">
-      <div class="row" role="main">
-        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-          <h2 id="about-link" tabindex="0">About EKAW 2024</h2>
-        </div>
-        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
-          <h3 id="ekaw-about">The Conference</h3>
-          <p style="text-align: justify;" role="article">
-            EKAW (pronounced /ˈiːkoʊ/) conference serves as a premier gathering for scholars, researchers, and
-            practitioners in the fields of knowledge engineering and knowledge management.
-            The <strong>24th International Conference on Knowledge Engineering and Knowledge Management
-              (EKAW-24)</strong> will take place in Amsterdam, the Netherlands (in-person conference).
-            The conference will be held at the Amsterdam Science Park campus from November 26th to November 28th 2024.
-            EKAW is renowned for its high-quality research presentations, stimulating discussions, and opportunities for
-            networking,
-            making it an essential event for anyone interested in advancing knowledge engineering and knowledge
-            management practices.
-          </p>
-          <h3 id="ekaw24-theme">EKAW-24's Special Theme: <strong>Knowledge in the Age of Language Models</strong></h3>
-          <p style="text-align: justify;" role="article">
-
-            EKAW publishes original, high-quality papers related to eliciting, acquiring, modelling, and managing
-            knowledge.
-            Topics of EKAW24 include, but are not limited to, semantic web, knowledge management,
-            knowledge discovery, information integration, natural language processing, intelligent systems,
-            e-business, e-health, humanities, cultural heritage. In addition,
-            this year's conference invites research articles focusing on algorithms, tools, methodologies, and
-            applications that leverage the interplay between knowledge and Language Models. The contributions should
-            deepen our
-            understanding of how Language Models contribute to the dynamic landscape of knowledge acquisition and
-            engineering and
-            vice versa.
-          </p>
-        </div>
-        <hr class="colored-break">
-        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-          <h2>Timeline</h2>
-          <p>&#x26A0; This section will be updated with specific dates for each track.</p>
-        </div>
-        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
-          <section id="dates-link" class="timeline-container" role="contentinfo" aria-label="Conference timeline">
-            <div class="timeline-line" aria-hidden="true"></div>
-
-            <!-- Timeline item -->
-            <article class="timeline-item" role="listitem">
-              <div class="timeline-card left">
-                <div class="card" aria-label="Abstract submission deadline">
-                  <div class="card-body">
-                    <h5>Abstract Submission Deadline</h5>
-                    <time datetime="2024-07-01">July 01, 2024</time>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Timeline item -->
-            <article class="timeline-item" role="listitem">
-              <div class="timeline-card right">
-                <div class="card" aria-label="Full paper submission deadline">
-                  <div class="card-body">
-                    <h5>Full Paper Submission Deadline</h5>
-                    <time datetime="2024-07-05">July 05, 2024</time>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Timeline item -->
-            <article class="timeline-item" role="listitem">
-              <div class="timeline-card left">
-                <div class="card" aria-label="Notification of acceptance">
-                  <div class="card-body">
-                    <h5>Notification of Acceptance</h5>
-                    <time datetime="2024-09-04">September 04, 2024</time>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Timeline item -->
-            <article class="timeline-item" role="listitem">
-              <div class="timeline-card right">
-                <div class="card" aria-label="Conference days">
-                  <div class="card-body">
-                    <h5>Conference Days</h5>
-                    <time datetime="2024-11-26">November 26-28, 2024</time>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </section>
-        </div>
+        <a role="button" href="cfp.html" class="btn btn-outline-light btn-lg">Call for Papers</a>
       </div>
+    </div>
+  </header>
+  <main>
+    <div class="m-2 p-2 bg-transparent text-justify">
+      <div class="container">
+        <section>
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              <h2 id="about-link">About EKAW 2024</h2>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+              <h3 id="ekaw-about">The Conference</h3>
+              <article>
+                <p style="text-align: justify;">
+                  EKAW (pronounced /ˈiːkoʊ/) conference serves as a premier gathering for scholars, researchers, and
+                  practitioners in the fields of knowledge engineering and knowledge management.
+                  The <strong>24th International Conference on Knowledge Engineering and Knowledge Management
+                    (EKAW-24)</strong> will take place in Amsterdam, the Netherlands (in-person conference).
+                  The conference will be held at the Amsterdam Science Park campus from November 26th to November 28th
+                  2024.
+                  EKAW is renowned for its high-quality research presentations, stimulating discussions, and
+                  opportunities
+                  for
+                  networking,
+                  making it an essential event for anyone interested in advancing knowledge engineering and knowledge
+                  management practices.
+                </p>
+              </article>
+              <h3 id="ekaw24-theme">EKAW-24's Special Theme: <strong>Knowledge in the Age of Language Models</strong>
+              </h3>
+              <article>
+                <p style="text-align: justify;">
 
-      <hr class="colored-break">
-      <div class="row">
-        <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
-          <h2 id="topics-link">Topics of interest</h2>
-        </div>
-        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
-          <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne">
-                  <img src="./images/chatbot.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Knowledge and (Small/Large) Language Models (LMs)</span>
-                </button>
+                  EKAW publishes original, high-quality papers related to eliciting, acquiring, modelling, and managing
+                  knowledge.
+                  Topics of EKAW24 include, but are not limited to, semantic web, knowledge management,
+                  knowledge discovery, information integration, natural language processing, intelligent systems,
+                  e-business, e-health, humanities, cultural heritage. In addition,
+                  this year's conference invites research articles focusing on algorithms, tools, methodologies, and
+                  applications that leverage the interplay between knowledge and Language Models. The contributions
+                  should
+                  deepen our
+                  understanding of how Language Models contribute to the dynamic landscape of knowledge acquisition and
+                  engineering and
+                  vice versa.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <hr class="colored-break">
+        <section>
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              <h2>Timeline</h2>
+              <p>&#x26A0; This section will be updated with specific dates for each track.</p>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+              <div id="dates-link" class="timeline-container" role="contentinfo" aria-label="Conference timeline">
+                <div class="timeline-line" aria-hidden="true"></div>
 
-              </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                  <ul>
-                    <li>LM-enhanced ontology and knowledge engineering methodologies and tools</li>
-                    <li>Ontology evaluation via LMs</li>
-                    <li>(Ontological) knowledge memorization in LMs</li>
-                    <li>Knowledge-based techniques for LMs (Retrieval Augmented Generation based approaches,
-                      fact-checking, and bias mitigation)</li>
-                    <li>Question answering over knowledge graphs via LMs</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseTwo">
+                <!-- Timeline item -->
+                <article class="timeline-item" role="listitem">
+                  <div class="timeline-card left">
+                    <div class="card" aria-label="Abstract submission deadline">
+                      <div class="card-body">
+                        <h5>Abstract Submission Deadline</h5>
+                        <time datetime="2024-07-01">July 01, 2024</time>
+                      </div>
+                    </div>
+                  </div>
+                </article>
 
-                  <img src="./images/kg.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Knowledge Engineering and Acquisition </span></button>
-              </h2>
-              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Methods, techniques, and tools for knowledge acquisition and ontology engineering (e.g.,
-                      ontology learning and population, ontology design patterns)</li>
-                    <li>Ontology mapping and alignment</li>
-                    <li>Ontology evaluation and metrics</li>
-                    <li>Collaborative knowledge engineering</li>
-                    <li>Multimodal Knowledge Engineering and Acquisition</li>
-                  </ul>
-                </div>
+                <!-- Timeline item -->
+                <article class="timeline-item" role="listitem">
+                  <div class="timeline-card right">
+                    <div class="card" aria-label="Full paper submission deadline">
+                      <div class="card-body">
+                        <h5>Full Paper Submission Deadline</h5>
+                        <time datetime="2024-07-05">July 05, 2024</time>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Timeline item -->
+                <article class="timeline-item" role="listitem">
+                  <div class="timeline-card left">
+                    <div class="card" aria-label="Notification of acceptance">
+                      <div class="card-body">
+                        <h5>Notification of Acceptance</h5>
+                        <time datetime="2024-09-04">September 04, 2024</time>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Timeline item -->
+                <article class="timeline-item" role="listitem">
+                  <div class="timeline-card right">
+                    <div class="card" aria-label="Conference days">
+                      <div class="card-body">
+                        <h5>Conference Days</h5>
+                        <time datetime="2024-11-26">November 26-28, 2024</time>
+                      </div>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button custom-btn collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseThree">
-                  <img src="./images/management.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Knowledge Management and Governance</span>
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Methods, techniques, and tools for knowledge management and ontology governance</li>
-                    <li>Knowledge evolution, maintenance, and preservation</li>
-                    <li>Knowledge sharing and distribution</li>
-                    <li>Methods for accelerating take-up of knowledge management technologies</li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+        </section>
+        <hr class="colored-break">
+        <section>
+
+          <div class="row">
+            <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
+              <h2 id="topics-link">Topics of interest</h2>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseFour">
-                  <img src="./images/trustful.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Ethical and Trustworthy Knowledge Engineering</span>
-                </button>
-              </h2>
-              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Ethics, trust, and privacy in knowledge representation and reasoning</li>
-                    <li>Explainable AI</li>
-                    <li>Provenance, trust, and transparency in knowledge management</li>
-                    <li>FAIR data and FAIR knowledge</li>
-                    <li>Inclusivity and diversity in knowledge representation</li>
-                  </ul>
+            <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+              <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                      aria-controls="panelsStayOpen-collapseOne">
+                      <img aria-hidden="true" src="./images/chatbot.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Knowledge and (Small/Large) Language Models (LMs)</span>
+                    </button>
+
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>LM-enhanced ontology and knowledge engineering methodologies and tools</li>
+                        <li>Ontology evaluation via LMs</li>
+                        <li>(Ontological) knowledge memorization in LMs</li>
+                        <li>Knowledge-based techniques for LMs (Retrieval Augmented Generation based approaches,
+                          fact-checking, and bias mitigation)</li>
+                        <li>Question answering over knowledge graphs via LMs</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseFive">
-                  <img src="./images/network.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Social and Cognitive Aspects of Knowledge Engineering
-                  </span></button>
-              </h2>
-              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Knowledge representation inspired by cognitive science</li>
-                    <li>Synergies between humans and machines</li>
-                    <li>Knowledge emerging from user interaction and (social) networks</li>
-                    <li>Knowledge ecosystems</li>
-                    <li>Crowdsourcing in knowledge management</li>
-                  </ul>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseTwo">
+
+                      <img aria-hidden="true" src="./images/kg.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Knowledge Engineering and Acquisition </span></button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Methods, techniques, and tools for knowledge acquisition and ontology engineering (e.g.,
+                          ontology learning and population, ontology design patterns)</li>
+                        <li>Ontology mapping and alignment</li>
+                        <li>Ontology evaluation and metrics</li>
+                        <li>Collaborative knowledge engineering</li>
+                        <li>Multimodal Knowledge Engineering and Acquisition</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseSix">
-                  <img src="./images/discovery.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Knowledge discovery</span> </button>
-              </h2>
-              <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Data mining for knowledge construction</li>
-                    <li>Text mining and ontology engineering</li>
-                    <li>Classification and clustering for knowledge management</li>
-                    <li>Mining patterns and association rules</li>
-                    <li>Neuro-symbolic Artificial Intelligence</li>
-                  </ul>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button custom-btn collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseThree">
+                      <img aria-hidden="true" src="./images/management.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Knowledge Management and Governance</span>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Methods, techniques, and tools for knowledge management and ontology governance</li>
+                        <li>Knowledge evolution, maintenance, and preservation</li>
+                        <li>Knowledge sharing and distribution</li>
+                        <li>Methods for accelerating take-up of knowledge management technologies</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
-                  aria-controls="panelsStayOpen-collapseSeven">
-                  <img src="./images/globe.png"
-                    style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
-                  <span style="vertical-align: middle;">Domain-specific Applications</span></button>
-              </h2>
-              <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <ul>
-                    <li>eGovernment and public administration</li>
-                    <li>Life sciences, health, and medicine</li>
-                    <li>Humanities and Social Sciences</li>
-                    <li>Cultural Heritage and Digital Libraries</li>
-                    <li>ICT4D (Knowledge in the developing world)</li>
-                  </ul>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFour">
+                      <img aria-hidden="true" src="./images/trustful.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Ethical and Trustworthy Knowledge Engineering</span>
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ethics, trust, and privacy in knowledge representation and reasoning</li>
+                        <li>Explainable AI</li>
+                        <li>Provenance, trust, and transparency in knowledge management</li>
+                        <li>FAIR data and FAIR knowledge</li>
+                        <li>Inclusivity and diversity in knowledge representation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseFive">
+                      <img aria-hidden="true" src="./images/network.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Social and Cognitive Aspects of Knowledge Engineering
+                      </span></button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Knowledge representation inspired by cognitive science</li>
+                        <li>Synergies between humans and machines</li>
+                        <li>Knowledge emerging from user interaction and (social) networks</li>
+                        <li>Knowledge ecosystems</li>
+                        <li>Crowdsourcing in knowledge management</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseSix">
+                      <img aria-hidden="true" src="./images/discovery.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Knowledge discovery</span> </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Data mining for knowledge construction</li>
+                        <li>Text mining and ontology engineering</li>
+                        <li>Classification and clustering for knowledge management</li>
+                        <li>Mining patterns and association rules</li>
+                        <li>Neuro-symbolic Artificial Intelligence</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseSeven">
+                      <img aria-hidden="true" src="./images/globe.png"
+                        style="width: 5vh; height: 5vh; margin-right: 0.5rem; vertical-align: middle;" alt="KG Icon">
+                      <span style="vertical-align: middle;">Domain-specific Applications</span></button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>eGovernment and public administration</li>
+                        <li>Life sciences, health, and medicine</li>
+                        <li>Humanities and Social Sciences</li>
+                        <li>Cultural Heritage and Digital Libraries</li>
+                        <li>ICT4D (Knowledge in the developing world)</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <hr class="colored-break">
+        <section>
+          <div class="row">
+            <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
+              <h2 id="venue-heading">Conference Venue</h2> <!-- Ensure IDs are unique and descriptive -->
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
+              <h3 id="ekaw-location">CWI Building</h3>
+              <p>
+                Join us at the prestigious CWI Building, nestled in the heart of the vibrant Amsterdam Science Park.
+                Renowned as the birthplace of Python, this iconic venue is a nexus of scientific progress and
+                innovation.
+                Whether you're here to share knowledge or simply soak in the atmosphere of discovery, the location
+                promises
+                to make this event memorable.
+              </p>
+            </div>
+            <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
+              <iframe title="Map of CWI Building, Amsterdam Science Park" width="100%" height="450" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=4.95067024230957%2C52.35508346590936%2C4.953469753265381%2C52.35787610809302&layer=mapnik&marker=52.35648%2C4.95207"
+                style="border: 1px solid black">
+              </iframe>
+              <br />
+              <small>
+                <a href="https://www.openstreetmap.org/way/57861985#map=19/52.35648/4.95207" target="_blank"
+                  rel="noopener noreferrer">
+                  View Larger Map
+                </a>
+              </small> <!-- Added rel="noopener noreferrer" for security and accessibility -->
+            </div>
+          </div>
+        </section>
       </div>
-      <hr class="colored-break">
-      <div class="row">
-        <div class="col-xl-3 mr-1 col-lg-12 col-md-2 col-sm-12">
-          <h2 id="venue-heading">Conference Venue</h2> <!-- Ensure IDs are unique and descriptive -->
-        </div>
-        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
-          <h3 id="ekaw-location">CWI Building</h3>
-          <p>
-            Join us at the prestigious CWI Building, nestled in the heart of the vibrant Amsterdam Science Park.
-            Renowned as the birthplace of Python, this iconic venue is a nexus of scientific progress and innovation.
-            Whether you're here to share knowledge or simply soak in the atmosphere of discovery, the location promises
-            to make this event memorable.
-          </p>
-        </div>
-        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- Adjust the column sizing for small screens -->
-          <iframe 
-            title="Map of CWI Building, Amsterdam Science Park"
-            width="100%" 
-            height="450" 
-            frameborder="0" 
-            scrolling="no" 
-            marginheight="0" 
-            marginwidth="0"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=4.95067024230957%2C52.35508346590936%2C4.953469753265381%2C52.35787610809302&layer=mapnik&marker=52.35648%2C4.95207"
-            style="border: 1px solid black">
-          </iframe>
-          <br />
-          <small>
-            <a href="https://www.openstreetmap.org/way/57861985#map=19/52.35648/4.95207" target="_blank" rel="noopener noreferrer">
-              View Larger Map
-            </a>
-          </small> <!-- Added rel="noopener noreferrer" for security and accessibility -->
-        </div>
-      </div>
-      
     </div>
 
-  </div>
+  </main>
+
+
   <footer class="bg-dark text-light pt-4 pb-4">
     <div class="container">
       <div class="row">
@@ -367,7 +444,7 @@
           <p>24th International Conference on Knowledge Engineering and Knowledge Management</p>
         </div>
         <div class="col-md-4 mb-3">
-          <h5 class="text-danger">Quick Links</h5>
+          <h4 class="text-danger">Quick Links</h4>
           <ul class="list-unstyled">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="cfp.html" class="footer-link">Call for Papers</a></li>
@@ -383,57 +460,88 @@
       </div>
     </div>
   </footer>
-  
 
 
-</body>
-<script>
-  function updateTimelineStatus() {
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    const currentDate = new Date(); // Fake current date for testing
 
-    let firstPendingFound = false;
-
-    timelineItems.forEach(item => {
-      const timeElement = item.querySelector('time');
-      const deadlineDate = new Date(timeElement.getAttribute('datetime'));
-      const card = item.querySelector('.timeline-card');
-
-      if (currentDate < deadlineDate) {
-        if (!firstPendingFound) {
-          // The first pending date
-          card.classList.add('pulsating-border-pending');
-          card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
-          firstPendingFound = true;
-        } else {
-          // Upcoming dates after the first pending
-          card.classList.add('pulsating-border-upcoming');
-          card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
+  <button onclick="topFunction()" title="Go to top" aria-label="Scroll to top" aria-hidden="true" id="scrollToTopButton"
+    class="btn btn-danger btn-lg" style="display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor"
+      class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5" />
+    </svg> </button>
+    <script src="./js/script.js" async defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        // Function to show/hide the "Scroll to Top" button
+        function scrollVisibilityFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("scrollToTopButton").style.display = "block";
+          } else {
+            document.getElementById("scrollToTopButton").style.display = "none";
+          }
         }
-      } else {
-        // Dates that have passed
-        card.classList.add('opaque');
-        card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
-      }
-    });
-  }
+      
+        // Attach scroll event listener to window
+        window.onscroll = scrollVisibilityFunction;
+      
+        // Function to scroll to the top of the page
+        function topFunction() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      
+        // Make sure to attach your topFunction to the button's click event
+        // Assuming "scrollToTopButton" is the ID of your "Scroll to Top" button
+        var topButton = document.getElementById("scrollToTopButton");
+        if (topButton) {
+          topButton.addEventListener('click', topFunction);
+        }
+      
+        // Function to update the timeline status
+        function updateTimelineStatus() {
+          const timelineItems = document.querySelectorAll('.timeline-item');
+          const currentDate = new Date(); // Use the actual current date
+      
+          let firstPendingFound = false;
+      
+          timelineItems.forEach(item => {
+            const timeElement = item.querySelector('time');
+            const deadlineDate = new Date(timeElement.getAttribute('datetime'));
+            const card = item.querySelector('.timeline-card');
+      
+            if (currentDate < deadlineDate) {
+              if (!firstPendingFound) {
+                // The first pending date
+                card.classList.add('pulsating-border-pending');
+                card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
+                firstPendingFound = true;
+              } else {
+                // Upcoming dates after the first pending
+                card.classList.add('pulsating-border-upcoming');
+                card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
+              }
+            } else {
+              // Dates that have passed
+              card.classList.add('opaque');
+              card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
+            }
+          });
+        }
+      
+        // Call updateTimelineStatus on DOMContentLoaded
+        updateTimelineStatus();
+      
+        // Set navbar height as a CSS variable
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+          const navbarHeight = navbar.offsetHeight;
+          document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+        }
+      });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 
-
-  // Invoke the function when the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', updateTimelineStatus);
-
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const navbar = document.querySelector('.navbar');
-    console.log(navbar)
-    if (navbar) {
-      const navbarHeight = navbar.offsetHeight;
-      document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
-    }
-  });
-
-</script>
-<script src="./particle_animation.js" async defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>

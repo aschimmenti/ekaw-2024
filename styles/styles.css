@@ -2,10 +2,9 @@
   --jumbotron-padding-y: 3rem;
 }
 
-body {
-  scroll-padding-top: var(--navbar-height);
+html {
+   scroll-padding-top: 100px;
 }
-
 
 .container-fluid.banner {
   display: flex; /* Use flexbox for centering */
@@ -50,9 +49,10 @@ body {
 }
 
 .jumbotron-heading {
-  color: white; /* Set text color to white */
+  color: white; /* Your whitish text color */
   font-weight: 600; /* Increase font weight */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.728); /* Add text shadow */
+  -webkit-text-stroke: 1px #8B0000; /* Dark red stroke for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjusted shadow for depth */
 }
 
 
@@ -242,3 +242,6 @@ canvas {
 .text-danger {
   color: #CF1D29 !important; /* Red color for emphasis */
 }
+
+
+
