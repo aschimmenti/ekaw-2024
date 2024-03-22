@@ -244,4 +244,8 @@ canvas {
 }
 
 
+.card-img-size {
+  width: 100%; /* Adjust based on your preference */
+  margin: auto;
+}
 
