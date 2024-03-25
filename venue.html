@@ -36,39 +36,40 @@
     <meta name="twitter:image" content="URL_TO_IMAGE">
     <!-- replace URL_TO_IMAGE to ../images/ekaw-twitter-banner.png, depending on where the folder will end up in -->
 
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Event",
+          "name": "EKAW 2024",
+          "image": "images/ekaw_2024_logo.png",
+          "startDate": "2024-11-26T00:00",
+          "endDate": "2024-11-28T23:59",
+          "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "CWI Building",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Science Park 123",
+              "addressLocality": "Amsterdam",
+              "postalCode": "1098 XG",
+              "addressCountry": "NL"
+            }
+          },
+          "description": "The 24th International Conference on Knowledge Engineering and Knowledge Management."
+          "performer": {
+            "@type": "PerformingGroup",
+            "name": "Keynote Speakers"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "EKAW 2024 Organising Committee",
+            "url": "https://ekaw.org/"
+          }
+        }
+        </script>
 </head>
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Event",
-    "name": "EKAW 2024",
-    "startDate": "2024-11-26T00:00",
-    "endDate": "2024-11-28T23:59",
-    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "location": {
-      "@type": "Place",
-      "name": "CWI Building",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Science Park 123",
-        "addressLocality": "Amsterdam",
-        "postalCode": "1098 XG",
-        "addressCountry": "NL"
-      }
-    },
-    "description": "The 24th International Conference on Knowledge Engineering and Knowledge Management."
-    "performer": {
-      "@type": "PerformingGroup",
-      "name": "Keynote Speakers"
-    },
-    "organizer": {
-      "@type": "Organization",
-      "name": "EKAW 2024 Organising Committee",
-      "url": "https://ekaw.org/"
-    }
-  }
-  </script>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent sticky-top">
