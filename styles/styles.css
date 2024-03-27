@@ -249,3 +249,19 @@ canvas {
   margin: auto;
 }
 
+a.link-style:link { /* Unvisited links */
+  color: #ff0011;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Invisible border */
+  transition: border-bottom-color 0.3s ease-in-out; /* Transition effect */
+}
+
+a.link-style:hover,
+a.link-style:focus { /* Hover and focus states */
+  border-bottom: 2px solid #ff0011; /* Visible border simulates underline */
+}
+
+
+a.link-style:visited { /* Visited links */
+  color: #CF1D29;
+}
