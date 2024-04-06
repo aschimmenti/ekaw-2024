@@ -1,0 +1,109 @@
+# EKAW-24: Call for Workshops & Tutorials
+
+The 24th International Conference on Knowledge Engineering and Knowledge Management (EKAW-24) encompasses the diverse realms of eliciting, acquiring, modeling, and managing knowledge. 
+The conference addresses the pivotal role of knowledge in constructing systems and services for the semantic web, knowledge management, knowledge discovery, information integration, natural language processing, intelligent systems, e-business, e-health, humanities, cultural heritage, and beyond. In particular, EKAW-24 emphasises the role of Large Language Models (LLMs) in Knowledge Engineering and Management.
+Besides the regular conference tracks, EKAW will also host workshops and tutorials. 
+EKAW Workshops provide an informal setting in which participants have the opportunity to discuss specific topics in an atmosphere that fosters the exchange of ideas via networking activities. 
+EKAW Tutorials will enable attendees to fully engage in emerging methods and technologies relevant to knowledge representation and management, established schools of thought, and exciting application areas.
+
+## Topics of Interest
+
+In order to meet these goals, workshop/tutorial proposals should address topics that satisfy the following criteria:
+
+- their topic falls within the general scope of EKAW 2024  (see: https://event.cwi.nl/ekaw2024/);
+- there is a clear focus on any of the following:
+  - Emergent technologies and methods in knowledge acquisition or management
+  - New application domains or ways to rethink established ones
+  - Novel problems in knowledge acquisition
+  - Domain-oriented, interdisciplinary, or “blue-sky” research that may challenge established KR paradigms
+  - there is a reference or growing research community interested in the topic
+
+## Submission Guidelines
+
+Proposals should be submitted via EasyChair at: 	https://easychair.org/conferences/?conf=ekaw2024 
+
+Submissions should be a single PDF file of no more than 5 pages, specifying “Workshop Proposal” or “Tutorial Proposal” as their topic, and should contain the following information.
+
+### Guidelines for Workshop proposals:
+
+Workshop proposals must include the following elements:
+
+- Title.
+- Abstract (200 words).
+- Motivation on why the topic is of particular interest at this time and its relation to the main conference topics
+- Format: whether the event will include paper presentations, invited talks, panels, and general discussion, or other elements
+- Intended audience and expected number of participants
+- Dissemination channel and strategy for attracting submissions
+- List of (accepted and potential) members of the program committee
+- Indication of whether the workshop should be considered for a half-day or full-day
+- The tentative dates (submission, notification, camera-ready deadline, etc.)
+- Past versions of the workshop, including URLs as well as the number of submissions and acceptance rates
+- Related workshops and their similarities and differences
+- Details of the organisers (name, affiliation, email address, homepage) and a short CV
+
+In addition:
+
+- We strongly advise having more than one organizer (with a maximum of four), preferably from different institutions, bringing different perspectives to the workshop topic
+- We encourage the workshop organizers to strive for gender and location diversity in the organization and program committee
+- We welcome and will prioritize workshops with creative structures and organizations that attract various types of contributions and ensure rich interactions
+
+### Guidelines for Tutorial Proposals:
+
+- Title.
+- Abstract (200 words)
+- Relation to the conference topics, i.e. why it will be of interest to the conference attendants
+- If the tutorial, or a very similar tutorial, has been given elsewhere, an explanation of the benefit of presenting it again to the EKAW community
+- Overview of content, description of the aims, presentation style, potential/preferred prerequisite knowledge
+- Indication on whether the tutorial should be considered for a half-day or full-day
+- Intended audience and expected number of participants
+- Audio-visual or technical requirements and any special room requirements (for hands-on sessions, any software needed and download sites must be provided by the tutorial presenters)
+- Details of the presenters (name, affiliation, email address, homepage) and short CV including also their expertise, experiences in teaching and in tutorial presentation
+
+In addition:
+
+- We strongly advise having more than one organizer, preferably from different institutions
+- We encourage the organizers to strive for gender and location diversity in the organization
+
+## Workshop Organiser’s Responsibilities
+
+The organizers of accepted workshops are expected to:
+
+- prepare a workshop webpage (linked to the official EKAW website) containing the call for papers and detailed information about the workshop organization and timelines
+- be responsible for the workshop publicity
+- be responsible for the workshops’ reviewing process, decide upon the final program content
+- be responsible for compiling the camera ready papers by the 20th of November 2024
+
+Proceedings of all workshops will be published in an EKAW joint electronic proceedings volume (e.g. on the CEUR-WS website)
+schedule, attend, and coordinate their entire workshop.
+
+## Tutorial Organisers’s Responsibilities
+
+The proposers of accepted tutorials are expected to:
+
+- prepare a tutorial webpage (linked to the official EKAW website) containing detailed information about the tutorial
+- prepare the tutorial materials 
+- publicity distribute materials to participants 
+- schedule, attend, and coordinate their tutorial
+- tutorial organisers are invited to produce an extended version of the tutorial submission to be included in the EKAW joint electronic proceedings volume (e.g. on the CEUR-WS website)
+
+# Important Dates
+
+Proposals will be evaluated on a rolling basis until: 1 June 2024 
+
+# Suggested Timeline for Workshops and Tutorials
+
+- Workshop/Tutorial website up and calls: 3 weeks after notification 
+- Deadline to submit Papers to Workshops: 15 September 2024
+- Acceptance of Papers for Workshops: 15 October 2024
+- Provide camera-ready versions and CEUR copyright signed forms: 20 November 2024 
+- Workshop/Tutorial day: 26 November 2024 
+- EKAW 2022 days: 26-28 November 2024
+
+# Chairs
+
+Enrico Daga (Knowledge Media Institute, The Open University, United Kingdom)
+
+Lise Stork (Vrije Universiteit Amsterdam, The Netherlands)
+
+Contact: ekaw2024wt@easychair.org
+
