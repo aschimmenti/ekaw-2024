@@ -265,3 +265,34 @@ a.link-style:focus { /* Hover and focus states */
 a.link-style:visited { /* Visited links */
   color: #CF1D29;
 }
+
+ul.topics-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.topics-ul li {
+  border-top: 1px solid #CF1D29;
+  border-bottom: 1px solid #CF1D29;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ul.topics-ul li:hover {
+  background-color: #CF1D29;
+  color: white;
+  cursor: pointer;
+}
+
+ul.topics-ul li:first-child {
+  border-top: none;
+}
+
+ul.topics-ul li:last-child {
+  border-bottom: none;
+}
