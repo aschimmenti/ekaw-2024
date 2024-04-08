@@ -10,7 +10,6 @@ html {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  background: linear-gradient(#CF1D29 50%, black 50%); /* Split background top/bottom */
   position: relative; /* Positioning context for absolute children */
   width: 100%; /* Full width */
   padding-top: 17.85%; /* Half the height of the image's aspect ratio to maintain it and approximate the desired 30% of the viewport height */
@@ -231,18 +230,6 @@ canvas {
   transform: translateY(-2px); /* Subtle lift effect */
 }
 
-.bg-dark {
-  background-color: #060606 !important; /* Ensure the background color is black */
-}
-
-.text-light {
-  color: #C0BEBE !important; /* Light text color for better readability */
-}
-
-.text-danger {
-  color: #CF1D29 !important; /* Red color for emphasis */
-}
-
 
 .card-img-size {
   width: 100%; /* Adjust based on your preference */
@@ -295,4 +282,12 @@ ul.topics-ul li:first-child {
 
 ul.topics-ul li:last-child {
   border-bottom: none;
+}
+
+
+.sticky-aside {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0; /* Adjust based on your header/nav height */
+  height: fit-content;
 }
