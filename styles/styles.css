@@ -1,5 +1,5 @@
 :root {
-  --jumbotron-padding-y: 3rem;
+  --jumbotron-padding-y: 2rem;
 }
 
 html {
@@ -85,7 +85,7 @@ h2.jumbotron-heading::after {
 
 
 .jumbotron .container {
-  max-width: 40rem;
+  max-width: 45rem;
 }
 
 canvas {

@@ -87,17 +87,16 @@
             <a class="nav-link active" aria-current="page" href="index.html">EKAW-24</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-Calls            </a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Calls </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item"  href="cfp.html">Call for Papers</a></li>
-                <li><a class="dropdown-item"  href="cfwt.html">Call for Workshops and
-                        Tutorials</a></li>
-                        <li><a class="dropdown-item" href="cfpd.html">Call for Posters
-                          and Demos</a></li>
+              <li><a class="dropdown-item" href="cfp.html">Call for Papers</a></li>
+              <li><a class="dropdown-item" href="cfwt.html">Call for Workshops and
+                  Tutorials</a></li>
+              <li><a class="dropdown-item" href="cfpd.html">Call for Posters
+                  and Demos</a></li>
             </ul>
-        </li>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="venue.html">Venue</a>
           </li>
@@ -118,8 +117,13 @@ Calls            </a>
           Management</h2>
         <h3 class="jumbotron-heading">Amsterdam, Netherlands</h3>
         <h3 class="jumbotron-heading">November 26-28, 2024</h3>
+        <h4 class="jumbotron-heading">Calls:</h4>
+        <div class="btn-group btn-group-lg"  role="group" aria-label="Calls Buttons">
+          <a role="button" href="cfp.html" type="button" class="btn btn-outline-light">Call for Papers</a>
+          <a role="button" href="cfp.html" class="btn btn-outline-light">Workshops and Tutorials</a>
+          <a role="button" href="cfp.html" type="button" class="btn btn-outline-light">Posters and Demos</a>
+        </div>
 
-        <a role="button" href="cfp.html" class="btn btn-outline-light btn-lg">Call for Papers</a>
       </div>
     </div>
   </header>
@@ -180,14 +184,19 @@ Calls            </a>
                       </p>
                     </article>
                     <h3 id="proceedings">Proceedings</strong>
-                  </h3>
-                  <article>
-                    <p style="text-align: justify;">
-                      As with <a class="link-style"  href="https://link.springer.com/conference/ekaw">past proceedings</a>, the EKAW 2024 proceedings will be published as a <strong>Lecture Notes in Artificial Intelligence (LNAI) volume</strong>. Authors are requested to consult the Instructions for Authors and adhere to the provided guidelines to ensure acceptance and a smooth publication process. For further details on paper submissions and other important information, please visit our <a href="cfp.html" class="link-style">Call for Papers</a> page.
-                    </p>
+                    </h3>
+                    <article>
+                      <p style="text-align: justify;">
+                        As with <a class="link-style" href="https://link.springer.com/conference/ekaw">past
+                          proceedings</a>, the EKAW 2024 proceedings will be published as a <strong>Lecture Notes in
+                          Artificial Intelligence (LNAI) volume</strong>. Authors are requested to consult the
+                        Instructions for Authors and adhere to the provided guidelines to ensure acceptance and a smooth
+                        publication process. For further details on paper submissions and other important information,
+                        please visit our <a href="cfp.html" class="link-style">Call for Papers</a> page.
+                      </p>
 
 
-                  </article>
+                    </article>
                   </div>
                 </div>
               </section>
@@ -267,7 +276,8 @@ Calls            </a>
           <div class="m-1 p-1 bg-transparent text-justify">
             <div class="bg-white p-4 border rounded" style="height: 800px; overflow-y: auto;">
               <h5>#EKAW24 on X</h5>
-              <a class="twitter-timeline" href="https://twitter.com/ekawconference?ref_src=twsrc%5Etfw">Tweets by ekawconference</a>
+              <a class="twitter-timeline" href="https://twitter.com/ekawconference?ref_src=twsrc%5Etfw">Tweets by
+                ekawconference</a>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
@@ -275,14 +285,15 @@ Calls            </a>
           <div class="m-1 p-1 bg-transparent text-justify">
             <div class="bg-white p-4 border rounded">
               <h5>Proceedings published by</h5>
-              <img src="images/Springer.png" alt="Springer Logo"  style="width: 100%; height: auto; display: block;">
+              <img src="images/Springer.png" alt="Springer Logo" style="width: 100%; height: auto; display: block;">
               <hr>
-              <img src="images/LNAI-Logo.png" alt="Lecture Notes in Artificial Intelligence Logo"  style="width: 100%; height: auto; display: block;">
+              <img src="images/LNAI-Logo.png" alt="Lecture Notes in Artificial Intelligence Logo"
+                style="width: 100%; height: auto; display: block;">
             </div>
           </div>
         </aside>
       </div>
-      
+
     </div>
   </div>
 
@@ -393,6 +404,26 @@ Calls            </a>
         document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
       }
     });
+  </script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const btnGroup = document.querySelector(".btn-group");
+  
+    const mqSmallMedium = window.matchMedia("(max-width: 991px)"); // 'md' size on Bootstrap (992px)
+  
+    function updateBtnGroupClass(event) {
+      if (event.matches) {
+        btnGroup.classList.remove("btn-group");
+        btnGroup.classList.add("btn-group-vertical");
+      } else {
+        btnGroup.classList.remove("btn-group-vertical");
+        btnGroup.classList.add("btn-group");
+      }
+    }
+  
+    // Add listener and set initial state
+    mqSmallMedium.addEventListener("change", updateBtnGroupClass);
+    updateBtnGroupClass(mqSmallMedium); // Initial check
+  });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
