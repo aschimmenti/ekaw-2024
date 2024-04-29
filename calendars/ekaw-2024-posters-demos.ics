@@ -1,0 +1,54 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//EKAW//EKAW Call for Posters and Demos Calendar//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - P&D Submission Deadline
+DTSTART;VALUE=DATE:20240908
+DTEND;VALUE=DATE:20240909
+DESCRIPTION:Deadline for submitting posters and demos for EKAW 2024. 
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:panddsubmission20240908@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Posters and Demos Submission Deadline tomorrow.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - P&D Notification of Acceptance
+DTSTART;VALUE=DATE:20240930
+DTEND;VALUE=DATE:20241001
+DESCRIPTION:Notification day for acceptance of poster and demo submissions to EKAW 2024.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:panddnotification20240930@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Notification for Posters and Demos is today.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - P&D Camera-Ready Version Due
+DTSTART;VALUE=DATE:20241007
+DTEND;VALUE=DATE:20241008
+DESCRIPTION:Deadline to submit the camera-ready version of accepted posters and demos for EKAW 2024.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:panddcameraready20241007@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Camera-Ready Submission for Posters and Demos is due tomorrow.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

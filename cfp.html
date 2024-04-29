@@ -38,37 +38,58 @@
         <meta name="twitter:image" content="URL_TO_IMAGE">
     <!-- replace URL_TO_IMAGE to .images/ekaw-twitter-banner.png, depending on where the folder will end up in -->
     <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "Event",
-          "name": "EKAW 2024",
-          "image": "https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png",
-          "startDate": "2024-11-26T00:00",
-          "endDate": "2024-11-28T23:59",
-          "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "CWI Building",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Science Park 123",
-              "addressLocality": "Amsterdam",
-              "postalCode": "1098 XG",
-              "addressCountry": "NL"
+        <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "Event",
+              "name": "EKAW 2024 - Call for Papers",
+              "image": "https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png",
+              "startDate": "2024-07-01",
+              "endDate": "2024-11-28",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "location": {
+                "@type": "Place",
+                "name": "CWI Building",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Science Park 123",
+                  "addressLocality": "Amsterdam",
+                  "postalCode": "1098 XG",
+                  "addressCountry": "NL"
+                }
+              },
+              "description": "Submit your papers to EKAW 2024. This year's special theme focuses on Knowledge in the Age of Language Models.",
+              "organizer": {
+                "@type": "Organization",
+                "name": "EKAW Organising Committee",
+                "url": "https://ekaw.org/"
+              },
+              "subEvent": [
+                {
+                  "@type": "Event",
+                  "name": "Abstract Submission Deadline",
+                  "startDate": "2024-07-01",
+                  "endDate": "2024-07-01",
+                  "description": "Abstract Submission Deadline for the EKAW 2024 Call for Papers."
+                },
+                {
+                  "@type": "Event",
+                  "name": "Full Paper Submission Deadline",
+                  "startDate": "2024-07-05",
+                  "endDate": "2024-07-05",
+                  "description": "Full Paper Submission Deadline for the EKAW 2024 Call for Papers."
+                },
+                {
+                  "@type": "Event",
+                  "name": "Notification of Acceptance",
+                  "startDate": "2024-09-04",
+                  "endDate": "2024-09-04",
+                  "description": "Notification date for paper acceptance at EKAW 2024."
+                }
+              ]
             }
-          },
-          "description": "The 24th International Conference on Knowledge Engineering and Knowledge Management."
-          "performer": {
-            "@type": "PerformingGroup",
-            "name": "Keynote Speakers"
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "EKAW Organising Committee",
-            "url": "https://ekaw.org/"
-          }
-        }
+            </script>            
         </script>
 </head>
 
@@ -93,6 +114,10 @@
                             aria-expanded="false">
                             Calls </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calls.html">Calls</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>                            
                             <li><a class="dropdown-item" aria-current="page" href="cfp.html">Call for Papers</a></li>
                             <li><a class="dropdown-item" href="cfwt.html">Call for Workshops and
                                     Tutorials</a></li>
@@ -180,78 +205,6 @@
                                                 conference.</p>
                                             </p>
                                         </article>
-                                    </div>
-                                </div>
-                            </section>
-                            <hr class="colored-break">
-                            <section>
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
-                                        <h2>Timeline</h2>
-                                        <p>&#x26A0; This section will be updated with specific dates for each track.</p>
-                                        <p><strong>All submission deadlines are 23:59:59 AoE. </strong></p>
-                                    </div>
-                                    <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
-                                        <div id="dates-link" class="timeline-container" role="contentinfo"
-                                            aria-label="Conference timeline">
-                                            <div class="timeline-line" aria-hidden="true"></div>
-
-                                            <!-- Timeline item -->
-                                            <article class="timeline-item" role="listitem">
-                                                <div class="timeline-card left">
-                                                    <div class="card"
-                                                        style="background-image: url('images/background.jpg');"
-                                                        aria-label="Abstract submission deadline">
-                                                        <div class="card-body">
-                                                            <h5>Abstract Submission Deadline</h5>
-                                                            <time datetime="2024-07-01">July 01, 2024</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <!-- Timeline item -->
-                                            <article class="timeline-item" role="listitem">
-                                                <div class="timeline-card right">
-                                                    <div class="card"
-                                                        style="background-image: url('images/background.jpg');"
-                                                        aria-label="Full paper submission deadline">
-                                                        <div class="card-body">
-                                                            <h5>Full Paper Submission Deadline</h5>
-                                                            <time datetime="2024-07-05">July 05, 2024</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <!-- Timeline item -->
-                                            <article class="timeline-item" role="listitem">
-                                                <div class="timeline-card left">
-                                                    <div class="card"
-                                                        style="background-image: url('images/background.jpg');"
-                                                        aria-label="Notification of acceptance">
-                                                        <div class="card-body">
-                                                            <h5>Notification of Acceptance</h5>
-                                                            <time datetime="2024-09-04">September 04, 2024</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-                                            <!-- Timeline item -->
-                                            <article class="timeline-item" role="listitem">
-                                                <div class="timeline-card right">
-                                                    <div class="card"
-                                                        style="background-image: url('images/background.jpg');"
-                                                        aria-label="Conference days">
-                                                        <div class="card-body">
-                                                            <h5>Conference Days</h5>
-                                                            <time datetime="2024-11-26">November 26-28, 2024</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -476,6 +429,79 @@
                                     </div>
                                 </div>
                             </section>
+                            <hr class="colored-break">
+                            <section>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+                                        <h2>Timeline</h2>
+                                        <p>&#x26A0; This section will be updated with specific dates for each track.</p>
+                                        <p><strong>All submission deadlines are 23:59:59 AoE. </strong></p>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                                        <div id="dates-link" class="timeline-container" role="contentinfo"
+                                            aria-label="Conference timeline">
+                                            <div class="timeline-line" aria-hidden="true"></div>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card left">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Abstract submission deadline">
+                                                        <div class="card-body">
+                                                            <h5>Abstract Submission Deadline</h5>
+                                                            <time datetime="2024-07-01">July 01, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card right">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Full paper submission deadline">
+                                                        <div class="card-body">
+                                                            <h5>Full Paper Submission Deadline</h5>
+                                                            <time datetime="2024-07-05">July 05, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card left">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Notification of acceptance">
+                                                        <div class="card-body">
+                                                            <h5>Notification of Acceptance</h5>
+                                                            <time datetime="2024-09-04">September 04, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card right">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Conference days">
+                                                        <div class="card-body">
+                                                            <h5>Conference Days</h5>
+                                                            <time datetime="2024-11-26">November 26-28, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
                             <hr class="colored-break">
                             <section>
                                 <div class="row">

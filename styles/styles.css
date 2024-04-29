@@ -236,6 +236,7 @@ canvas {
   margin: auto;
 }
 
+
 a.link-style:link { /* Unvisited links */
   color: #ff0011;
   text-decoration: none;
@@ -252,6 +253,25 @@ a.link-style:focus { /* Hover and focus states */
 a.link-style:visited { /* Visited links */
   color: #CF1D29;
 }
+
+
+h3 > a.link-style:link { /* Unvisited links */
+  color: #ff0011;
+  text-decoration: none;
+  border-bottom: 2px solid transparent; /* Invisible border */
+  transition: border-bottom-color 0.3s ease-in-out; /* Transition effect */
+}
+
+h3 > a.link-style:hover,
+h3 > a.link-style:focus { /* Hover and focus states */
+  border-bottom: 2px solid #ff0011; /* Visible border simulates underline */
+}
+
+
+h3 > a.link-style:visited { /* Visited links */
+  color: #CF1D29;
+}
+
 
 ul.topics-ul {
   list-style: none;
@@ -291,3 +311,5 @@ ul.topics-ul li:last-child {
   top: 0; /* Adjust based on your header/nav height */
   height: fit-content;
 }
+
+

@@ -1,0 +1,86 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//EKAW//EKAW Workshops and Tutorials Calendar//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - Workshop/Tutorial Website Launch
+DTSTART;VALUE=DATE:20240622
+DTEND;VALUE=DATE:20240623
+DESCRIPTION:Website for workshops and tutorials at EKAW 2024 goes live. Calls for submissions start.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:workshoptutorialwebsite20240622@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Workshop/Tutorial website launches today.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - Workshop Paper Submission Deadline
+DTSTART;VALUE=DATE:20240915
+DTEND;VALUE=DATE:20240916
+DESCRIPTION:Deadline to submit papers for workshops at EKAW 2024.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:workshopsubmit20240915@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Workshop paper submission deadline is tomorrow.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - Workshop Paper Acceptance Notification
+DTSTART;VALUE=DATE:20241015
+DTEND;VALUE=DATE:20241016
+DESCRIPTION:Notification date for acceptance of workshop papers for EKAW 2024.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:workshopacceptance20241015@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Notifications for EKAW 2024 Workshop papers are due today.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - Camera-Ready Submission for Workshops
+DTSTART;VALUE=DATE:20241120
+DTEND;VALUE=DATE:20241121
+DESCRIPTION:Deadline for submitting camera-ready versions and signed CEUR copyright forms for EKAW 2024 workshops.
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:workshopcameraready20241120@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Camera-ready submissions and copyright forms for EKAW 2024 Workshops are due tomorrow.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+SUMMARY:EKAW 2024 - Workshop/Tutorial Day
+DTSTART;VALUE=DATE:20241126
+DTEND;VALUE=DATE:20241127
+DESCRIPTION:Workshop and tutorial sessions at EKAW 2024
+LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
+UID:workshoptutorialday20241126@yourconference.com
+SEQUENCE:0
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Reminder: EKAW 2024 Workshop/Tutorial Day is tomorrow. Prepare your materials and questions.
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

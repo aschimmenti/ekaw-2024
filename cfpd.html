@@ -41,11 +41,11 @@
         {
           "@context": "http://schema.org",
           "@type": "Event",
-          "name": "EKAW 2024",
+          "name": "Poster and Demos Session at EKAW 2024",
           "image": "https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png",
-          "startDate": "2024-11-26T00:00",
-          "endDate": "2024-11-28T23:59",
-          "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+          "startDate": "2024-11-26",
+          "endDate": "2024-11-26",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
             "@type": "Place",
@@ -58,18 +58,38 @@
               "addressCountry": "NL"
             }
           },
-          "description": "The 24th International Conference on Knowledge Engineering and Knowledge Management."
-          "performer": {
-            "@type": "PerformingGroup",
-            "name": "Keynote Speakers"
-          },
+          "description": "The Poster and Demos session at EKAW 2024 provides an opportunity for researchers to showcase their work through posters and demonstrations.",
           "organizer": {
             "@type": "Organization",
             "name": "EKAW Organising Committee",
             "url": "https://ekaw.org/"
-          }
+          },
+          "subEvent": [
+            {
+              "@type": "Event",
+              "name": "Poster and Demos Submission Deadline",
+              "startDate": "2024-09-08",
+              "endDate": "2024-09-08",
+              "description": "Deadline for submitting posters and demos for the Poster and Demos session at EKAW 2024."
+            },
+            {
+              "@type": "Event",
+              "name": "Notification of Acceptance",
+              "startDate": "2024-09-30",
+              "endDate": "2024-09-30",
+              "description": "Notification date for acceptance of posters and demos."
+            },
+            {
+              "@type": "Event",
+              "name": "Camera-ready Versions Deadline",
+              "startDate": "2024-10-07",
+              "endDate": "2024-10-07",
+              "description": "Deadline for submitting camera-ready versions of posters and demos."
+            }
+          ]
         }
         </script>
+        
 </head>
 
 
@@ -93,6 +113,10 @@
                             aria-expanded="false">
                             Calls </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calls.html">Calls</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>               
                             <li><a class="dropdown-item" href="cfp.html">Call for Papers</a></li>
                             <li><a class="dropdown-item" href="cfwt.html">Call for Workshops and
                                     Tutorials</a></li>
