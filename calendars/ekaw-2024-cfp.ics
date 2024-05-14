@@ -2,6 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//EKAW//EKAW Call for Papers Calendar//EN
 CALSCALE:GREGORIAN
+
 BEGIN:VEVENT
 SUMMARY:EKAW 2024 - Abstract Submission Deadline
 DTSTART;VALUE=DATE:20240701
@@ -16,11 +17,12 @@ DESCRIPTION:Reminder: EKAW 2024 Abstract Submission Deadline tomorrow.
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
+
 BEGIN:VEVENT
 SUMMARY:EKAW 2024 - Full Paper Submission Deadline
 DTSTART;VALUE=DATE:20240705
 DTEND;VALUE=DATE:20240706
-DESCRIPTION:Full paper submissions deadline for EKAW 2024. 
+DESCRIPTION:Full paper submissions deadline for EKAW 2024. Original deadline with possible extension.
 UID:fullpaper20240705@yourconference.com
 SEQUENCE:0
 STATUS:CONFIRMED
@@ -30,12 +32,14 @@ DESCRIPTION:Reminder: EKAW 2024 Full Paper Submission Deadline tomorrow.
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
+
+
 BEGIN:VEVENT
 SUMMARY:EKAW 2024 - Notification of Acceptance
-DTSTART;VALUE=DATE:20240904
-DTEND;VALUE=DATE:20240905
+DTSTART;VALUE=DATE:20240910
+DTEND;VALUE=DATE:20240911
 DESCRIPTION:Notification day for acceptance of submissions to EKAW 2024. Check your email for notification and further instructions.
-UID:notification20240904@yourconference.com
+UID:notification20240910@yourconference.com
 SEQUENCE:0
 STATUS:CONFIRMED
 BEGIN:VALARM
@@ -44,20 +48,20 @@ DESCRIPTION:Reminder: EKAW 2024 Notification of Acceptance is tomorrow.
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
+
 BEGIN:VEVENT
-SUMMARY:EKAW 2024 - Conference Days
-DTSTART;VALUE=DATE:20241126
-DTEND;VALUE=DATE:20241129
-DESCRIPTION:EKAW 2024 conference event days. Note: In case your navigation system does not recognize the current address, please use the old address 'Kruislaan 413, 1098 SJ Amsterdam'.
-LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
-UID:conference20241126@yourconference.com
+SUMMARY:EKAW 2024 - Camera Ready Deadline
+DTSTART;VALUE=DATE:20240924
+DTEND;VALUE=DATE:20240925
+DESCRIPTION:Camera ready submissions deadline for EKAW 2024.
+UID:cameraready20240924@yourconference.com
 SEQUENCE:0
 STATUS:CONFIRMED
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Reminder: EKAW 2024 Conference starts in two days.
-TRIGGER:-P2D
+DESCRIPTION:Reminder: EKAW 2024 Camera Ready Deadline tomorrow.
+TRIGGER:-P1D
 END:VALARM
 END:VEVENT
-END:VCALENDAR
 
+END:VCALENDAR
