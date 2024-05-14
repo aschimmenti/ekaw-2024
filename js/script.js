@@ -1,3 +1,4 @@
+window.addEventListener('DOMContentLoaded', (event) => {
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -131,3 +132,4 @@ update = function () {
 requestAnimationFrame(update);
 
 
+});
