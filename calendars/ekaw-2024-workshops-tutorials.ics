@@ -5,8 +5,8 @@ CALSCALE:GREGORIAN
 
 BEGIN:VEVENT
 SUMMARY:EKAW 2024 - Workshops/Tutorials Proposal Deadline
-DTSTART;VALUE=DATE:20240601
-DTEND;VALUE=DATE:20240602
+DTSTART;VALUE=DATE:20240614
+DTEND;VALUE=DATE:20240615
 DESCRIPTION:Deadline for submitting proposals for workshops and tutorials at EKAW 2024.
 LOCATION:CWI Building, Science Park 123, 1098 XG Amsterdam, Netherlands
 UID:workshoptutorialproposal20240601@yourconference.com
