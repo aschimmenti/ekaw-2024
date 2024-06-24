@@ -20,9 +20,9 @@ END:VEVENT
 
 BEGIN:VEVENT
 SUMMARY:EKAW 2024 - Full Paper Submission Deadline
-DTSTART;VALUE=DATE:20240705
-DTEND;VALUE=DATE:20240706
-DESCRIPTION:Full paper submissions deadline for EKAW 2024. Original deadline with possible extension.
+DTSTART;VALUE=DATE:20240712
+DTEND;VALUE=DATE:20240712
+DESCRIPTION:Full paper submissions deadline for EKAW 2024. Original deadline was July 05, but it has been extended to July 12, 2024.
 UID:fullpaper20240705@yourconference.com
 SEQUENCE:0
 STATUS:CONFIRMED

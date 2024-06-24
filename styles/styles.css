@@ -6,6 +6,8 @@ html {
    scroll-padding-top: 100px;
 }
 
+
+
 .container-fluid.banner {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
