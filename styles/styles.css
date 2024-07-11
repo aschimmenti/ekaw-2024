@@ -7,7 +7,6 @@ html {
 }
 
 
-
 .container-fluid.banner {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center horizontally */
