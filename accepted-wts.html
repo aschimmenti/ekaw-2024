@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon-32x32.png">
+
+    <!-- Apple Touch Icon (used for bookmarks and on the home screen in iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png">
+
+    <!-- Smaller icons for tabs, bookmarks, etc -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+    <!-- Webmanifest for specifying icons and application metadata -->
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Add Three.js Stats CDN -->
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <link href="./styles/styles.css" rel="stylesheet">
+    <script charset="utf-8"
+        src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
+    <title>EKAW 2024 - Workshops and Tutorials</title>
+    <meta name="description"
+        content="Join EKAW 2024, the leading conference on Knowledge Engineering and Knowledge Management, in Amsterdam from November 26-28. Explore cutting-edge research and industry applications in Semantic Web, Knowledge Discovery, and more.">
+    <meta name="keywords"
+        content="EKAW 2024 Call for Workshops and tutorials, workshops and tutorials, WORKSHOPS AND TUTORIALS EKAW 2024, WORKSHOP EKAW 2024, EKAW 2024, Knowledge Engineering, Semantic Web, Knowledge Discovery, Amsterdam Conference, AI, Machine Learning">
+    <meta name="author" content="EKAW 2024 Organizing Committee">
+    <meta property="og:title" content="EKAW 2024 - Knowledge Engineering and Knowledge Management">
+    <meta property="og:description"
+        content="Experience the forefront of Knowledge Engineering at EKAW 2024 in Amsterdam. Discuss, learn, and network with experts in a specialized theme: Knowledge in the Age of Language Models.">
+    <meta property="og:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta property="og:url" content="https://event.cwi.nl/ekaw2024/">
+    <meta property="og:type" content="event">
+    <meta name="twitter:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta name="twitter:site" content="@EKAW2024">
+    <meta name="twitter:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta name="twitter:title" content="EKAW 2024 - Uniting Knowledge Engineering Experts">
+    <meta name="twitter:description"
+        content="Don’t miss EKAW 2024 in Amsterdam! Engage in innovative discussions on Knowledge Engineering and Knowledge Management. November 26-28, 2024.">
+
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Event",
+                "name": "Call for Workshops and Tutorials - EKAW 2024 - International Conference on Knowledge Engineering and Knowledge Management",
+                "image": "https://event.cwi.nl/ekaw2024/images/ekaw-banner.png",
+                "startDate": "2024-11-26",
+                "endDate": "2024-11-28",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Centre for Mathematics and Computer Science (CWI)",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Science Park 123",
+                    "addressLocality": "Amsterdam",
+                    "postalCode": "1098 XG",
+                    "addressCountry": "NL"
+                  }
+                },
+                "description": "EKAW 2024 focuses on Knowledge in the Age of Language Models, featuring discussions on Semantic Web, AI, and Information Integration.",
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "EKAW Organising Committee",
+                  "url": "https://ekaw.org/"
+                },
+                  "subEvent": [
+        {
+          "@type": "Event",
+          "name": "Workshops/Tutorials Proposal Deadline",
+          "startDate": "2024-06-14",
+          "endDate": "2024-06-14",
+          "description": "Submission deadline for workshops and tutorials proposals for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Abstract Submission Deadline",
+          "startDate": "2024-07-01",
+          "endDate": "2024-07-01",
+          "description": "Abstract Submission Deadline for the EKAW 2024 Call for Papers."
+        },
+        {
+          "@type": "Event",
+          "name": "Full Paper Submission Deadline",
+          "startDate": "2024-07-05",
+          "endDate": "2024-07-12",
+          "description": "Full Paper Submission Deadline for the EKAW 2024 Call for Papers."
+        },
+        {
+          "@type": "Event",
+          "name": "Notification of Acceptance",
+          "startDate": "2024-09-10",
+          "endDate": "2024-09-10",
+          "description": "Notification date for paper acceptance at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Poster/Demo Submission Deadline",
+          "startDate": "2024-09-17",
+          "endDate": "2024-09-17",
+          "description": "Submission deadline for posters and demos for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Submission Deadline",
+          "startDate": "2024-09-17",
+          "endDate": "2024-09-17",
+          "description": "Submission deadline for workshop papers for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Camera Ready Deadline",
+          "startDate": "2024-09-24",
+          "endDate": "2024-09-24",
+          "description": "Camera ready submission deadline for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Author Registration Deadline",
+          "startDate": "2024-10-01",
+          "endDate": "2024-10-01",
+          "description": "Deadline for author registration for inclusion in the EKAW 2024 proceedings."
+        },
+        {
+          "@type": "Event",
+          "name": "Posters/Demos Notification",
+          "startDate": "2024-10-15",
+          "endDate": "2024-10-15",
+          "description": "Notification date for the acceptance of posters and demos at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Notification",
+          "startDate": "2024-10-15",
+          "endDate": "2024-10-15",
+          "description": "Notification date for the acceptance of workshop papers at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Early Bird Registration",
+          "startDate": "2024-10-17",
+          "endDate": "2024-10-17",
+          "description": "Early bird registration deadline for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Posters/Demos Camera Ready Deadline",
+          "startDate": "2024-11-01",
+          "endDate": "2024-11-01",
+          "description": "Camera ready deadline for posters and demos for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Camera Ready",
+          "startDate": "2024-11-20",
+          "endDate": "2024-11-20",
+          "description": "Camera ready deadline for workshop papers for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Conference Days",
+          "startDate": "2024-11-26",
+          "endDate": "2024-11-28",
+          "description": "Conference days for EKAW 2024."
+        }
+                  ]
+                }
+        </script>
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./images/ekaw_2024_logo.png" alt="EKAW 2024 Logo" width="100vw" class="navbar-logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">EKAW-24</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Calls </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="calls.html">Calls for Contributions</a></li>
+    
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="cfp.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Call for Papers</a></li>
+                  <li><a class="dropdown-item" href="cfwt.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Call for Workshops and
+                      Tutorials</a></li>
+                  <li><a class="dropdown-item" href="cfpd.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Call for Posters
+                      and Demos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Program</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item disabled" href="program.html">Program Overview</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item disabled" href="accepted-papers.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Accepted Papers</a></li>
+                  <li><a class="dropdown-item" href="accepted-wts.html" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Workshops and Tutorials</a></li>
+                  <li><a class="dropdown-item disabled" href="cfpd.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>Posters
+                      and Demos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="important-dates.html">Important
+                  Dates</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="venue.html">Venue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="oc.html">Organising Committee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sponsorships.html">Sponsorships</a>
+              </li>
+            </ul>
+          </div>
+    
+        </div>
+      </nav>
+    <header>
+        <div class="container-fluid banner">
+            <img src="images/banner.png" alt="Conference Banner showing Knowledge Graphs flying over Amsterdam"
+                class="banner-img">
+        </div>
+    </header>
+    <div class="container-fluid" style="background-image: url('images/background.jpg'); background-repeat: repeat;">
+        <div class="row gx-1">
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <main>
+                    <div class="m-1 p-1 bg-transparent text-justify"
+                        style="background-image: url('images/background.jpg'); background-repeat: repeat;">
+                        <div class="container bg-white p-4 border rounded">
+                            <section class="">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                                        <h2 id="accepted-ws">Workshops</h2>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1">
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">KNUMS</h4>
+                                                        <h5 class="card-subtitle">First Workshop on Knowledge Management
+                                                            for Numerical Modeling, Measurement & Simulation</h5>
+                                                        <h6 class="mt-2"><a href="https://k-nums.github.io/ekaw/2024/"
+                                                                class="link-style">k-nums.github.io</a></h6>
+
+                                                        <button class="btn btn-outline-danger" data-bs-toggle="collapse"
+                                                            data-bs-target="#KNUMSDetails" aria-expanded="false"
+                                                            aria-controls="KNUMSDetails">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-tools"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                                                            </svg> More Info
+                                                        </button>
+                                                        <div class="collapse" id="KNUMSDetails">
+                                                            <div class="card card-body mt-2">
+                                                                <p><strong>Organizers:</strong> Benno Kruit (VU
+                                                                    Amsterdam), Victoria Deleger (University of
+                                                                    Amsterdam), João Moreira (University of Twente)</p>
+                                                                <p><strong>Keywords / Topics of interest:</strong>
+                                                                    Knowledge Management for Numerical Data, Measurement
+                                                                    Knowledge, Numerical Modeling, Digital Twins, IoT,
+                                                                    Timeseries, Model Metadata Management, Applications
+                                                                </p>
+                                                                <p><strong>Types of submission:</strong> Long (15 page)
+                                                                    and short/vision (7 page) papers</p>
+                                                                <p><strong>Deadlines:</strong> September 17, 2024 (Paper
+                                                                    submission)</p>
+                                                                <p><strong>Website URL:</strong> <a
+                                                                        href="https://k-nums.github.io/ekaw/2024/"
+                                                                        class="link-style">https://k-nums.github.io/ekaw/2024/</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">X-TAIL</h4>
+                                                        <h5 class="card-subtitle">eXtraction and eXploitation of
+                                                            long-TAIL Knowledge with LLMs and KGs</h5>
+                                                        <h6 class="mt-2"><a href="https://www.xtail-workshop.org/"
+                                                                class="link-style">xtail-workshop.org/</a></h6>
+                                                        <button class="btn btn-outline-danger" data-bs-toggle="collapse"
+                                                            data-bs-target="#XTAILDetails" aria-expanded="false"
+                                                            aria-controls="XTAILDetails">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-tools"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                                                            </svg> More Info
+                                                        </button>
+                                                        <div class="collapse" id="XTAILDetails">
+                                                            <div class="card card-body mt-2">
+                                                                <p><strong>Organizers and affiliations:</strong> Arianna
+                                                                    Graciotti (University of Bologna), Alba Morales
+                                                                    Tirado (The Open University), Valentina Presutti
+                                                                    (University of Bologna), Enrico Motta (The Open
+                                                                    University)</p>
+                                                                <p><strong>Keywords:</strong> long-tail knowledge, RAG,
+                                                                    knowledge probing, LLM, knowledge graphs</p>
+                                                                <p><strong>Types of submission:</strong> Long papers
+                                                                    (10-15 pages), Short papers (5-9 pages)</p>
+                                                                <p><strong>Deadlines:</strong> Abstract Registration
+                                                                    Deadline: September 8th, 2024; Workshop Papers
+                                                                    Submission Deadline: September 17th, 2024; Workshop
+                                                                    Papers Notification: October 15th, 2024; Early Bird
+                                                                    Registration: October 17th, 2024; Workshop Papers
+                                                                    Camera Ready: November 20th, 2024; Conference Days:
+                                                                    November 26-28th, 2024</p>
+                                                                <p><strong>Topics of interest:</strong> Knowledge
+                                                                    Extraction from non-standard unstructured sources;
+                                                                    Knowledge Probing; Multi-modal Retrieval-augmented
+                                                                    Generation (RAG) techniques</p>
+                                                                <p><strong>Website URL:</strong> <a
+                                                                        href="https://www.xtail-workshop.org/"
+                                                                        class="link-style">https://www.xtail-workshop.org/</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">ELMKE</h4>
+                                                        <h5 class="card-subtitle">Workshop on Evaluation of Language
+                                                            Models in Knowledge Engineering</h5>
+                                                        <h6 class="mt-2"><a href="https://sites.google.com/view/elmke"
+                                                                class="link-style">elmke</a></h6>
+                                                        <button class="btn btn-outline-danger" data-bs-toggle="collapse"
+                                                            data-bs-target="#ELMKEDetails" aria-expanded="false"
+                                                            aria-controls="ELMKEDetails">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-tools"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                                                            </svg> More Info
+                                                        </button>
+                                                        <div class="collapse" id="ELMKEDetails">
+                                                            <div class="card card-body mt-2">
+                                                                <p><strong>Organizers and affiliations:</strong> Bohui
+                                                                    Zhang (King’s College London), Yuan He (University
+                                                                    of Oxford), Reham Alharbi (University of Liverpool)
+                                                                </p>
+                                                                <p><strong>Keywords:</strong> Language Models, Knowledge
+                                                                    Engineering, Ontology Engineering, Evaluation,
+                                                                    Benchmarks, Dataset</p>
+                                                                <p><strong>Types of submission:</strong> long papers
+                                                                    (10-15 pages), short papers (5-9 pages)</p>
+                                                                <p><strong>Deadlines:</strong> Papers Submission
+                                                                    Deadline: September 17, 2024; Papers Notification:
+                                                                    October 15, 2024; Camera Ready: November 20, 2024
+                                                                </p>
+                                                                <p><strong>Topics of interest:</strong> Novel evaluation
+                                                                    approaches for Language Models (LMs) in Knowledge
+                                                                    Engineering (KE) tasks; Challenges and limitations
+                                                                    of existing evaluation methods for LMs in KE;
+                                                                    Examination of human factors in the evaluation of
+                                                                    LMs in KE tasks; Datasets and benchmarks for LMs
+                                                                    evaluation in KE tasks; Exploration of hybrid
+                                                                    evaluation methods; Methods and metrics for
+                                                                    evaluating the trustworthiness, interpretability,
+                                                                    and explainability of LM-generated results</p>
+                                                                <p><strong>Website URL:</strong> <a
+                                                                        href="https://sites.google.com/view/elmke"
+                                                                        class="link-style">https://sites.google.com/view/elmke</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">K-MiN</h4>
+                                                        <h5 class="card-subtitle">First Workshop on Structured Knowledge
+                                                            in Newsrooms</h5>
+                                                        <h6 class="mt-2"><a href="https://k-min.info/"
+                                                                class="link-style">k-min.info/</a></h6>
+
+                                                        <button class="btn btn-outline-danger" data-bs-toggle="collapse"
+                                                            data-bs-target="#KMiNDetails" aria-expanded="false"
+                                                            aria-controls="KMiNDetails">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-tools"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                                                            </svg>
+                                                            More Info
+                                                        </button>
+                                                        <div class="collapse" id="KMiNDetails">
+                                                            <div class="card card-body mt-2">
+                                                                <p><strong>Organizers and affiliations:</strong> Dr
+                                                                    Reshmi G Pillai (Vrije University Amsterdam), Dr.
+                                                                    Laurence Dierickx (University of Bergen / Université
+                                                                    Libre de Bruxelles)</p>
+                                                                <p><strong>Keywords:</strong> Journalistic Knowledge
+                                                                    Platforms, Knowledge graphs, Large Language Models,
+                                                                    Journalistic AI, Ethics</p>
+                                                                <p><strong>Types of submission:</strong> Long (10-15
+                                                                    pages) and Short (5-9 pages) papers describing novel
+                                                                    ideas or applications demonstrating the adoption of
+                                                                    knowledge management tools and techniques in
+                                                                    newsroom tasks; description of application of such
+                                                                    existing tools in the context of newsroom knowledge
+                                                                    with real-world data and real users; ethical
+                                                                    considerations related to developing and adopting
+                                                                    these technologies in newsrooms</p>
+                                                                <p><strong>Deadlines:</strong> Submission link open:
+                                                                    July 19th 2024; Paper Submission deadline: September
+                                                                    17th 2024; Acceptance notification: October 20th
+                                                                    2024; Camera-ready deadline: November 20th, 2024;
+                                                                    Conference dates: November 26-28, 2024</p>
+                                                                <p><strong>Website URL:</strong> <a
+                                                                        href="https://k-min.info/"
+                                                                        class="link-style">k-min.info/</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                                        <h2 id="accepted-ts">Tutorials</h2>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1">
+
+                                            <!-- Tutorial 1 -->
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Conversational Knowledge Capture Using
+                                                            the KNOW Ontology</h4>
+                                                        <h6 class="mt-2"><a href="https://ekaw2024.asimov.so"
+                                                                class="link-style">ekaw2024.asimov.so</a></h6>
+                                                        <button class="btn btn-outline-danger" data-bs-toggle="collapse"
+                                                            data-bs-target="#KNOWOntologyDetails" aria-expanded="false"
+                                                            aria-controls="KNOWOntologyDetails">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-tools"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z" />
+                                                            </svg>
+                                                            More Info
+                                                        </button>
+                                                        <div class="collapse" id="KNOWOntologyDetails">
+                                                            <div class="card card-body mt-2">
+
+                                                                <h5>Organizers and affiliations:</h5>
+                                                                <img src="images/wt-imgs/haltia-logo.png"
+                                                                    class="rounded my-1" width="50%"
+                                                                    alt="Asimov by Haltia.AI logo">
+                                                                <p><strong>Dr. Tolga Çöplü, Haltia.AI</strong>
+                                                                    (tolga@haltia.ai)</p>
+                                                                <p>Dr. Tolga Çöplü is an expert in integrating
+                                                                    communication technologies with machine learning,
+                                                                    boasting over two decades of research and
+                                                                    development experience. His focus is on the
+                                                                    practical application of neurosymbolic AI to enhance
+                                                                    the personalization and efficiency of AI systems.
+                                                                    Dr. Çöplü has authored numerous academic papers and
+                                                                    is pivotal in applying symbolic AI with large
+                                                                    language models.</p>
+                                                                <p><strong>Arto Bendiken, Haltia.AI</strong>
+                                                                    (arto@haltia.ai, <a href="https://ar.to"
+                                                                        class="link-style">https://ar.to</a>)</p>
+                                                                <p>Arto Bendiken brings over 25 years of experience in
+                                                                    software engineering and artificial intelligence,
+                                                                    with a specialization in Semantic Web technology and
+                                                                    knowledge graphs. His pioneering work has
+                                                                    significantly influenced the development of
+                                                                    decentralized graph database technologies. As
+                                                                    co-founder and CTO of Dydra, he developed solutions
+                                                                    that now support Haltia.AI’s AI systems, and he
+                                                                    leads the design of the KNOW ontology.</p>
+                                                                <p><strong>Andrii Skomorokhov, Haltia.AI</strong>
+                                                                    (andrii.skomorokhov@haltia.ai)</p>
+                                                                <p>Andrii Skomorokhov has over 15 years of experience
+                                                                    developing complex data management systems and AI
+                                                                    applications. At Haltia.AI, he focuses on applying
+                                                                    Large Language Model (LLM) adapters to construct
+                                                                    comprehensive knowledge graphs from extensive
+                                                                    datasets, enhancing AI personalization and mobile
+                                                                    assistant technologies. His research contributes to
+                                                                    the development of privacy-centric, on-device AI
+                                                                    solutions.</p>
+                                                                <p><strong>Keywords:</strong> Conversational knowledge
+                                                                    capture, ontology-guided knowledge capture, KNOW
+                                                                    ontology, symbolic representation, knowledge graphs,
+                                                                    large language models.</p>
+                                                                <p><strong>Target audience:</strong></p>
+                                                                <ul>
+                                                                    <li>Early-stage researchers in neurosymbolic AI</li>
+                                                                    <li>Experienced Semantic Web/Knowledge Graph
+                                                                        researchers</li>
+                                                                    <li>AI practitioners in real-world applications</li>
+                                                                    <li>Researchers interested in personal data
+                                                                        extraction from LLM conversations</li>
+                                                                    <li>Professionals seeking ontological knowledge
+                                                                        capture techniques</li>
+                                                                </ul>
+                                                                <p><strong>Why participate?</strong></p>
+                                                                <ul>
+                                                                    <li>Understand the fundamentals of neurosymbolic AI.
+                                                                    </li>
+                                                                    <li>Gain skills in generative AI and its
+                                                                        applications.</li>
+                                                                    <li>Learn to apply advanced knowledge capture in
+                                                                        real-world scenarios.</li>
+                                                                    <li>Master different approaches to the generation of
+                                                                        personal information in the era of generative AI
+                                                                    </li>
+                                                                    <li>Explore integration with the KNOW ecosystem for
+                                                                        enhanced AI personalization</li>
+                                                                </ul>
+                                                                <p><strong>Requirements to participate:</strong></p>
+                                                                <p>Participants should bring laptops or tablets to
+                                                                    engage with provided digital materials:</p>
+                                                                <ul>
+                                                                    <li>Handouts and printed materials will be provided
+                                                                    </li>
+                                                                    <li>Code and notebooks accessible on GitHub</li>
+                                                                </ul>
+                                                                <p>Participants are encouraged to <strong> review the
+                                                                        KNOW ontology </strong> webpage and the GitHub
+                                                                    repository prior to attending the tutorial:</p>
+                                                                <ul>
+                                                                    <li><a href="https://know.dev/"
+                                                                            class="link-style">https://know.dev/</a>
+                                                                    </li>
+                                                                    <li><a href="https://github.com/KnowOntology/know-ontology"
+                                                                            class="link-style">https://github.com/KnowOntology/know-ontology</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <p><strong>Contents of the Tutorial:</strong></p>
+                                                                <ol>
+                                                                    <li>Overview and Introduction: Framing the
+                                                                        neurosymbolic challenge and its relevance.</li>
+                                                                    <li>Neurosymbolic Synthesis
+
+                                                                    </li>
+                                                                    <li>The KNOW Ontology in Action
+
+                                                                    </li>
+                                                                    <li>Hands-on Ontology-Guided Knowledge
+                                                                        Capture
+
+                                                                    </li>
+                                                                    <li>Discussion on the future of AI research and
+                                                                        applications</li>
+                                                                </ol>
+                                                                <p><strong>Tutorial webpage URL:</strong> <a
+                                                                        href="https://ekaw2024.asimov.so"
+                                                                        class="link-style">https://ekaw2024.asimov.so</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <!-- Tutorial 2 -->
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">MUHAI</h4>
+                                                        <h5 class="card-subtitle">Enabling Meaning and Understanding in
+                                                            Human-centric AI</h5>
+                                                        <h6 class="mt-2">TBA</h6>
+                                                        <button class="btn btn-outline-danger" disabled>More
+                                                            Info</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tutorial 3 -->
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Creating and Accessing Knowledge Graphs
+                                                            for Action Parameterisation</h4>
+                                                        <h6 class="mt-2">TBA</h6>
+                                                        <button class="btn btn-outline-danger" disabled>More
+                                                            Info</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tutorial 4 -->
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">Semantic Knowledge Modeling - Ontologies
+                                                            & Vocabularies</h4>
+                                                        <h6 class="mt-2">TBA</h6>
+                                                        <button class="btn btn-outline-danger" disabled>More
+                                                            Info</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <hr class="colored-break">
+                            <section>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12" style="margin-bottom: 1rem;">
+                                        <h3>Important Dates</h3>
+                                    </div>
+                                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                                        <a href="calendars/ekaw-2024-workshops-tutorials.ics" role="button" download
+                                            type="button" class="btn btn-outline-danger"
+                                            style="display: flex; align-items: center;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z">
+                                                </path>
+                                            </svg>
+                                            Download ICS file
+                                        </a>
+                                        <hr>
+                                    </div>
+                                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                                        <div id="dates-link" class="timeline-container" role="contentinfo"
+                                            aria-label="Workshops/Tutorials timeline">
+                                            <div class="timeline-line" aria-hidden="true"></div>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card right">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Deadline to submit Papers to Workshops">
+                                                        <div class="card-body">
+                                                            <h5>Workshop papers submission deadline</h5>
+                                                            <time datetime="2024-09-17">September 17, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card left">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Workshop papers notification">
+                                                        <div class="card-body">
+                                                            <h5>Workshop papers notification</h5>
+                                                            <time datetime="2024-10-15">October 15, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card right">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Camera-ready versions and CEUR copyright signed forms">
+                                                        <div class="card-body">
+                                                            <h5>Camera-ready versions</h5>
+                                                            <time datetime="2024-11-20">November 20, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <!-- Timeline item -->
+                                            <article class="timeline-item" role="listitem">
+                                                <div class="timeline-card right">
+                                                    <div class="card"
+                                                        style="background-image: url('images/background.jpg');"
+                                                        aria-label="Workshop/Tutorial day">
+                                                        <div class="card-body">
+                                                            <h5>Workshops/Tutorials day</h5>
+                                                            <time datetime="2024-11-26">November 26, 2024</time>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 sticky-aside">
+                <aside>
+                    <div class="m-1 p-1 bg-transparent text-justify">
+                        <div class="bg-white p-4 border rounded">
+                            <h5>#EKAW24</h5>
+                            Check out our weekly updates on <a href="https://twitter.com/ekawconference"
+                                class="link-style" target="_blank">X</a>,
+                            <a href="https://mastodon.social/@ekawconference" class="link-style"
+                                target="_blank">Mastodon</a> and <a
+                                href="https://www.linkedin.com/company/ekaw-conference" class="link-style"
+                                target="_blank"> Linkedin</a>!.
+                        </div>
+                    </div>
+                    <hr class="colored-break">
+                    <div class="m-1 p-1 bg-transparent text-justify">
+                        <div class="bg-white p-4 border rounded">
+                            <h5>Proceedings published by</h5>
+                            <img src="./images/Springer.png" alt="Springer Logo"
+                                style="width: 100%; height: auto; display: block;">
+                            <hr>
+                            <img src="./images/LNAI-Logo.png" alt="Lecture Notes in Artificial Intelligence Logo"
+                                style="width: 100%; height: auto; display: block;">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="images/ekaw_2024_logo.png" aria-hidden="true" alt="EKAW 2024" class="footer-logo mb-2"
+                        style="max-width: 150px;">
+                    <p>24th International Conference on Knowledge Engineering and Knowledge Management</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 class="text-danger">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="cfp.html" class="footer-link">Call for Papers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 class="text-danger">Follow Us</h4>
+                    <div>
+                        <a href="https://twitter.com/ekawconference" class="btn btn-outline-light btn-lg"
+                            target="_blank">X</a>
+                        <a href="https://mastodon.social/@ekawconference" class="btn btn-outline-light btn-lg"
+                            target="_blank">Mastodon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <button onclick="topFunction()" title="Go to top" aria-label="Scroll to top" aria-hidden="true"
+        id="scrollToTopButton" class="btn btn-danger btn-lg"
+        style="display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor"
+            class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5" />
+        </svg> </button>
+    <script src="./js/script.js" async defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            // Function to show/hide the "Scroll to Top" button
+            function scrollVisibilityFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("scrollToTopButton").style.display = "block";
+                } else {
+                    document.getElementById("scrollToTopButton").style.display = "none";
+                }
+            }
+
+            // Attach scroll event listener to window
+            window.onscroll = scrollVisibilityFunction;
+
+            // Function to scroll to the top of the page
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Make sure to attach your topFunction to the button's click event
+            // Assuming "scrollToTopButton" is the ID of your "Scroll to Top" button
+            var topButton = document.getElementById("scrollToTopButton");
+            if (topButton) {
+                topButton.addEventListener('click', topFunction);
+            }
+
+            // Function to update the timeline status
+            function updateTimelineStatus() {
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                const currentDate = new Date(); // Use the actual current date
+
+                let firstPendingFound = false;
+
+                timelineItems.forEach(item => {
+                    const timeElement = item.querySelector('time');
+                    const deadlineDate = new Date(timeElement.getAttribute('datetime'));
+                    const card = item.querySelector('.timeline-card');
+
+                    if (currentDate < deadlineDate) {
+                        if (!firstPendingFound) {
+                            // The first pending date
+                            card.classList.add('pulsating-border-pending');
+                            card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
+                            firstPendingFound = true;
+                        } else {
+                            // Upcoming dates after the first pending
+                            card.classList.add('pulsating-border-upcoming');
+                            card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
+                        }
+                    } else {
+                        // Dates that have passed
+                        card.classList.add('opaque');
+                        card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
+                    }
+                });
+            }
+
+            // Call updateTimelineStatus on DOMContentLoaded
+            updateTimelineStatus();
+
+            // Set navbar height as a CSS variable
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                const navbarHeight = navbar.offsetHeight;
+                document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
