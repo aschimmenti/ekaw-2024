@@ -314,3 +314,14 @@ ul.topics-ul li:last-child {
 }
 
 
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 576px) {
+  .responsive-image {
+    width: 80%; /* Adjust this value as needed */
+  }
+}
