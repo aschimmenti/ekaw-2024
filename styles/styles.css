@@ -325,3 +325,27 @@ ul.topics-ul li:last-child {
     width: 80%; /* Adjust this value as needed */
   }
 }
+
+.sponsor-figure {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sponsor-figure figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.sponsor-figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+.sponsor-figure.platinum img {
+  width: 100%;
+}
+
+.sponsor-figure.gold img {
+  width: 80%;
+}
