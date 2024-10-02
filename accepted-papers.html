@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="https://event.cwi.nl/ekaw2024/images/favicon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://event.cwi.nl/ekaw2024/images/favicon/favicon-32x32.png">
+
+    <!-- Apple Touch Icon (used for bookmarks and on the home screen in iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://event.cwi.nl/ekaw2024/images/favicon/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://event.cwi.nl/ekaw2024/images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="https://event.cwi.nl/ekaw2024/images/favicon/android-chrome-512x512.png">
+
+    <!-- Smaller icons for tabs, bookmarks, etc -->
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://event.cwi.nl/ekaw2024/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://event.cwi.nl/ekaw2024/images/favicon/favicon-16x16.png">
+
+    <!-- Webmanifest for specifying icons and application metadata -->
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Add Three.js Stats CDN -->
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <link href="./styles/styles.css" rel="stylesheet">
+    <script charset="utf-8"
+        src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
+    <title>EKAW 2024 - Accepted Papers</title>
+    <meta name="description"
+        content="Join EKAW 2024, the leading conference on Knowledge Engineering and Knowledge Management, in Amsterdam from November 26-28. Explore cutting-edge research and industry applications in Semantic Web, Knowledge Discovery, and more.">
+    <meta name="keywords"
+        content="EKAW 2024 Call for Workshops and tutorials, workshops and tutorials, WORKSHOPS AND TUTORIALS EKAW 2024, WORKSHOP EKAW 2024, EKAW 2024, Knowledge Engineering, Semantic Web, Knowledge Discovery, Amsterdam Conference, AI, Machine Learning">
+    <meta name="author" content="EKAW 2024 Organizing Committee">
+    <meta property="og:title" content="EKAW 2024 - Knowledge Engineering and Knowledge Management">
+    <meta property="og:description"
+        content="Experience the forefront of Knowledge Engineering at EKAW 2024 in Amsterdam. Discuss, learn, and network with experts in a specialized theme: Knowledge in the Age of Language Models.">
+    <meta property="og:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta property="og:url" content="https://event.cwi.nl/ekaw2024/">
+    <meta property="og:type" content="event">
+    <meta name="twitter:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta name="twitter:site" content="@EKAW2024">
+    <meta name="twitter:image" content="https://event.cwi.nl/ekaw2024/images/ekaw-twitter-banner.png">
+    <meta name="twitter:title" content="EKAW 2024 - Uniting Knowledge Engineering Experts">
+    <meta name="twitter:description"
+        content="Don’t miss EKAW 2024 in Amsterdam! Engage in innovative discussions on Knowledge Engineering and Knowledge Management. November 26-28, 2024.">
+
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Event",
+                "name": "Call for Workshops and Tutorials - EKAW 2024 - International Conference on Knowledge Engineering and Knowledge Management",
+                "image": "https://event.cwi.nl/ekaw2024/images/ekaw-banner.png",
+                "startDate": "2024-11-26",
+                "endDate": "2024-11-28",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                  "@type": "Place",
+                  "name": "Centre for Mathematics and Computer Science (CWI)",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Science Park 123",
+                    "addressLocality": "Amsterdam",
+                    "postalCode": "1098 XG",
+                    "addressCountry": "NL"
+                  }
+                },
+                "description": "EKAW 2024 focuses on Knowledge in the Age of Language Models, featuring discussions on Semantic Web, AI, and Information Integration.",
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "EKAW Organising Committee",
+                  "url": "https://ekaw.org/"
+                },
+                  "subEvent": [
+        {
+          "@type": "Event",
+          "name": "Workshops/Tutorials Proposal Deadline",
+          "startDate": "2024-06-14",
+          "endDate": "2024-06-14",
+          "description": "Submission deadline for workshops and tutorials proposals for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Abstract Submission Deadline",
+          "startDate": "2024-07-01",
+          "endDate": "2024-07-01",
+          "description": "Abstract Submission Deadline for the EKAW 2024 Call for Papers."
+        },
+        {
+          "@type": "Event",
+          "name": "Full Paper Submission Deadline",
+          "startDate": "2024-07-05",
+          "endDate": "2024-07-12",
+          "description": "Full Paper Submission Deadline for the EKAW 2024 Call for Papers."
+        },
+        {
+          "@type": "Event",
+          "name": "Notification of Acceptance",
+          "startDate": "2024-09-10",
+          "endDate": "2024-09-10",
+          "description": "Notification date for paper acceptance at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Poster/Demo Submission Deadline",
+          "startDate": "2024-09-17",
+          "endDate": "2024-09-17",
+          "description": "Submission deadline for posters and demos for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Submission Deadline",
+          "startDate": "2024-09-17",
+          "endDate": "2024-09-17",
+          "description": "Submission deadline for workshop papers for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Camera Ready Deadline",
+          "startDate": "2024-09-24",
+          "endDate": "2024-09-24",
+          "description": "Camera ready submission deadline for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Author Registration Deadline",
+          "startDate": "2024-10-01",
+          "endDate": "2024-10-01",
+          "description": "Deadline for author registration for inclusion in the EKAW 2024 proceedings."
+        },
+        {
+          "@type": "Event",
+          "name": "Posters/Demos Notification",
+          "startDate": "2024-10-15",
+          "endDate": "2024-10-15",
+          "description": "Notification date for the acceptance of posters and demos at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Notification",
+          "startDate": "2024-10-15",
+          "endDate": "2024-10-15",
+          "description": "Notification date for the acceptance of workshop papers at EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Early Bird Registration",
+          "startDate": "2024-10-17",
+          "endDate": "2024-10-17",
+          "description": "Early bird registration deadline for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Posters/Demos Camera Ready Deadline",
+          "startDate": "2024-11-01",
+          "endDate": "2024-11-01",
+          "description": "Camera ready deadline for posters and demos for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Workshop Papers Camera Ready",
+          "startDate": "2024-11-20",
+          "endDate": "2024-11-20",
+          "description": "Camera ready deadline for workshop papers for EKAW 2024."
+        },
+        {
+          "@type": "Event",
+          "name": "Conference Days",
+          "startDate": "2024-11-26",
+          "endDate": "2024-11-28",
+          "description": "Conference days for EKAW 2024."
+        }
+                  ]
+                }
+        </script>
+
+        <style>
+            .card {
+                transition: transform 1s ease-in-out;
+                overflow: hidden;
+                position: relative;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+            }
+            .glossy-overlay {
+                position: absolute;
+                top: -100%;
+                left: -100%;
+                right: -100%;
+                bottom: -100%;
+                background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(218, 0, 0, 0.473) 50%, rgba(250, 16, 16, 0.541) 100%);
+                transition: transform 0.5s ease-in-out;
+                transform: translateY(200%) rotate(45deg);
+                pointer-events: none;
+                opacity: 0;
+                z-index: -3;
+            }
+            .card:hover .glossy-overlay {
+                animation: glossy-animation 3s ease-in-out;
+            }
+            @keyframes glossy-animation {
+                0% { 
+                    transform: translateY(200%) rotate(45deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                50% { 
+                    transform: translateY(-100%) rotate(45deg);
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% { 
+                    transform: translateY(200%) rotate(45deg);
+                    opacity: 0;
+                }
+            }
+        </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light-subtle sticky-top border-dark-subtle border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/ekaw_2024_logo.png" alt="EKAW 2024 Logo" width="100vw" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">EKAW-24</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Calls </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="calls.html">Calls for Contributions</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="cfp.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Call for Papers</a></li>
+                            <li><a class="dropdown-item" href="cfwt.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Call for Workshops and
+                                    Tutorials</a></li>
+                            <li><a class="dropdown-item" href="cfpd.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Call for Posters
+                                    and Demos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Program</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item disabled" href="program.html">Program Overview</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item " href="accepted-papers.html" aria-current="page"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Accepted Papers</a></li>
+                            <li><a class="dropdown-item" href="accepted-wts.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Workshops and Tutorials</a></li>
+                            <li><a class="dropdown-item disabled" href="cfpd.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Posters
+                                    and Demos</a></li>
+                            <li><a class="dropdown-item" href="keynotes.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Keynote Speakers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Attending</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="important-dates.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Important Dates</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="venue.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Venue</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="registration.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                              </svg>Registration</a></li>
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                              <li><a class="dropdown-item" href="attending.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                              </svg>Accomodation, Attending and more</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Organisation & Sponsoring</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="oc.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Organising Committee</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="sponsorships.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Sponsorship Packages</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Sponsors</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sponsors.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Our Sponsors</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="jobs.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
+                                        viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Job Opportunities</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <header>
+        <div class="container-fluid banner">
+            <img src="images/banner.png" alt="Conference Banner showing Knowledge Graphs flying over Amsterdam"
+                class="banner-img">
+        </div>
+    </header>
+    <div class="container-fluid" style="background-image: url('images/background.jpg'); background-repeat: repeat;">
+        <div class="row gx-1">
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                <main>
+                    <div class="m-1 p-1 bg-transparent text-justify"
+                        style="background-image: url('images/background.jpg'); background-repeat: repeat;">
+                        <div class="container bg-light-subtle p-4 border rounded">
+                            <section class="">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+                                        <h2 id="accepted-papers">Accepted Papers</h2>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1">
+                                            <p>The following is a list of accepted papers.</p>
+                                            <div id="papers-container">
+                                                <!-- Papers will be dynamically inserted here -->
+                                            </div>
+                                            
+
+
+
+
+
+                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <hr class="colored-break">
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 sticky-aside">
+                <aside>
+                    <div class="m-1 p-1 bg-transparent text-justify">
+                        <div class="bg-white p-4 border rounded">
+                            <h5>#EKAW24</h5>
+                            Check out our weekly updates on <a href="https://twitter.com/ekawconference"
+                                class="link-style" target="_blank">X</a>,
+                            <a href="https://mastodon.social/@ekawconference" class="link-style"
+                                target="_blank">Mastodon</a> and <a
+                                href="https://www.linkedin.com/company/ekaw-conference" class="link-style"
+                                target="_blank"> Linkedin</a>!.
+                        </div>
+                    </div>
+                    <hr class="colored-break">
+                    <div class="m-1 p-1 bg-transparent text-justify">
+                        <div class="bg-light-subtle p-4 border rounded">
+                            <h5>Register to EKAW 2024</h5>
+                            <p>Visit the <a href="registration.html" class="link-style">Registration and Attending</a>
+                                page for more information!</p>
+                            <button class="btn btn-outline-danger"
+                                onclick="window.open('https://www.cwi.nl/en/events/ekaw-2024-events-cwi/ekaw-2024-registration-form/', '_blank')"
+                                aria-expanded="false" aria-controls="ExtendedCfPDate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-file-text" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4.5 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM4 6a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6A.5.5 0 0 1 4 6zm.5 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-1 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                                    <path
+                                        d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h4.5L14 4.5zM13.5 4H10a.5.5 0 0 1-.5-.5V.5L13.5 4z" />
+                                </svg>
+                                Registration Form
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="colored-break">
+                    <div class="m-1 p-1 bg-transparent text-justify">
+                        <!-- <div class="bg-white p-4 border rounded">
+                      <h5>Our Sponsors!</h5>
+                      Haltia?
+                      Ontotext?
+                      <hr>
+                    </div> -->
+                        <div class="bg-white p-4 border rounded mx-auto">
+                            <h5>Our Sponsors</h5>
+                            <figure class="sponsor-figure platinum">
+                                <a href="https://haltia.ai/" target="_blank">
+                                    <img src="images/sponsors/Haltia_logo.png" alt="Haltia AI Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
+                            </figure>
+
+                            <hr>
+
+                            <figure class="sponsor-figure platinum">
+                                <a href="https://metaphacts.com/" target="_blank">
+                                    <img src="images/sponsors/Metaphacts_logo.png" alt="Metaphacts Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
+                            </figure>
+
+                            <hr>
+                            <figure class="sponsor-figure platinum">
+                                <a href="https://aij.ijcai.org/" target="_blank">
+                                    <img src="images/sponsors/artint-logo.jpg"
+                                        alt="Artificial Intelligence Journal Logo" class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
+                            </figure>
+
+                            <hr>
+                            <figure class="sponsor-figure gold">
+                                <a href="https://www.ontotext.com/" target="_blank">
+                                    <img src="images/sponsors/Ontotext_logo.png" alt="Ontotext Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Golden Sponsor</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <hr class="colored-break">
+                    <div class="m-1 p-1 bg-transparent text-justify">
+
+                        <div class="bg-white p-4 border rounded">
+                            <h5>Proceedings published by</h5>
+                            <img src="images/Springer.png" alt="Springer Logo"
+                                style="width: 100%; height: auto; display: block;">
+                            <hr>
+                            <img src="images/LNAI-Logo.png" alt="Lecture Notes in Artificial Intelligence Logo"
+                                style="width: 100%; height: auto; display: block;">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="images/ekaw_2024_logo.png" aria-hidden="true" alt="EKAW 2024" class="footer-logo mb-2"
+                        style="max-width: 150px;">
+                    <p>24th International Conference on Knowledge Engineering and Knowledge Management</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 class="text-danger">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="cfp.html" class="footer-link">Call for Papers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4 class="text-danger">Follow Us</h4>
+                    <div>
+                        <a href="https://twitter.com/ekawconference" class="btn btn-outline-light btn-lg"
+                            target="_blank">X</a>
+                        <a href="https://mastodon.social/@ekawconference" class="btn btn-outline-light btn-lg"
+                            target="_blank">Mastodon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <button onclick="topFunction()" title="Go to top" aria-label="Scroll to top" aria-hidden="true"
+        id="scrollToTopButton" class="btn btn-danger btn-lg"
+        style="display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor"
+            class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5" />
+        </svg> </button>
+    <script src="./js/script.js" async defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            // Function to show/hide the "Scroll to Top" button
+            function scrollVisibilityFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("scrollToTopButton").style.display = "block";
+                } else {
+                    document.getElementById("scrollToTopButton").style.display = "none";
+                }
+            }
+
+            // Attach scroll event listener to window
+            window.onscroll = scrollVisibilityFunction;
+
+            // Function to scroll to the top of the page
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Make sure to attach your topFunction to the button's click event
+            // Assuming "scrollToTopButton" is the ID of your "Scroll to Top" button
+            var topButton = document.getElementById("scrollToTopButton");
+            if (topButton) {
+                topButton.addEventListener('click', topFunction);
+            }
+
+            // Function to update the timeline status
+            function updateTimelineStatus() {
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                const currentDate = new Date(); // Use the actual current date
+
+                let firstPendingFound = false;
+
+                timelineItems.forEach(item => {
+                    const timeElement = item.querySelector('time');
+                    const deadlineDate = new Date(timeElement.getAttribute('datetime'));
+                    const card = item.querySelector('.timeline-card');
+
+                    if (currentDate < deadlineDate) {
+                        if (!firstPendingFound) {
+                            // The first pending date
+                            card.classList.add('pulsating-border-pending');
+                            card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
+                            firstPendingFound = true;
+                        } else {
+                            // Upcoming dates after the first pending
+                            card.classList.add('pulsating-border-upcoming');
+                            card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
+                        }
+                    } else {
+                        // Dates that have passed
+                        card.classList.add('opaque');
+                        card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
+                    }
+                });
+            }
+
+            // Call updateTimelineStatus on DOMContentLoaded
+            updateTimelineStatus();
+
+            // Set navbar height as a CSS variable
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                const navbarHeight = navbar.offsetHeight;
+                document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+            }
+        });
+    </script>
+        <script>
+            async function fetchPapers() {
+                const response = await fetch('./js/accepted-papers.csv');
+                const data = await response.text();
+                const papers = parseCSV(data);
+                displayPapers(papers);
+            }
+    
+            function parseCSV(csv) {
+                const lines = csv.split('\n');
+                return lines.slice(1).map(line => {
+                    const [id, authors, title] = line.split(';');
+                    return { id, authors, title };
+                });
+            }
+    
+            function displayPapers(papers) {
+                const container = document.getElementById('papers-container');
+                papers.forEach((paper, index) => {
+                    const paperElement = createPaperElement(paper, index);
+                    container.appendChild(paperElement);
+                });
+            }
+    
+            function createPaperElement(paper, index) {
+                const div = document.createElement('div');
+                div.className = 'row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1 mb-3';
+                div.innerHTML = `
+                 <div class="col">
+                    <div class="card bg-light-subtle border-dark-subtle">
+                        <div class="card-body">
+                                                    <div class="glossy-overlay"></div>
+                            <h4 class="card-title">${paper.title}</h4>
+                        </br>
+                            <h5 class="card-subtitle">${paper.authors}</h5>
+                            <!-- <h6 class="mt-2">Paper ID: ${paper.id}</h6> -->
+                        </div>
+                    </div>
+                </div>
+                `;
+                return div;
+            }
+    
+            function toggleExpand(index) {
+                const card = document.querySelectorAll('.card-body')[index];
+                card.classList.toggle('expanded');
+                const button = card.nextElementSibling.querySelector('button');
+                button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
+                
+                // Trigger glossy animation
+                const glossyOverlay = card.querySelector('.glossy-overlay');
+                glossyOverlay.style.transition = 'none';
+                glossyOverlay.style.transform = 'translateY(100%) rotate(45deg)';
+                setTimeout(() => {
+                    glossyOverlay.style.transition = 'transform 0.5s ease-in-out';
+                    glossyOverlay.style.transform = 'translateY(-100%) rotate(45deg)';
+                }, 10);
+            }
+    
+            fetchPapers();
+        </script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
