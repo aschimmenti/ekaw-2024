@@ -83,6 +83,18 @@ h2.jumbotron-heading::after {
   bottom: -2px;
 }
 
+@media (max-width: 768px) {
+  .jumbotron-heading {
+      text-shadow: none;
+      -webkit-text-stroke: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      font-family: "Arial", sans-serif; /* Force simpler font stack for mobile */
+  }
+}
 
 
 .jumbotron .container {
