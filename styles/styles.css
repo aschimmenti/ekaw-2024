@@ -28,6 +28,107 @@ html {
 }
 
 
+.program-banner {
+  background-image: url("images/graphbg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 33vh; /* This sets the height to 1/3 of the viewport height */
+  max-height: 300px; /* Adjust this value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.program-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+}
+
+.program-banner h1 {
+  color: white; /* Adjust text color as needed */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  margin: 0;
+}
+
+
+
+
+.program-banner {
+  background-image: url("../images/graphbg.png"); /* Your image path */
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  height: 15vh; /* Set the height to 11% of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0; /* Ensure the image background is behind the text */
+}
+
+.program-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1); /* 20% opacity */
+  z-index: 1;
+}
+.program-banner h1 {
+  color: white; /* Text color */
+  font-size: 2.5rem; /* Default font size for larger screens */
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Keep the text above the overlay */
+  padding: 20px; /* Default padding */
+  margin: 0;
+  max-width: 100%; /* Ensure the text doesn't overflow */
+}
+
+@media (max-width: 1200px) {
+  .program-banner h1 {
+    font-size: 2rem; /* Slightly smaller font for medium screens */
+    padding: 15px; /* Reduce padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .program-banner h1 {
+    font-size: 1.8rem; /* Smaller font size for tablet-sized screens */
+    padding: 1vh; /* Reduce padding for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .program-banner h1 {
+    font-size: 1.5rem; /* Smaller font for mobile phones */
+    padding: 1vh; /* Smaller padding for mobile phones */
+  }
+}
+
+@media (max-width: 320px) {
+  .program-banner h1 {
+    font-size: 1.2rem; /* Even smaller font size for very small mobile screens */
+    padding: 2vh; /* Adjust padding further for small mobile screens */
+  }
+}
+
+
+
+
 .jumbotron {
   position: relative; /* Make sure the jumbotron is a positioned container */
   padding-top: var(--jumbotron-padding-y);
