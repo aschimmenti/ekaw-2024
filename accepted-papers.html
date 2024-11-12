@@ -16,7 +16,7 @@
         href="https://event.cwi.nl/ekaw2024/images/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512"
         href="https://event.cwi.nl/ekaw2024/images/favicon/android-chrome-512x512.png">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Smaller icons for tabs, bookmarks, etc -->
     <link rel="icon" type="image/png" sizes="32x32"
         href="https://event.cwi.nl/ekaw2024/images/favicon/favicon-32x32.png">
@@ -185,6 +185,26 @@
         </script>
 
         <style>
+            @keyframes spin-and-slow {
+                0% {
+                    transform: rotate(0deg);
+                }
+                70% {
+                    transform: rotate(360deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            
+            .star-icon {
+                transition: transform 0.3s ease;
+            }
+            
+            .card:hover .star-icon {
+                animation: spin-and-slow 2s ease-out;
+            }
+
             .card {
                 transition: transform 1s ease-in-out;
                 overflow: hidden;
@@ -428,7 +448,7 @@
                                     </div>
                                     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
                                         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1">
-                                            <p>The following is a list of accepted papers.</p>
+                                            <p>The following is a list of accepted papers. Spotlight papers are marked with a star.</p>
                                             <div id="papers-container">
                                                 <!-- Papers will be dynamically inserted here -->
                                             </div>
@@ -656,67 +676,92 @@
             }
         });
     </script>
-        <script>
-            async function fetchPapers() {
-                const response = await fetch('./js/accepted-papers.csv');
-                const data = await response.text();
-                const papers = parseCSV(data);
-                displayPapers(papers);
-            }
-    
-            function parseCSV(csv) {
-                const lines = csv.split('\n');
-                return lines.slice(1).map(line => {
-                    const [id, authors, title] = line.split(';');
-                    return { id, authors, title };
-                });
-            }
-    
-            function displayPapers(papers) {
-                const container = document.getElementById('papers-container');
-                papers.forEach((paper, index) => {
-                    const paperElement = createPaperElement(paper, index);
-                    container.appendChild(paperElement);
-                });
-            }
-    
-            function createPaperElement(paper, index) {
-                const div = document.createElement('div');
-                div.className = 'row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1 mb-3';
-                div.innerHTML = `
-                 <div class="col">
-                    <div class="card bg-light-subtle border-dark-subtle">
+    <script>
+        async function fetchPapers() {
+            const response = await fetch('./js/accepted-papers.csv');
+            const data = await response.text();
+            const papers = parseCSV(data);
+            displayPapers(papers);
+        }
+     
+        function displayPapers(papers) {
+            const container = document.getElementById('papers-container');
+            papers.forEach((paper, index) => {
+                const paperElement = createPaperElement(paper, index);
+                container.appendChild(paperElement);
+            });
+            // Add stars to spotlight papers
+            addSpotlightStars([4, 20, 37, 60, 128]);
+        }
+     
+        function parseCSV(csv) {
+            const lines = csv.split('\n');
+            return lines.slice(1).map(line => {
+                const [id, authors, title, star] = line.split(';');
+                return { id, authors, title, star };
+            });
+        }
+        
+        function createPaperElement(paper, index) {
+            const div = document.createElement('div');
+            div.className = 'row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1 mb-2';
+            
+            div.innerHTML = `
+                <div class="col">
+                    <div class="card bg-light-subtle border-dark-subtle position-relative">
+                        <div class="paper-id" style="display: none;">${paper.id}</div>
                         <div class="card-body">
-                                                    <div class="glossy-overlay"></div>
-                            <h4 class="card-title">${paper.title}</h4>
-                        </br>
-                            <h5 class="card-subtitle">${paper.authors}</h5>
-                            <!-- <h6 class="mt-2">Paper ID: ${paper.id}</h6> -->
+                            <div class="glossy-overlay"></div>
+                            <h4 class="fs-4">${paper.title}</h4>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="fs-6 mb-0">${paper.authors}</h5>
+                                <div class="ms-2 position-relative" style="min-width: 24px;"><!-- Placeholder for star --></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                `;
-                return div;
-            }
-    
-            function toggleExpand(index) {
-                const card = document.querySelectorAll('.card-body')[index];
-                card.classList.toggle('expanded');
-                const button = card.nextElementSibling.querySelector('button');
-                button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
-                
-                // Trigger glossy animation
-                const glossyOverlay = card.querySelector('.glossy-overlay');
-                glossyOverlay.style.transition = 'none';
-                glossyOverlay.style.transform = 'translateY(100%) rotate(45deg)';
-                setTimeout(() => {
-                    glossyOverlay.style.transition = 'transform 0.5s ease-in-out';
-                    glossyOverlay.style.transform = 'translateY(-100%) rotate(45deg)';
-                }, 10);
-            }
-    
-            fetchPapers();
-        </script>
+            `;
+            return div;
+        }
+        
+        function addSpotlightStars(spotlightIds) {
+            const spotlightSet = new Set(spotlightIds.map(id => id.toString()));
+            
+            const papers = document.querySelectorAll('.card');
+            
+            papers.forEach(paper => {
+                const paperId = paper.querySelector('.paper-id').textContent;
+                if (spotlightSet.has(paperId)) {
+                    const starIcon = document.createElement('i');
+                    starIcon.className = 'bi bi-star star-icon position-absolute m-0';
+                    starIcon.style.color = '#ffd700';
+                    starIcon.style.fontSize = '1.2rem';
+                    
+                    // Find the placeholder div and insert the star
+                    const placeholder = paper.querySelector('.ms-2');
+                    placeholder.appendChild(starIcon);
+                }
+            });
+        }
+     
+        function toggleExpand(index) {
+            const card = document.querySelectorAll('.card-body')[index];
+            card.classList.toggle('expanded');
+            const button = card.nextElementSibling.querySelector('button');
+            button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
+            
+            // Trigger glossy animation
+            const glossyOverlay = card.querySelector('.glossy-overlay');
+            glossyOverlay.style.transition = 'none';
+            glossyOverlay.style.transform = 'translateY(100%) rotate(45deg)';
+            setTimeout(() => {
+                glossyOverlay.style.transition = 'transform 0.5s ease-in-out';
+                glossyOverlay.style.transform = 'translateY(-100%) rotate(45deg)';
+            }, 10);
+        }
+     
+        fetchPapers();
+     </script>
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
