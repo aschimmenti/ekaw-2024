@@ -202,23 +202,20 @@
         }
         
         .star-icon {
-            display: inline-block; /* This is important for the transform to work */
+            display: inline-block;
             transition: transform 0.3s ease;
         }
         
         /* For the papers list cards */
         .card:hover .star-icon {
             animation: spin-and-slow 2s ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         
         /* For the program entries */
         .spotlight-paper:hover .star-icon {
             animation: spin-and-slow 2s ease-out;
-        }
-        
-        /* Ensure animation plays each time */
-        .card:hover .star-icon,
-        .spotlight-paper:hover .star-icon {
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
@@ -790,8 +787,10 @@
                                             <h6 class="mb-1">11:45-12:00</h6>
                                             <h5 class="mb-1">Examining LGBTQ+-related Concepts in the Semantic Web: Link
                                                 Discovery, Concept Drift, Ambiguity, and Multilingual Information Reuse
-                                            </h5>
+                                                <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
                                             <small class="text-muted">Shuai Wang and Maria Adamidou</small>
+                                            <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
+
                                         </div>
                                         <hr class="colored-break">
 
@@ -834,12 +833,14 @@
                                             <h6 class="mb-1">12:45-13:00</h6>
                                             <h5 class="mb-1">UniQ-Gen: Unified Query Generation across Multiple
                                                 Knowledge
-                                                Graphs
+                                                Graphs <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
                                             </h5>
                                             <small class="text-muted">Daniel Vollmers, Nikit Srivastava, Diego
                                                 Moussallem,
                                                 Hamada Zahera and Axel-Cyrille Ngonga Ngomo</small>
-                                        </div>
+                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
+
+                                            </div>
                                     </div>
                                     <hr class="colored-break">
 
@@ -1032,8 +1033,9 @@
                                         <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">11:30 - 11:45</h6>
                                             <h5 class="mb-1">Contextualizing Entity Representations for Zero-Shot
-                                                Relation Extraction with Masked Language Models</h5>
+                                                Relation Extraction with Masked Language Models <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
                                             <small class="text-muted">Riley Capshaw and Eva Blomqvist</small>
+                                            <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
                                         </div>
                                         <hr class="colored-break">
 
@@ -1068,17 +1070,21 @@
                                         <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">14:00 - 14:15</h6>
                                             <h6 class="mb-1">Empower CamemBERT Legal Entity Extraction With LLM
-                                                Boostraping</h6>
+                                                Boostraping <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h6>
                                             <small class="text-muted">Julien Breton, Mokhtar Boumedyen Billami, Max
                                                 Chevalier and Cassia Trojahn</small>
+                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
+
                                         </div>
                                         <hr class="colored-break">
 
                                         <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">14:15 - 14:30</h6>
-                                            <h5 class="mb-1">Capturing the Viewpoint Dynamics in the News Domain</h5>
+                                            <h5 class="mb-1">Capturing the Viewpoint Dynamics in the News Domain <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
                                             <small class="text-muted">Enrico Motta, Francesco Osborne, Martino Pulici,
                                                 Angelo Salatino and Iman Naja</small>
+                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
+
                                         </div>
                                         <hr class="colored-break">
 
@@ -1316,30 +1322,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script>
-    function addProgramStars() {
-        const spotlightPapers = document.querySelectorAll('.spotlight-paper');
-        spotlightPapers.forEach(paper => {
-            const titleElement = paper.querySelector('.mb-1:nth-child(2)');
-            if (titleElement) {
-                const starIcon = document.createElement('i');
-                // Add bi-star-fill instead of bi-star for better visibility
-                starIcon.className = 'bi bi-star-fill star-icon';
-                starIcon.style.color = '#ffd700';
-                starIcon.style.fontSize = '1rem';
-                starIcon.style.marginLeft = '0.5rem';
-                starIcon.style.verticalAlign = 'middle';
-                
-                titleElement.appendChild(starIcon);
-            }
-        });
-    }
+        <script>
 
-    // Initialize both functions when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        addProgramStars();
-    });
-</script>
+    </script>
     </body>
 
 
