@@ -188,6 +188,41 @@
 
 
 <body>
+    <style>
+        @keyframes spin-and-slow {
+            0% {
+                transform: rotate(0deg);
+            }
+            70% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .star-icon {
+            display: inline-block; /* This is important for the transform to work */
+            transition: transform 0.3s ease;
+        }
+        
+        /* For the papers list cards */
+        .card:hover .star-icon {
+            animation: spin-and-slow 2s ease-out;
+        }
+        
+        /* For the program entries */
+        .spotlight-paper:hover .star-icon {
+            animation: spin-and-slow 2s ease-out;
+        }
+        
+        /* Ensure animation plays each time */
+        .card:hover .star-icon,
+        .spotlight-paper:hover .star-icon {
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    </style>
     <nav class="navbar navbar-expand-lg bg-light-subtle sticky-top border-dark-subtle border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -751,7 +786,7 @@
                                                 Troquard</small>
                                         </div>
                                         <hr class="colored-break">
-                                        <div class="mb-3">
+                                        <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">11:45-12:00</h6>
                                             <h5 class="mb-1">Examining LGBTQ+-related Concepts in the Semantic Web: Link
                                                 Discovery, Concept Drift, Ambiguity, and Multilingual Information Reuse
@@ -795,7 +830,7 @@
                                         </div>
                                         <hr class="colored-break">
 
-                                        <div class="mb-3">
+                                        <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">12:45-13:00</h6>
                                             <h5 class="mb-1">UniQ-Gen: Unified Query Generation across Multiple
                                                 Knowledge
@@ -994,7 +1029,7 @@
                                         </div>
                                         <hr class="colored-break">
 
-                                        <div class="mb-3">
+                                        <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">11:30 - 11:45</h6>
                                             <h5 class="mb-1">Contextualizing Entity Representations for Zero-Shot
                                                 Relation Extraction with Masked Language Models</h5>
@@ -1030,7 +1065,7 @@
                                                 style="min-width: 2vw; max-height: 4vh;">
                                             <h2 class="h4 mb-0">Session 5: Natural Language Processing</h2>
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">14:00 - 14:15</h6>
                                             <h6 class="mb-1">Empower CamemBERT Legal Entity Extraction With LLM
                                                 Boostraping</h6>
@@ -1039,7 +1074,7 @@
                                         </div>
                                         <hr class="colored-break">
 
-                                        <div class="mb-3">
+                                        <div class="mb-3 spotlight-paper">
                                             <h6 class="mb-1">14:15 - 14:30</h6>
                                             <h5 class="mb-1">Capturing the Viewpoint Dynamics in the News Domain</h5>
                                             <small class="text-muted">Enrico Motta, Francesco Osborne, Martino Pulici,
@@ -1281,7 +1316,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-</body>
+<script>
+    function addProgramStars() {
+        const spotlightPapers = document.querySelectorAll('.spotlight-paper');
+        spotlightPapers.forEach(paper => {
+            const titleElement = paper.querySelector('.mb-1:nth-child(2)');
+            if (titleElement) {
+                const starIcon = document.createElement('i');
+                // Add bi-star-fill instead of bi-star for better visibility
+                starIcon.className = 'bi bi-star-fill star-icon';
+                starIcon.style.color = '#ffd700';
+                starIcon.style.fontSize = '1rem';
+                starIcon.style.marginLeft = '0.5rem';
+                starIcon.style.verticalAlign = 'middle';
+                
+                titleElement.appendChild(starIcon);
+            }
+        });
+    }
+
+    // Initialize both functions when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        addProgramStars();
+    });
+</script>
+    </body>
 
 
 
