@@ -220,6 +220,69 @@
             animation-fill-mode: forwards;
         }
     </style>
+    <style>
+        .schedule-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .schedule-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .thumbnail-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            width: 200px;  /* Smaller fixed width */
+            cursor: pointer;
+        }
+        
+        .zoom-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .thumbnail-wrapper:hover .zoom-overlay {
+            opacity: 1;
+        }
+        
+        .zoom-icon {
+            color: white;
+            font-size: 1.5rem;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+        
+        .thumbnail-wrapper:hover .zoom-icon {
+            transform: scale(1);
+        }
+        
+        .room-badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin: 0 2px;
+        }
+        
+        .modal-content {
+            border-radius: 15px;
+        }
+        
+        .modal-header {
+            border-bottom: 2px solid #f0f0f0;
+        }
+    </style>
     <nav class="navbar navbar-expand-lg bg-light-subtle sticky-top border-dark-subtle border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -288,13 +351,12 @@
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>Workshops and Tutorials</a></li>
-                            <li><a class="dropdown-item disabled" href="cfpd.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <li><a class="dropdown-item" href="accepted-posters-demos.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
-                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                                    </svg>Posters
-                                    and Demos</a></li>
+                                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                      </svg>Accepted Posters
+                                      and Demos</a></li>
                             <li><a class="dropdown-item" href="keynotes.html"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
                                         viewBox="0 0 16 16">
@@ -427,10 +489,68 @@
                                     aria-labelledby="day0-tab">
                                     <div class="container-fluid">
                                         <div class="card">
-                                            <div class="card-header">
-                                                <h2 class="h4 mb-0">Workshops and Tutorials Schedule</h2>
-                                                <p> <i class="bi bi-info-circle-fill"></i> Workshops and Tutorials will be held in four rooms: <span class="font-monospace text-danger">Eulerzaal 1</span>, <span class="font-monospace text-success">Eulerzaal 2</span>, <span class="font-monospace text-warning">L016</span> and <span class="font-monospace text-primary">L017</span>.</p>
-                                                <small class="text-muted">November 26, 2024</small>
+                                            <div class="card schedule-card p-4 bg-light">
+                                                <div class="card-header border-0 bg-transparent">
+                                                    <h2 class="h4 mb-4 fw-bold">
+                                                        <i class="bi bi-calendar-event me-2"></i>
+                                                        Workshops and Tutorials Schedule
+                                                    </h2>
+                                                    <p>Click on the image to zoom in.</p>
+
+                                                    
+                                                    <div class="thumbnail-wrapper mb-2 mx-auto">
+                                                        <img src="images/wt-imgs/thumbnail_floorplan.jpg"
+                                                             class="img-fluid shadow-sm" 
+                                                             data-bs-toggle="modal" 
+                                                             data-bs-target="#floorplanModal"
+                                                             alt="Floor Plan">
+                                                        <div class="zoom-overlay" data-bs-toggle="modal" data-bs-target="#floorplanModal">
+                                                            <i class="bi bi-zoom-in zoom-icon"></i>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                    <div class="info-section p-3 bg-white rounded-3 shadow-sm">
+                                                        <p class="mb-3">
+                                                            <i class="bi bi-info-circle-fill text-primary me-2"></i>
+                                                            Workshops and Tutorials will be held in four rooms:
+                                                        </p>
+                                                        <div class="d-flex flex-wrap gap-2">
+                                                            <span class="room-badge bg-danger bg-opacity-10 text-danger">
+                                                                <i class="bi bi-door-open me-1"></i>Eulerzaal 1
+                                                            </span>
+                                                            <span class="room-badge bg-success bg-opacity-10 text-success">
+                                                                <i class="bi bi-door-open me-1"></i>Eulerzaal 2
+                                                            </span>
+                                                            <span class="room-badge bg-warning bg-opacity-10 text-warning">
+                                                                <i class="bi bi-door-open me-1"></i>L016
+                                                            </span>
+                                                            <span class="room-badge bg-primary bg-opacity-10 text-primary">
+                                                                <i class="bi bi-door-open me-1"></i>L017
+                                                            </span>
+                                                        </div>
+                                                    </div>
+  
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Enhanced Modal -->
+                                            <div class="modal fade" id="floorplanModal" tabindex="-1" aria-labelledby="floorplanModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header align-items-center">
+                                                            <h5 class="modal-title" id="floorplanModalLabel">
+                                                                <i class="bi bi-map me-2"></i>Floor Plan
+                                                            </h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body p-0">
+                                                            <img src="images/wt-imgs/thumbnail_floorplan.jpg"
+                                                            class="img-fluid w-100" 
+                                                                 alt="Floor Plan">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="card-body">
                                                 <div class="table-responsive">
@@ -1280,6 +1400,13 @@
                               </a>
                               <figcaption>Golden Sponsor</figcaption>
                             </figure>
+                            <hr>
+                            <figure class="sponsor-figure silver">
+                                <a href="http://iisg.amsterdam/kg" target="_blank">
+                                  <img src="images/sponsors/iish_logo.png" alt="IISH Logo" class="responsive-image">
+                                </a>
+                                <figcaption>Silver Sponsor</figcaption>
+                              </figure>
                           </div>
                     </div>
                     <hr class="colored-break">

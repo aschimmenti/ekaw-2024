@@ -35,7 +35,7 @@
     <link href="./styles/styles.css" rel="stylesheet">
     <script charset="utf-8"
         src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
-    <title>EKAW 2024 - Accepted Papers</title>
+    <title>EKAW 2024 - Accepted Posters and Demos</title>
     <meta name="description"
         content="Join EKAW 2024, the leading conference on Knowledge Engineering and Knowledge Management, in Amsterdam from November 26-28. Explore cutting-edge research and industry applications in Semantic Web, Knowledge Discovery, and more.">
     <meta name="keywords"
@@ -319,7 +319,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item " href="accepted-papers.html" aria-current="page"><svg
+                            <li><a class="dropdown-item " href="accepted-papers.html"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
@@ -331,9 +331,9 @@
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>Workshops and Tutorials</a></li>
-                            <li><a class="dropdown-item" href="accepted-posters-demos.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <li><a class="dropdown-item disabled" href="accepted-posters-demos.html"
+                                    aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>Accepted Posters
@@ -451,31 +451,20 @@
                     <div class="m-1 p-1 bg-transparent text-justify"
                         style="background-image: url('images/background.jpg'); background-repeat: repeat;">
                         <div class="container bg-light-subtle p-4 border rounded">
-                            <section class="">
+                            <section>
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                                        <h2 id="accepted-papers">Accepted Papers</h2>
+                                        <h2>Accepted Posters and Demos</h2>
                                     </div>
                                     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
                                         <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1">
-                                            <p>The following is a list of accepted papers. Spotlight papers are marked
-                                                with a star.</p>
-                                            <div id="papers-container">
-                                                <!-- Papers will be dynamically inserted here -->
-                                            </div>
-
-
-
-
-
-
-
+                                            The following is a list of accepted posters and demos. Best Posters and Demos award
+                                            candidates are marked with a star.
+                                            <div id="posters-demos-container"></div>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-
-                            <hr class="colored-break">
                         </div>
                     </div>
                 </main>
@@ -574,7 +563,6 @@
                                 </a>
                                 <figcaption>Silver Sponsor</figcaption>
                               </figure>
-                              
                         </div>
                     </div>
                     <hr class="colored-break">
@@ -658,40 +646,6 @@
                 topButton.addEventListener('click', topFunction);
             }
 
-            // Function to update the timeline status
-            function updateTimelineStatus() {
-                const timelineItems = document.querySelectorAll('.timeline-item');
-                const currentDate = new Date(); // Use the actual current date
-
-                let firstPendingFound = false;
-
-                timelineItems.forEach(item => {
-                    const timeElement = item.querySelector('time');
-                    const deadlineDate = new Date(timeElement.getAttribute('datetime'));
-                    const card = item.querySelector('.timeline-card');
-
-                    if (currentDate < deadlineDate) {
-                        if (!firstPendingFound) {
-                            // The first pending date
-                            card.classList.add('pulsating-border-pending');
-                            card.setAttribute('aria-label', 'Pending: ' + timeElement.textContent);
-                            firstPendingFound = true;
-                        } else {
-                            // Upcoming dates after the first pending
-                            card.classList.add('pulsating-border-upcoming');
-                            card.setAttribute('aria-label', 'Upcoming: ' + timeElement.textContent);
-                        }
-                    } else {
-                        // Dates that have passed
-                        card.classList.add('opaque');
-                        card.setAttribute('aria-label', 'Passed: ' + timeElement.textContent);
-                    }
-                });
-            }
-
-            // Call updateTimelineStatus on DOMContentLoaded
-            updateTimelineStatus();
-
             // Set navbar height as a CSS variable
             const navbar = document.querySelector('.navbar');
             if (navbar) {
@@ -701,92 +655,143 @@
         });
     </script>
     <script>
-        async function fetchPapers() {
-            const response = await fetch('./js/accepted-papers.csv');
-            const data = await response.text();
-            const papers = parseCSV(data);
-            displayPapers(papers);
-        }
-
-        function displayPapers(papers) {
-            const container = document.getElementById('papers-container');
-            papers.forEach((paper, index) => {
-                const paperElement = createPaperElement(paper, index);
-                container.appendChild(paperElement);
+    async function fetchSubmissions() {
+        const response = await fetch('./js/accepted-pnds.csv');
+        const data = await response.text();
+        const submissions = parseCSV(data);
+        displaySubmissions(submissions);
+    }
+    
+    function parseCSV(csv) {
+        const lines = csv.split('\n');
+        return lines.slice(1).map(line => {
+            // Handle quoted strings containing commas
+            const values = [];
+            let currentValue = '';
+            let withinQuotes = false;
+            
+            for (let char of line) {
+                if (char === '"') {
+                    withinQuotes = !withinQuotes;
+                } else if (char === ',' && !withinQuotes) {
+                    values.push(currentValue.trim());
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+            values.push(currentValue.trim());  // Add the last value
+            
+            const [authors, title, type, points] = values;
+            return { 
+                authors: authors.replace(/^"|"$/g, ''),  // Remove surrounding quotes
+                title: title.replace(/^"|"$/g, ''),      // Remove surrounding quotes
+                type, 
+                points: parseFloat(points) 
+            };
+        });
+    }
+    
+    function displaySubmissions(submissions) {
+        const container = document.getElementById('posters-demos-container');
+        
+        // Empty the container first to ensure order
+        container.innerHTML = '';
+        
+        // First section - Posters
+        const posterSubmissions = submissions
+            .filter(sub => sub.type === 'Poster')
+            .sort((a, b) => b.points - a.points);
+    
+        if (posterSubmissions.length > 0) {
+            const postersHeader = document.createElement('h3');
+            postersHeader.textContent = 'Posters';
+            postersHeader.className = 'mt-4';
+            container.appendChild(postersHeader);
+            
+            posterSubmissions.forEach((submission, index) => {
+                const submissionElement = createSubmissionElement(submission, index);
+                container.appendChild(submissionElement);
             });
-            // Add stars to spotlight papers
-            addSpotlightStars([4, 20, 37, 60, 128]);
         }
-
-        function parseCSV(csv) {
-            const lines = csv.split('\n');
-            return lines.slice(1).map(line => {
-                const [id, authors, title, star] = line.split(';');
-                return { id, authors, title, star };
+    
+        // Second section - Demos
+        const demoSubmissions = submissions
+            .filter(sub => sub.type === 'Demo')
+            .sort((a, b) => b.points - a.points);
+    
+        if (demoSubmissions.length > 0) {
+            const demosHeader = document.createElement('h3');
+            demosHeader.textContent = 'Demos';
+            demosHeader.className = 'mt-4';
+            container.appendChild(demosHeader);
+            
+            demoSubmissions.forEach((submission, index) => {
+                const submissionElement = createSubmissionElement(submission, index);
+                container.appendChild(submissionElement);
             });
         }
-
-        function createPaperElement(paper, index) {
-            const div = document.createElement('div');
-            div.className = 'row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1 mb-2';
-
-            div.innerHTML = `
-                <div class="col">
-                    <div class="card bg-light-subtle border-dark-subtle position-relative">
-                        <div class="paper-id" style="display: none;">${paper.id}</div>
-                        <div class="card-body">
-                            <div class="glossy-overlay"></div>
-                            <h4 class="fs-4">${paper.title}</h4>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="fs-6 mb-0">${paper.authors}</h5>
-                                <div class="ms-2 position-relative" style="min-width: 24px;"><!-- Placeholder for star --></div>
-                            </div>
+    
+        // Add stars to high-scoring submissions
+        addStars();
+    }
+    
+    function createSubmissionElement(submission, index) {
+        const div = document.createElement('div');
+        div.className = 'row row-cols-1 row-cols-md-1 row-cols-lg-1 g-1 mb-2';
+        
+        div.innerHTML = `
+            <div class="col">
+                <div class="card bg-light-subtle border-dark-subtle position-relative">
+                    <div class="submission-points" style="display: none;">${submission.points}</div>
+                    <div class="card-body">
+                        <div class="glossy-overlay"></div>
+                        <h4 class="fs-4">${submission.title}</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="fs-6 mb-0">${submission.authors}</h5>
+                            <div class="ms-2 position-relative" style="min-width: 24px;"><!-- Placeholder for star --></div>
                         </div>
                     </div>
                 </div>
-            `;
-            return div;
-        }
-
-        function addSpotlightStars(spotlightIds) {
-            const spotlightSet = new Set(spotlightIds.map(id => id.toString()));
-
-            const papers = document.querySelectorAll('.card');
-
-            papers.forEach(paper => {
-                const paperId = paper.querySelector('.paper-id').textContent;
-                if (spotlightSet.has(paperId)) {
-                    const starIcon = document.createElement('i');
-                    starIcon.className = 'bi bi-star-fill star-icon position-absolute m-0';
-                    starIcon.style.color = '#ffd700';
-                    starIcon.style.fontSize = '1.2rem';
-
-                    // Find the placeholder div and insert the star
-                    const placeholder = paper.querySelector('.ms-2');
-                    placeholder.appendChild(starIcon);
-                }
-            });
-        }
-
-        function toggleExpand(index) {
-            const card = document.querySelectorAll('.card-body')[index];
-            card.classList.toggle('expanded');
-            const button = card.nextElementSibling.querySelector('button');
-            button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
-
-            // Trigger glossy animation
-            const glossyOverlay = card.querySelector('.glossy-overlay');
-            glossyOverlay.style.transition = 'none';
-            glossyOverlay.style.transform = 'translateY(100%) rotate(45deg)';
-            setTimeout(() => {
-                glossyOverlay.style.transition = 'transform 0.5s ease-in-out';
-                glossyOverlay.style.transform = 'translateY(-100%) rotate(45deg)';
-            }, 10);
-        }
-
-        fetchPapers();
-    </script>
-    </script>
+            </div>
+        `;
+        return div;
+    }
+    
+    function addStars() {
+        const submissions = document.querySelectorAll('.card');
+        
+        submissions.forEach(submission => {
+            const points = parseFloat(submission.querySelector('.submission-points').textContent);
+            if (points >= 4.7) {
+                const starIcon = document.createElement('i');
+                starIcon.className = 'bi bi-star-fill star-icon position-absolute m-0';
+                starIcon.style.color = '#ffd700';
+                starIcon.style.fontSize = '1.2rem';
+                
+                const placeholder = submission.querySelector('.ms-2');
+                placeholder.appendChild(starIcon);
+            }
+        });
+    }
+    
+    function toggleExpand(index) {
+        const card = document.querySelectorAll('.card-body')[index];
+        card.classList.toggle('expanded');
+        const button = card.nextElementSibling.querySelector('button');
+        button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        
+        const glossyOverlay = card.querySelector('.glossy-overlay');
+        glossyOverlay.style.transition = 'none';
+        glossyOverlay.style.transform = 'translateY(100%) rotate(45deg)';
+        setTimeout(() => {
+            glossyOverlay.style.transition = 'transform 0.5s ease-in-out';
+            glossyOverlay.style.transform = 'translateY(-100%) rotate(45deg)';
+        }, 10);
+    }
+    
+    fetchSubmissions();
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

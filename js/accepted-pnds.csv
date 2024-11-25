@@ -1,0 +1,28 @@
+authors,title,type,points
+"Piotr Sowiński and Maria Ganzha",Realizing a Collaborative RDF Benchmark Suite in Practice,Demo,4.7
+"Ibai Guillen-Pacho, Ana Iglesias-Molina, Carlos Badenes-Olmedo and Oscar Corcho",PODIO: A Political Discourse Ontology,Demo,4.7
+"Paul Eyzaguirre Barreda and Carlos Badenes Olmedo",QuerIA: Contextual Learning-Driven Questionnaire Generation and Assessment based on Large Language Models,Demo,4.7
+"Riley Capshaw and Eva Blomqvist",LINTEXT: A Visual Tool for Exploring and Modeling Knowledge in Text Documents,Demo,4.7
+"Andrei Nesterov, Laura Hollink and Jacco van Ossenbruggen",Alter Heritage: a Web App to Gather Expert Knowledge on Inclusive Cultural Heritage Metadata,Demo,4.7
+"Stephan Maree, Richard Taylor and C. Maria Keet",TRENDy: a tool for temporal modelling and database generation,Demo,4.3
+"Virginia Ramón-Ferrer, Álvaro Fontecha, Carlos Badenes-Olmedo and Oscar Corcho",EU Contract Hub: Towards a more accessible public procurement,Demo,4.0
+"David M. Schmidt, Mohammad Fazleh Elahi and Philipp Cimiano",Lexicalization Is All You Need: Examining the Impact of Lexical Knowledge in a Compositional QALD System,Demo,4.0
+"Nele Garay, Mahsa Vafaie and Harald Sack",Named Entity Recognition for digitised archival documents in German,Poster,4.0
+"Vojtěch Svátek, Ondřej Zamazal, Kateřina Haniková, David Chudán, Mohammad Javad Saeedizade and Eva Blomqvist","Welcome, newborn entity! On handling newly generated entities in ontology transformation",Poster,4.0
+Patrik Kompuš,RDF2JSON-OM: Dynamic ontology serialization using ontology mapping paths,Poster,4.0
+"Charvi Jain, Sahar Vahdati, Nandu Gopan, Ivo F. Sbalzarini and Jens Lehmann",Evaluating Large Language Model Literature Reviews in Interdisciplinary Science: A Systems Biology Perspective,Poster,4.0
+"Zekeri Adams, Martin Homola, Ján Kl'Uka and Vojtech Svatek",Leveraging Meta-Modelling Language for Ontology Structuring and Validation.,Poster,4.0
+"Inès Blin, Ilaria Tiddi, Giuliana Spadaro and Annette Ten Teije",Living Meta-Review Generation for Social Scientists: An Interface and A Case Study on Human Cooperation,Demo,3.7
+"Elham Motamedi, Inna Novalija and Luis Rei",Taxonomy for Patent Classification: A Step Towards Intelligent Patent Analytics,Poster,3.7
+"Vojtěch Svátek, Kateřina Haniková and Ondřej Zamazal",OWL Data Properties Ontologically,Poster,3.7
+"Desiree Heim, Christian Jilek, Adrian Ulges and Andreas Dengel",Towards Synthesizing E-Mail Conversations as Part of Knowledge Work Datasets with Large Language Models,Poster,3.7
+"Upal Bhattacharya, Maaike de Boer and Sergey Sosnovsky",Automatic Ontology Term Typing by LLMs: the impact of prompt and ontology variation,Poster,3.7
+"Ondřej Zamazal, Martin Ledvinka and Vojtěch Svátek",PatOMat2: A Tool for Pattern-Based Ontology Transformation using SPARQL,Demo,3.7
+"Vishvapalsinhji Parmar, Achraf Hadder and Alsayed Algergawy",On the Role of Preprocessing on Matching Tables to Knowledge Graphs,Poster,3.7
+"Ameneh Naghdipour, Benno Kruit, Jieying Chen, Peter Kruizinga, Godfried Webers and Stefan Schlobach",Intelligent Fault Diagnosis of Cyber Physical Systems using Knowledge Graphs,Poster,3.3
+"Kim Schmidt, Kai Sven Radtke and Marco Selig",An ontology classifying residues from the bioeconomy,Poster,3.3
+"Sergejs Rikacovs and Kārlis Čerāns",Visual Data and Schema Queries over Knowledge Graphs,Demo,3.3
+"Ángel García-Menéndez, José Emilio Labra-Gayo and Daniel Gayo-Avello",Unlocking historical knowledge: a semantic web approach to medieval notarial document analysis,Poster,3.0
+"Gustavo Flores Miguel, Youssra Rebboud, Pasquale Lisena and Raphael Troncy",Streamlining Event Relation Extraction: A Pipeline Leveraging Pretrained and Large Language Models for Inference,Poster,2.7
+"Frédéric Godest, Mouna El Alaoui, Victor Richet and Malhomme Olivier",Enhanced LLM with ontologies for smart Knowledge Management in nuclear industry.,Poster,2.7
+"Mohammed Rasheed and Marina Aguado",LLM based chatbot to find Railway Topology and Rail Vehicle Information in Europe,Poster,2.7
