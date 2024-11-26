@@ -2,6 +2,10 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
+    <!-- In your server configuration or meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" href="https://event.cwi.nl/ekaw2024/images/favicon/favicon.ico">
@@ -27,7 +31,7 @@
     <link rel="manifest" href="/images/favicon/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
@@ -37,6 +41,7 @@
     <script charset="utf-8"
         src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=16509876347"></script>
     <title>EKAW 2024 - Program</title>
+
     <meta name="description"
         content="Join EKAW 2024, the leading conference on Knowledge Engineering and Knowledge Management, in Amsterdam from November 26-28. Explore cutting-edge research and industry applications in Semantic Web, Knowledge Discovery, and more.">
     <meta name="keywords"
@@ -193,26 +198,28 @@
             0% {
                 transform: rotate(0deg);
             }
+
             70% {
                 transform: rotate(360deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
         }
-        
+
         .star-icon {
             display: inline-block;
             transition: transform 0.3s ease;
         }
-        
+
         /* For the papers list cards */
         .card:hover .star-icon {
             animation: spin-and-slow 2s ease-out;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-        
+
         /* For the program entries */
         .spotlight-paper:hover .star-icon {
             animation: spin-and-slow 2s ease-out;
@@ -225,20 +232,23 @@
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            margin-left: 0;
+            margin-right: 0;
         }
-        
+
         .schedule-card:hover {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        
+
         .thumbnail-wrapper {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
-            width: 200px;  /* Smaller fixed width */
+            width: 200px;
+            /* Smaller fixed width */
             cursor: pointer;
         }
-        
+
         .zoom-overlay {
             position: absolute;
             top: 0;
@@ -252,33 +262,33 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
+
         .thumbnail-wrapper:hover .zoom-overlay {
             opacity: 1;
         }
-        
+
         .zoom-icon {
             color: white;
             font-size: 1.5rem;
             transform: scale(0.8);
             transition: transform 0.3s ease;
         }
-        
+
         .thumbnail-wrapper:hover .zoom-icon {
             transform: scale(1);
         }
-        
+
         .room-badge {
             padding: 4px 8px;
             border-radius: 6px;
             font-size: 0.9rem;
             margin: 0 2px;
         }
-        
+
         .modal-content {
             border-radius: 15px;
         }
-        
+
         .modal-header {
             border-bottom: 2px solid #f0f0f0;
         }
@@ -297,6 +307,12 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">EKAW-24</a>
                     </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="https://link.springer.com/book/9783031777912" target="_blank"
+                            title="EKAW 2024 Proceedings">Proceedings</a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -351,12 +367,13 @@
                                         <path fill-rule="evenodd"
                                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                                     </svg>Workshops and Tutorials</a></li>
-                                    <li><a class="dropdown-item" href="accepted-posters-demos.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <li><a class="dropdown-item" href="accepted-posters-demos.html"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd"
-                                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                                      </svg>Accepted Posters
-                                      and Demos</a></li>
+                                            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                                    </svg>Accepted Posters
+                                    and Demos</a></li>
                             <li><a class="dropdown-item" href="keynotes.html"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="24" height="24" fill="currentColor" class="bi bi-arrow-right-short"
                                         viewBox="0 0 16 16">
@@ -467,853 +484,940 @@
         <div class="row gx-1">
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
                 <main>
-                    <div class="container bg-light-subtle mt-2 p-4 border rounded">
-                        <div class="m-1 p-1 bg-transparent text-justify"
-                            style="background-image: url('images/background.jpg'); background-repeat: repeat;">
-                            <ul class="nav nav-underline mb-4" id="scheduleTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="day0-tab" data-bs-toggle="tab" href="#day0" role="tab"
-                                        aria-controls="day0" aria-selected="false">26th November</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="day1-tab" data-bs-toggle="tab" href="#day1"
-                                        role="tab" aria-controls="day1" aria-selected="true">27th November</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="day2-tab" data-bs-toggle="tab" href="#day2" role="tab"
-                                        aria-controls="day2" aria-selected="false">28th November</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="scheduleTabContent">
-                                <div class="tab-pane fade" id="day0" role="tabpanel"
-                                    aria-labelledby="day0-tab">
-                                    <div class="container-fluid">
-                                        <div class="card">
-                                            <div class="card schedule-card p-4 bg-light">
-                                                <div class="card-header border-0 bg-transparent">
-                                                    <h2 class="h4 mb-4 fw-bold">
-                                                        <i class="bi bi-calendar-event me-2"></i>
-                                                        Workshops and Tutorials Schedule
-                                                    </h2>
-                                                    <p>Click on the image to zoom in.</p>
+                    <div class="p-2 text-justify">
+                        <ul class="nav nav-underline mb-4" id="scheduleTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="day0-tab" data-bs-toggle="tab" href="#day0" role="tab"
+                                    aria-controls="day0" aria-selected="false">26th November</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="day1-tab" data-bs-toggle="tab" href="#day1" role="tab"
+                                    aria-controls="day1" aria-selected="true">27th November</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="day2-tab" data-bs-toggle="tab" href="#day2" role="tab"
+                                    aria-controls="day2" aria-selected="false">28th November</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="scheduleTabContent">
+                            <div class="tab-pane fade" id="day0" role="tabpanel" aria-labelledby="day0-tab">
+                                <div class="container-fluid">
+                                    <div class="card">
+                                        <div class="card schedule-card bg-light m-0 p-0">
+                                            <div class="card-header border-0 bg-transparent">
+                                                <h2 class="h4 mb-4 fw-bold">
+                                                    <i class="bi bi-calendar-event me-2"></i>
+                                                    Workshops and Tutorials Schedule
+                                                </h2>
+                                                <p>Click on the image to zoom in.</p>
 
-                                                    
-                                                    <div class="thumbnail-wrapper mb-2 mx-auto">
+
+                                                <div class="thumbnail-wrapper mb-2 mx-auto">
+                                                    <img src="images/wt-imgs/thumbnail_floorplan.jpg"
+                                                        class="img-fluid shadow-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#floorplanModal" alt="Floor Plan">
+                                                    <div class="zoom-overlay" data-bs-toggle="modal"
+                                                        data-bs-target="#floorplanModal">
+                                                        <i class="bi bi-zoom-in zoom-icon"></i>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="info-section p-3 bg-white rounded-3 shadow-sm">
+                                                    <p class="mb-3">
+                                                        <i class="bi bi-info-circle-fill text-primary me-2"></i>
+                                                        Workshops and Tutorials will be held in four rooms:
+                                                    </p>
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        <span class="room-badge bg-danger bg-opacity-10 text-danger">
+                                                            <i class="bi bi-door-open me-1"></i>Eulerzaal 1
+                                                        </span>
+                                                        <span class="room-badge bg-success bg-opacity-10 text-success">
+                                                            <i class="bi bi-door-open me-1"></i>Eulerzaal 2
+                                                        </span>
+                                                        <span class="room-badge bg-warning bg-opacity-10 text-warning">
+                                                            <i class="bi bi-door-open me-1"></i>L016
+                                                        </span>
+                                                        <span class="room-badge bg-primary bg-opacity-10 text-primary">
+                                                            <i class="bi bi-door-open me-1"></i>L017
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Enhanced Modal -->
+                                        <div class="modal fade" id="floorplanModal" tabindex="-1"
+                                            aria-labelledby="floorplanModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header align-items-center">
+                                                        <h5 class="modal-title" id="floorplanModalLabel">
+                                                            <i class="bi bi-map me-2"></i>Floor Plan
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body p-0">
                                                         <img src="images/wt-imgs/thumbnail_floorplan.jpg"
-                                                             class="img-fluid shadow-sm" 
-                                                             data-bs-toggle="modal" 
-                                                             data-bs-target="#floorplanModal"
-                                                             alt="Floor Plan">
-                                                        <div class="zoom-overlay" data-bs-toggle="modal" data-bs-target="#floorplanModal">
-                                                            <i class="bi bi-zoom-in zoom-icon"></i>
-                                                        </div>
+                                                            class="img-fluid w-100" alt="Floor Plan">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <style>
+                                                    .session-break {
+                                                        background-color: #f8f9fa;
+                                                        border-radius: 0.375rem;
+                                                        padding: 0.5rem;
+                                                    }
 
-                                                    </div>
-                                                    
-                                                    <div class="info-section p-3 bg-white rounded-3 shadow-sm">
-                                                        <p class="mb-3">
-                                                            <i class="bi bi-info-circle-fill text-primary me-2"></i>
-                                                            Workshops and Tutorials will be held in four rooms:
-                                                        </p>
-                                                        <div class="d-flex flex-wrap gap-2">
-                                                            <span class="room-badge bg-danger bg-opacity-10 text-danger">
-                                                                <i class="bi bi-door-open me-1"></i>Eulerzaal 1
-                                                            </span>
-                                                            <span class="room-badge bg-success bg-opacity-10 text-success">
-                                                                <i class="bi bi-door-open me-1"></i>Eulerzaal 2
-                                                            </span>
-                                                            <span class="room-badge bg-warning bg-opacity-10 text-warning">
-                                                                <i class="bi bi-door-open me-1"></i>L016
-                                                            </span>
-                                                            <span class="room-badge bg-primary bg-opacity-10 text-primary">
-                                                                <i class="bi bi-door-open me-1"></i>L017
-                                                            </span>
-                                                        </div>
-                                                    </div>
-  
-                                                </div>
-                                            </div>
-                                        
-                                            <!-- Enhanced Modal -->
-                                            <div class="modal fade" id="floorplanModal" tabindex="-1" aria-labelledby="floorplanModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-lg modal-dialog-centered">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header align-items-center">
-                                                            <h5 class="modal-title" id="floorplanModalLabel">
-                                                                <i class="bi bi-map me-2"></i>Floor Plan
-                                                            </h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body p-0">
-                                                            <img src="images/wt-imgs/thumbnail_floorplan.jpg"
-                                                            class="img-fluid w-100" 
-                                                                 alt="Floor Plan">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="table-responsive">
-                                                    <style>
-                                                        .session-break {
-                                                            background-color: #f8f9fa;
-                                                            border-radius: 0.375rem;
-                                                            padding: 0.5rem;
-                                                        }
-                                                        .time-column {
-                                                            width: 100px;
-                                                            font-weight: 500;
-                                                        }
-                                                        .session-type {
-                                                            display: inline-block;
-                                                            padding: 0.25rem 0.5rem;
-                                                            font-size: 0.75rem;
-                                                            background-color: white;
-                                                            border-radius: 0.25rem;
-                                                            margin-top: 0.5rem;
-                                                        }
-                                                        .room-text {
-                                                            font-size: 0.875rem;
-                                                            color: #6c757d;
-                                                        }
-                                                        /* Room-specific background classes */
-                                                        .bg-euler-1 {
-                                                            background-color: #f8d7da;
-                                                            border-radius: 0.375rem;
-                                                            padding: 0.5rem;
-                                                            height: 100%;
-                                                        }
-                                                        .bg-euler-2 {
-                                                            background-color:  #dff0d8;
-                                                            border-radius: 0.375rem;
-                                                            padding: 0.5rem;
-                                                            height: 100%;
-                                                        }
-                                                        .bg-l016 {
-                                                            background-color: #fff7db;
-                                                            border-radius: 0.375rem;
-                                                            padding: 0.5rem;
-                                                            height: 100%;
-                                                        }
-                                                        .bg-l017 {
-                                                            background-color: #e6f3ff;
-                                                            border-radius: 0.375rem;
-                                                            padding: 0.5rem;
-                                                            height: 100%;
-                                                        }
-                                                    </style>
-                                                    <table class="table table-bordered">
-                                                        <thead>
-                                                            <tr>
-                                                                <th class="time-column">Time</th>
-                                                                <th colspan="4">Concurrent Sessions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="time-column">8:30-9:00</td>
-                                                                <td colspan="4">
-                                                                    <div class="bg-primary-subtle session-break">
-                                                                        <div class="fw-medium">Registration + Coffee</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                    .time-column {
+                                                        width: 100px;
+                                                        font-weight: 500;
+                                                    }
+
+                                                    .session-type {
+                                                        display: inline-block;
+                                                        padding: 0.25rem 0.5rem;
+                                                        font-size: 0.75rem;
+                                                        background-color: white;
+                                                        border-radius: 0.25rem;
+                                                        margin-top: 0.5rem;
+                                                    }
+
+                                                    .room-text {
+                                                        font-size: 0.875rem;
+                                                        color: #6c757d;
+                                                    }
+
+                                                    /* Room-specific background classes */
+                                                    .bg-euler-1 {
+                                                        background-color: #f8d7da;
+                                                        border-radius: 0.375rem;
+                                                        padding: 0.5rem;
+                                                        height: 100%;
+                                                    }
+
+                                                    .bg-euler-2 {
+                                                        background-color: #dff0d8;
+                                                        border-radius: 0.375rem;
+                                                        padding: 0.5rem;
+                                                        height: 100%;
+                                                    }
+
+                                                    .bg-l016 {
+                                                        background-color: #fff7db;
+                                                        border-radius: 0.375rem;
+                                                        padding: 0.5rem;
+                                                        height: 100%;
+                                                    }
+
+                                                    .bg-l017 {
+                                                        background-color: #e6f3ff;
+                                                        border-radius: 0.375rem;
+                                                        padding: 0.5rem;
+                                                        height: 100%;
+                                                    }
+                                                </style>
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="time-column">Time</th>
+                                                            <th colspan="4">Concurrent Sessions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="time-column">8:30-9:00</td>
+                                                            <td colspan="4">
+                                                                <div class="bg-primary-subtle session-break">
+                                                                    <div class="fw-medium">Registration + Coffee</div>
+                                                                    <div class="room-text">All Rooms</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">9:00-10:30</td>
+                                                            <td>
+                                                                <div class="bg-euler-1">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://kmitd.github.io/muhai-tutorial/">MUHAI</a>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">9:00-10:30</td>
-                                                                <td>
-                                                                    <div class="bg-euler-1">
-                                                                        <div class="fw-medium"><a href="https://kmitd.github.io/muhai-tutorial/">MUHAI</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-danger">Eulerzaal 1</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-danger">Eulerzaal
+                                                                            1</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-euler-2">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://ekaw2024.asimov.so/">KNOW</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-euler-2">
-                                                                        <div class="fw-medium"><a href="https://ekaw2024.asimov.so/">KNOW</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-success">Eulerzaal 2</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-success">Eulerzaal
+                                                                            2</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l016">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://www.xtail-workshop.org/">X-TAIL</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l016">
-                                                                        <div class="fw-medium"><a href="https://www.xtail-workshop.org/">X-TAIL</a>
-                                                                        </div>
-                                                                        <div class="room-text"><span class="font-monospace text-warning">L016</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-warning">L016</span>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l017">
-                                                                        <div class="fw-medium"><a href="https://k-nums.github.io/ekaw/2024/">KNUMS</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-primary">L017</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l017">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://k-nums.github.io/ekaw/2024/">KNUMS</a>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">10:30-11:00</td>
-                                                                <td colspan="4">
-                                                                    <div class="session-break">
-                                                                        <div class="fw-medium">Coffee break</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-primary">L017</span>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">11:00-12:30</td>
-                                                                <td>
-                                                                    <div class="bg-euler-1">
-                                                                        <div class="fw-medium"><a href="https://kmitd.github.io/muhai-tutorial/">MUHAI</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-danger">Eulerzaal 1</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">10:30-11:00</td>
+                                                            <td colspan="4">
+                                                                <div class="session-break">
+                                                                    <div class="fw-medium">Coffee break</div>
+                                                                    <div class="room-text">All Rooms</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">11:00-12:30</td>
+                                                            <td>
+                                                                <div class="bg-euler-1">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://kmitd.github.io/muhai-tutorial/">MUHAI</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-euler-2">
-                                                                        <div class="fw-medium"><a href="https://ekaw2024.asimov.so/">KNOW</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-success">Eulerzaal 2</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-danger">Eulerzaal
+                                                                            1</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-euler-2">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://ekaw2024.asimov.so/">KNOW</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l016">
-                                                                        <div class="fw-medium"><a href="https://www.xtail-workshop.org/">X-TAIL</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-warning">L016</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-success">Eulerzaal
+                                                                            2</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l016">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://www.xtail-workshop.org/">X-TAIL</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l017">
-                                                                        <div class="fw-medium"><a href="https://k-nums.github.io/ekaw/2024/">KNUMS</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-primary">L017</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-warning">L016</span>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">12:30-13:30</td>
-                                                                <td colspan="4">
-                                                                    <div class="session-break">
-                                                                        <div class="fw-medium">Lunch break</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l017">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://k-nums.github.io/ekaw/2024/">KNUMS</a>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">13:30-15:00</td>
-                                                                <td>
-                                                                    <div class="bg-euler-1">
-                                                                        <div class="fw-medium"><a href="https://kr3-workshop.net/ekaw-tutorial/">ACTION</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-danger">Eulerzaal 1</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-primary">L017</span>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-euler-2">
-                                                                        <div class="fw-medium"><a href="https://metaphacts.com/ekaw24-semantic-modeling-tutorial">SEMMOD</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-success">Eulerzaal 2</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">12:30-13:30</td>
+                                                            <td colspan="4">
+                                                                <div class="session-break">
+                                                                    <div class="fw-medium">Lunch break</div>
+                                                                    <div class="room-text">All Rooms</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">13:30-15:00</td>
+                                                            <td>
+                                                                <div class="bg-euler-1">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://kr3-workshop.net/ekaw-tutorial/">ACTION</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l016">
-                                                                        <div class="fw-medium"><a href="https://sites.google.com/view/elmke">ELMKE</a>
-                                                                        </div>
-                                                                        <div class="room-text"><span class="font-monospace text-warning">L016</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-danger">Eulerzaal
+                                                                            1</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-euler-2">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://metaphacts.com/ekaw24-semantic-modeling-tutorial">SEMMOD</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l017">
-                                                                        <div class="fw-medium"><a href="https://k-min.info/">K-MIN</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-primary">L017</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-success">Eulerzaal
+                                                                            2</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l016">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://sites.google.com/view/elmke">ELMKE</a>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">15:00-15:30</td>
-                                                                <td colspan="4">
-                                                                    <div class="session-break">
-                                                                        <div class="fw-medium">Coffee break</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-warning">L016</span>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">15:30-17:00</td>
-                                                                <td>
-                                                                    <div class="bg-euler-1">
-                                                                        <div class="fw-medium"><a href="https://kr3-workshop.net/ekaw-tutorial/">ACTION</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-danger">Eulerzaal 1</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l017">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://k-min.info/">K-MIN</a></div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-primary">L017</span>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-euler-2">
-                                                                        <div class="fw-medium"><a href="https://metaphacts.com/ekaw24-semantic-modeling-tutorial">SEMMOD</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-success">Eulerzaal 2</span></div>
-                                                                        <div class="session-type">Tutorial</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">15:00-15:30</td>
+                                                            <td colspan="4">
+                                                                <div class="session-break">
+                                                                    <div class="fw-medium">Coffee break</div>
+                                                                    <div class="room-text">All Rooms</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">15:30-17:00</td>
+                                                            <td>
+                                                                <div class="bg-euler-1">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://kr3-workshop.net/ekaw-tutorial/">ACTION</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l016">
-                                                                        <div class="fw-medium"><a href="https://sites.google.com/view/elmke">ELMKE</a>
-                                                                        </div>
-                                                                        <div class="room-text"><span class="font-monospace text-warning">L016</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-danger">Eulerzaal
+                                                                            1</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-euler-2">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://metaphacts.com/ekaw24-semantic-modeling-tutorial">SEMMOD</a>
                                                                     </div>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="bg-l017">
-                                                                        <div class="fw-medium"><a href="https://k-min.info/">K-MIN</a></div>
-                                                                        <div class="room-text"><span class="font-monospace text-primary">L017</span></div>
-                                                                        <div class="session-type">Workshop</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-success">Eulerzaal
+                                                                            2</span></div>
+                                                                    <div class="session-type">Tutorial</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l016">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://sites.google.com/view/elmke">ELMKE</a>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">17:00-18:00</td>
-                                                                <td colspan="4">
-                                                                    <div class="session-break">
-                                                                        <div class="fw-medium">End of proceedings</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-warning">L016</span>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="time-column">18:00-20:00</td>
-                                                                <td colspan="4">
-                                                                    <div class="session-break">
-                                                                        <div class="fw-medium">Welcome reception</div>
-                                                                        <div class="room-text">All Rooms</div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="bg-l017">
+                                                                    <div class="fw-medium"><a
+                                                                            href="https://k-min.info/">K-MIN</a></div>
+                                                                    <div class="room-text"><span
+                                                                            class="font-monospace text-primary">L017</span>
                                                                     </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                                                                    <div class="session-type">Workshop</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">17:00-18:00</td>
+                                                            <td colspan="4">
+                                                                <div class="session-break">
+                                                                    <div class="fw-medium">End of proceedings / Transfer
+                                                                        to Amsterdam Centraal</div>
+                                                                    <div class="room-text">CWI=>Amsterdam Centraal</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="time-column">18:00-20:00</td>
+                                                            <td colspan="4">
+                                                                <div class="session-break">
+                                                                    <div class="fw-medium"><a
+                                                                            href="attending.html#boat-tour">Boat
+                                                                            Tour</a></div>
+                                                                    <div class="room-text">From Amsterdam Centraal</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade show active" id="day1" role="tabpanel"
-                                    aria-labelledby="day1-tab">
+                            </div>
+                            <div class="tab-pane fade show active" id="day1" role="tabpanel" aria-labelledby="day1-tab">
 
-                                    <style>
-                                        .bg-success-subtle,
-                                        .bg-primary-subtle,
-                                        .bg-info-subtle {
-                                            display: inline-block;
-                                            width: auto;
+                                <style>
+                                    .bg-success-subtle,
+                                    .bg-primary-subtle,
+                                    .bg-info-subtle {
+                                        display: inline-block;
+                                        width: auto;
+                                    }
+
+                                    .d-inline-block {
+                                        max-width: 100%;
+                                    }
+
+                                    @media (max-width: 576px) {
+                                        .bg-success-subtle {
+                                            width: 100%;
                                         }
+                                    }
+                                </style>
 
-                                        .d-inline-block {
-                                            max-width: 100%;
-                                        }
-
-                                        @media (max-width: 576px) {
-                                            .bg-success-subtle {
-                                                width: 100%;
-                                            }
-                                        }
-                                    </style>
-
-                                    <div class="bg-primary-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/registration.png" alt="Registration icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Registration and Coffee</h2>
-                                            </div>
-                                            <h5 class="ms-5 mt-2 mb-0">09:00 - 09:30</h5>
-                                            <hr class="colored-break">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/opening.png" alt="Doors icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Opening Ceremony</h2>
-                                            </div>
-                                            <h5 class="ms-5 mt-2 mb-0">09:30 - 10:00</h5>
-                                        </div>
-                                    </div>
-                                    <hr class="colored-break">
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2 mt-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                <div class="bg-primary-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/registration.png" alt="Registration icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4 mb-0">Session 1: Knowledge Validation</h2>
+                                            <h2 class="h4 mb-0">Registration and Coffee</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h6>Session Chair: Eleni Ilkou</h6>
-                                        </div>
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">10:00-10:15</h6>
-                                            <h5 class="mb-1">On the Roles of Competency Questions in Ontology
-                                                Engineering
-                                            </h5>
-                                            <small class="text-muted">C. Maria Keet and Zubeida Khan</small>
-                                        </div>
+                                        <h5 class="ms-5 mt-2 mb-0">09:00 - 09:30</h5>
                                         <hr class="colored-break">
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">10:15-10:30</h6>
-                                            <h5 class="mb-1">A Review and Comparison of Competency Question Engineering Approaches</h5>
-                                            <small class="text-muted">Reham Alharbi, Valentina Tamma, Floriana Grasso
-                                                and
-                                                Terry
-                                                Payne</small>
-                                        </div>
-                                        <hr class="colored-break">
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">10:30-10:45</h6>
-                                            <h5 class="mb-1">FAVEL: Fact Validation Ensemble Learning</h5>
-                                            <small class="text-muted">Umair Qudus, Franck Lionel Tatkeu Pekarou, Ana
-                                                Alexandra
-                                                Morim da Silva, Michael Röder and Axel-Cyrille Ngonga Ngomo</small>
-                                        </div>
-                                        <hr class="colored-break">
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">10:45-11:00</h6>
-                                            <h5 class="mb-1">Validating a Functional Status Knowledge Graph in a Large-scale Living Lab</h5>
-                                            <small class="text-muted">Mauro Dragoni, Gianluca Apriceno and Tania
-                                                Bailoni</small>
-                                        </div>
-                                    </div>
-                                    <hr class="colored-break">
-
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/coffee.png" alt="Coffee icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Coffee Break</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">11:00-11:30</p>
-                                        </div>
-
-                                    </div>
-                                    <hr class="colored-break">
-
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/opening.png" alt="Doors icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4">Session 2: Knowledge Acquisition and Completion</h2>
+                                            <h2 class="h4 mb-0">Opening Ceremony</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h5 class="">Session Chair: Eva Blomqvist</h5>
-                                        </div>
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">11:30-11:45</h6>
-                                            <h5 class="mb-1">Modelling and Mining Knowledge about Computational
-                                                Complexity
-                                            </h5>
-                                            <small class="text-muted">Anton Gnatenko, Oliver Kutz and Nicolas
-                                                Troquard</small>
-                                        </div>
-                                        <hr class="colored-break">
-                                        <div class="mb-3 spotlight-paper">
-                                            <h6 class="mb-1">11:45-12:00</h6>
-                                            <h5 class="mb-1">Examining LGBTQ+-related Concepts in the Semantic Web: Link
-                                                Discovery, Concept Drift, Ambiguity, and Multilingual Information Reuse
-                                                <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
-                                            <small class="text-muted">Shuai Wang and Maria Adamidou</small>
-                                            <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
-
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">12:00-12:15</h6>
-                                            <h5 class="mb-1">Influence beyond similarity: A Contrastive Learning
-                                                approach to
-                                                Object Influence Retrieval</h5>
-                                            <small class="text-muted">Teresa Liberatore, Paul Groth, Nachoem Wijnberg
-                                                and
-                                                Monika
-                                                Kackovic</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">12:15-12:30</h6>
-                                            <h5 class="mb-1">Understanding inflicted injuries in young children: An
-                                                ontology
-                                                based approach</h5>
-                                            <small class="text-muted">Fatima Maikore, Suvodeep Mazumdar, Amaka Offiah,
-                                                Anthony
-                                                Hughes, Sneha Roychowdhury, Katie Hocking and Vitaveska
-                                                Lanfranchi</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">12:30-12:45</h6>
-                                            <h5 class="mb-1">A generic framework to better understand and compare
-                                                FAIRness
-                                                measures</h5>
-                                            <small class="text-muted">Philippe Lamarre, Jennie Andersen, Alban Gaignard
-                                                and
-                                                Sylvie Cazalens</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3 spotlight-paper">
-                                            <h6 class="mb-1">12:45-13:00</h6>
-                                            <h5 class="mb-1">UniQ-Gen: Unified Query Generation across Multiple
-                                                Knowledge
-                                                Graphs <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
-                                            </h5>
-                                            <small class="text-muted">Daniel Vollmers, Nikit Srivastava, Diego
-                                                Moussallem,
-                                                Hamada Zahera and Axel-Cyrille Ngonga Ngomo</small>
-                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
-
-                                            </div>
+                                        <h5 class="ms-5 mt-2 mb-0">09:30 - 10:00</h5>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2 mt-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4 mb-0">Session 1: Knowledge Validation</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Session Chair: Eleni Ilkou</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">10:00-10:15</h6>
+                                        <h5 class="mb-1">On the Roles of Competency Questions in Ontology
+                                            Engineering
+                                        </h5>
+                                        <small class="text-muted">C. Maria Keet and Zubeida Khan</small>
                                     </div>
                                     <hr class="colored-break">
-
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/lunch.png" alt="Lunch icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Lunch</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">13:00-14:00</p>
-                                        </div>
-                                        <!-- Lunch content -->
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">10:15-10:30</h6>
+                                        <h5 class="mb-1">A Review and Comparison of Competency Question Engineering
+                                            Approaches</h5>
+                                        <small class="text-muted">Reham Alharbi, Valentina Tamma, Floriana Grasso
+                                            and
+                                            Terry
+                                            Payne</small>
                                     </div>
                                     <hr class="colored-break">
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">10:30-10:45</h6>
+                                        <h5 class="mb-1">FAVEL: Fact Validation Ensemble Learning</h5>
+                                        <small class="text-muted">Umair Qudus, Franck Lionel Tatkeu Pekarou, Ana
+                                            Alexandra
+                                            Morim da Silva, Michael Röder and Axel-Cyrille Ngonga Ngomo</small>
+                                    </div>
+                                    <hr class="colored-break">
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">10:45-11:00</h6>
+                                        <h5 class="mb-1">Validating a Functional Status Knowledge Graph in a Large-scale
+                                            Living Lab</h5>
+                                        <small class="text-muted">Mauro Dragoni, Gianluca Apriceno and Tania
+                                            Bailoni</small>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
 
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/coffee.png" alt="Coffee icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4">Session 3: Knowledge Acquisition and Completion</h2>
+                                            <h2 class="h4 mb-0">Coffee Break</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h6>Session Chair: Valentina Tamma</h6>
-                                        </div>
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:00 - 14:15</h6>
-                                            <h5 class="mb-1">Lexicalization Is All You Need: Examining the Impact of
-                                                Lexical
-                                                Knowledge in a Compositional QALD System</h5>
-                                            <small class="text-muted">David M. Schmidt, Mohammad Fazleh Elahi and
-                                                Philipp
-                                                Cimiano</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:15 - 14:30</h6>
-                                            <h5 class="mb-1">A Framework for Evaluating Entity Alignment Impact on
-                                                Downstream
-                                                Knowledge Discovery</h5>
-                                            <small class="text-muted">Sarah Binta Alam Shoilee, Victor de Boer and Jacco
-                                                van
-                                                Ossenbruggen</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:30 - 14:45</h6>
-                                            <h5 class="mb-1">Discovering a Representative Set of Link Keys in RDF
-                                                Datasets
-                                            </h5>
-                                            <small class="text-muted">Nacira Abbas, Alexandre Bazin, Jérôme David and
-                                                Amedeo
-                                                Napoli</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:45 - 15:00</h6>
-                                            <h5 class="mb-1">Comparing Symbolic and Embedding-Based Approaches for
-                                                Relational
-                                                Blocking</h5>
-                                            <small class="text-muted">Daniel Obraczka and Erhard Rahm</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">15:00 - 15:15</h6>
-                                            <h5 class="mb-1">Additive Counterfactuals for Explaining Link Predictions on
-                                                Knowledge Graphs</h5>
-                                            <small class="text-muted">Roberto Barile, Claudia D'Amato and Nicola
-                                                Fanizzi</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">15:15 - 15:30</h6>
-                                            <h5 class="mb-1">Transformers in the Service of Description Logic-based
-                                                Contexts
-                                            </h5>
-                                            <small class="text-muted">Angelos Poulis, Eleni Tsalapati and Manolis
-                                                Koubarakis</small>
-                                        </div>
-                                    </div>
-                                    <hr class="colored-break">
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/coffee.png" alt="Lunch icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Coffee Break</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">15:30-16:00</p>
-                                        </div>
-                                        <!-- Lunch content -->
-                                    </div>
-                                    <hr class="colored-break">
-
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-8 mb-2">
-                                            <div class="bg-warning-subtle bg-opacity-10 p-4 rounded h-100">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="images/keynote.png" alt="Keynote icon" class="me-3"
-                                                        style="min-width: 2vw; max-height: 4vh;">
-                                                    <h2 class="h4 mb-0">Keynote</h2>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <h6 class="mb-1">16:00 - 17:00</h6>
-                                                    <h5 class="mb-1">Is the Search Engine of the Future a Chatbot?</h5>
-                                                    <small class="text-muted">Suzan Verberne</small>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <a href="keynotes.html#suzan-verberne"
-                                                        class="btn btn-warning">Keynote Abstract</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="colored-break">
-                                    <div class="bg-primary-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/lunch.png" alt="Lunch icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Conference Social Dinner</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">18:30-22:00</p>
-                                        </div>
-
+                                        <p class="ms-5 mt-2 mb-0">11:00-11:30</p>
                                     </div>
 
                                 </div>
-                                <div class="tab-pane fade" id="day2" role="tabpanel" aria-labelledby="day2-tab">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-8">
-                                            <div class="bg-warning-subtle bg-opacity-10 p-4 rounded mb-2">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="images/keynote.png" alt="Keynote icon" class="me-3"
-                                                        style="min-width: 2vw; max-height: 4vh;">
-                                                    <h2 class="h4 mb-0">Keynote</h2>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <h6 class="mb-1">09:30 - 10:30</h6>
-                                                    <h5 class="mb-1">Hitchhiker's Guide to Ontology</h5>
-                                                    <small class="text-muted">Fabian M. Suchanek</small>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <a href="keynotes.html#fabian-suchanek"
-                                                        class="btn btn-warning">Keynote Abstract</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4">Session 2: Knowledge Acquisition and Completion</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h5 class="">Session Chair: Eva Blomqvist</h5>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">11:30-11:45</h6>
+                                        <h5 class="mb-1">Modelling and Mining Knowledge about Computational
+                                            Complexity
+                                        </h5>
+                                        <small class="text-muted">Anton Gnatenko, Oliver Kutz and Nicolas
+                                            Troquard</small>
+                                    </div>
+                                    <hr class="colored-break">
+                                    <div class="mb-3 spotlight-paper">
+                                        <h6 class="mb-1">11:45-12:00</h6>
+                                        <h5 class="mb-1">Examining LGBTQ+-related Concepts in the Semantic Web: Link
+                                            Discovery, Concept Drift, Ambiguity, and Multilingual Information Reuse
+                                            <i class="bi bi-star-fill star-icon"
+                                                style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
+                                        </h5>
+                                        <small class="text-muted">Shuai Wang and Maria Adamidou</small>
+                                        <small
+                                            class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight
+                                            Paper</small>
+
                                     </div>
                                     <hr class="colored-break">
 
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/coffee.png" alt="Coffee icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Coffee Break</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">10:30 - 11:00</p>
-                                        </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">12:00-12:15</h6>
+                                        <h5 class="mb-1">Influence beyond similarity: A Contrastive Learning
+                                            approach to
+                                            Object Influence Retrieval</h5>
+                                        <small class="text-muted">Teresa Liberatore, Paul Groth, Nachoem Wijnberg
+                                            and
+                                            Monika
+                                            Kackovic</small>
                                     </div>
                                     <hr class="colored-break">
 
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">12:15-12:30</h6>
+                                        <h5 class="mb-1">Understanding inflicted injuries in young children: An
+                                            ontology
+                                            based approach</h5>
+                                        <small class="text-muted">Fatima Maikore, Suvodeep Mazumdar, Amaka Offiah,
+                                            Anthony
+                                            Hughes, Sneha Roychowdhury, Katie Hocking and Vitaveska
+                                            Lanfranchi</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">12:30-12:45</h6>
+                                        <h5 class="mb-1">A generic framework to better understand and compare
+                                            FAIRness
+                                            measures</h5>
+                                        <small class="text-muted">Philippe Lamarre, Jennie Andersen, Alban Gaignard
+                                            and
+                                            Sylvie Cazalens</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3 spotlight-paper">
+                                        <h6 class="mb-1">12:45-13:00</h6>
+                                        <h5 class="mb-1">UniQ-Gen: Unified Query Generation across Multiple
+                                            Knowledge
+                                            Graphs <i class="bi bi-star-fill star-icon"
+                                                style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
+                                        </h5>
+                                        <small class="text-muted">Daniel Vollmers, Nikit Srivastava, Diego
+                                            Moussallem,
+                                            Hamada Zahera and Axel-Cyrille Ngonga Ngomo</small>
+                                        <small
+                                            class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight
+                                            Paper</small>
+
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/lunch.png" alt="Lunch icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4">Session 4: Language Models</h2>
+                                            <h2 class="h4 mb-0">Lunch</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h6>Session Chair: Enrico Daga</h6>
-                                        </div>
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">11:00 - 11:15</h6>
-                                            <h5 class="mb-1">LLM-Driven Knowledge Extraction in Temporal and Description
-                                                Logics</h5>
-                                            <small class="text-muted">Damiano Duranti, Paolo Giorgini, Andrea Mazzullo,
-                                                Marco Robol and Marco Roveri</small>
-                                        </div>
-                                        <hr class="colored-break">
+                                        <p class="ms-5 mt-2 mb-0">13:00-14:00</p>
+                                    </div>
+                                    <!-- Lunch content -->
+                                </div>
+                                <hr class="colored-break">
 
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">11:15 - 11:30</h6>
-                                            <h5 class="mb-1">Human Evaluation of Procedural Knowledge Graph Extraction
-                                                from Text with Large Language Models</h5>
-                                            <small class="text-muted">Valentina Anita Carriero, Antonia Azzini, Ilaria
-                                                Baroni, Mario Scrocca and Irene Celino</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3 spotlight-paper">
-                                            <h6 class="mb-1">11:30 - 11:45</h6>
-                                            <h5 class="mb-1">Contextualizing Entity Representations for Zero-Shot
-                                                Relation Extraction with Masked Language Models <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
-                                            <small class="text-muted">Riley Capshaw and Eva Blomqvist</small>
-                                            <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">11:45 - 12:00</h6>
-                                            <h5 class="mb-1">Scholarly Wikidata: Population and Exploration of
-                                                Conference Data in Wikidata using LLMs</h5>
-                                            <small class="text-muted">Nandana Mihindukulasooriya, Sanju Tiwari, Daniil
-                                                Dobriy, Finn Årup Nielsen, Tek Raj Chhetri and Axel Polleres</small>
-                                        </div>
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4">Session 3: Knowledge Acquisition and Completion</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Session Chair: Valentina Tamma</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:00 - 14:15</h6>
+                                        <h5 class="mb-1">Lexicalization Is All You Need: Examining the Impact of
+                                            Lexical
+                                            Knowledge in a Compositional QALD System</h5>
+                                        <small class="text-muted">David M. Schmidt, Mohammad Fazleh Elahi and
+                                            Philipp
+                                            Cimiano</small>
                                     </div>
                                     <hr class="colored-break">
 
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/lunch.png" alt="Lunch icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Lunch + Posters</h2>
-                                            </div>
-                                            <p class="ms-4 mt-2 mb-0">12:00 - 14:00</p>
-                                        </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:15 - 14:30</h6>
+                                        <h5 class="mb-1">A Framework for Evaluating Entity Alignment Impact on
+                                            Downstream
+                                            Knowledge Discovery</h5>
+                                        <small class="text-muted">Sarah Binta Alam Shoilee, Victor de Boer and Jacco
+                                            van
+                                            Ossenbruggen</small>
                                     </div>
                                     <hr class="colored-break">
 
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:30 - 14:45</h6>
+                                        <h5 class="mb-1">Discovering a Representative Set of Link Keys in RDF
+                                            Datasets
+                                        </h5>
+                                        <small class="text-muted">Nacira Abbas, Alexandre Bazin, Jérôme David and
+                                            Amedeo
+                                            Napoli</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:45 - 15:00</h6>
+                                        <h5 class="mb-1">Comparing Symbolic and Embedding-Based Approaches for
+                                            Relational
+                                            Blocking</h5>
+                                        <small class="text-muted">Daniel Obraczka and Erhard Rahm</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">15:00 - 15:15</h6>
+                                        <h5 class="mb-1">Additive Counterfactuals for Explaining Link Predictions on
+                                            Knowledge Graphs</h5>
+                                        <small class="text-muted">Roberto Barile, Claudia D'Amato and Nicola
+                                            Fanizzi</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">15:15 - 15:30</h6>
+                                        <h5 class="mb-1">Transformers in the Service of Description Logic-based
+                                            Contexts
+                                        </h5>
+                                        <small class="text-muted">Angelos Poulis, Eleni Tsalapati and Manolis
+                                            Koubarakis</small>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/coffee.png" alt="Lunch icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4">Session 5: Natural Language Processing</h2>
+                                            <h2 class="h4 mb-0">Coffee Break</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h6>Session Chair: Carlos Badenes</h6>
-                                        </div>
-                                        <div class="mb-3 spotlight-paper">
-                                            <h6 class="mb-1">14:00 - 14:15</h6>
-                                            <h6 class="mb-1">Empower CamemBERT Legal Entity Extraction With LLM
-                                                Boostraping <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h6>
-                                            <small class="text-muted">Julien Breton, Mokhtar Boumedyen Billami, Max
-                                                Chevalier and Cassia Trojahn</small>
-                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
-
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3 spotlight-paper">
-                                            <h6 class="mb-1">14:15 - 14:30</h6>
-                                            <h5 class="mb-1">Capturing the Viewpoint Dynamics in the News Domain <i class="bi bi-star-fill star-icon" style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i></h5>
-                                            <small class="text-muted">Enrico Motta, Francesco Osborne, Martino Pulici,
-                                                Angelo Salatino and Iman Naja</small>
-                                                <small class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight Paper</small>
-
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:30 - 14:45</h6>
-                                            <h5 class="mb-1">Understanding the impact of entity linking on the topology
-                                                of entity co-occurrence networks for social media analysis</h5>
-                                            <small class="text-muted">James Nevin, Pengyu Zhang, Paul Groth, Michael
-                                                Lees, Dimitar Dimitrov and Stefan Dietze</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">14:45 - 15:00</h6>
-                                            <h5 class="mb-1">Structured Representations for Narratives</h5>
-                                            <small class="text-muted">Inès Blin, Annette Ten Teije, Frank Van Harmelen
-                                                and Ilaria Tiddi</small>
-                                        </div>
+                                        <p class="ms-5 mt-2 mb-0">15:30-16:00</p>
                                     </div>
-                                    <hr class="colored-break">
+                                    <!-- Lunch content -->
+                                </div>
+                                <hr class="colored-break">
 
-                                    <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/coffee.png" alt="Coffee icon" class="me-3"
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-8 mb-2">
+                                        <div class="bg-warning-subtle bg-opacity-10 p-4 rounded h-100">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="images/keynote.png" alt="Keynote icon" class="me-3"
                                                     style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Coffee Break</h2>
+                                                <h2 class="h4 mb-0">Keynote</h2>
                                             </div>
-                                            <p class="ms-5 mt-2 mb-0">15:00 - 15:30</p>
+                                            <div class="mb-3">
+                                                <h6 class="mb-1">16:00 - 17:00</h6>
+                                                <h5 class="mb-1">Is the Search Engine of the Future a Chatbot?</h5>
+                                                <small class="text-muted">Suzan Verberne</small>
+                                            </div>
+                                            <div class="mt-3">
+                                                <a href="keynotes.html#suzan-verberne" class="btn btn-warning">Keynote
+                                                    Abstract</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <hr class="colored-break">
-
-                                    <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <img src="images/session.png" alt="Session icon" class="me-3"
+                                </div>
+                                <hr class="colored-break">
+                                <div class="bg-primary-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/lunch.png" alt="Lunch icon" class="me-3"
                                                 style="min-width: 2vw; max-height: 4vh;">
-                                            <h2 class="h4">Session 6: Domain Specific Knowledge Graphs</h2>
+                                            <h2 class="h4 mb-0">Conference Social Dinner</h2>
                                         </div>
-                                        <div class="mb-3">
-                                            <h6>Session Chair: Lise Stork</h6>
-                                        </div>
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">15:30 - 15:45</h6>
-                                            <h5 class="mb-1">Generating a Question Answering Dataset about Geographic
-                                                Changes in a Knowledge Graph</h5>
-                                            <small class="text-muted">Michael Mitsios, Dharmen Punjani, Sara Abdollahi,
-                                                Simon Gottschalk, Eleni Tsalapati, Elena Demidova and Manolis
-                                                Koubarakis</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">15:45 - 16:00</h6>
-                                            <h5 class="mb-1">Ontology-Constrained Generation of Domain-Specific Clinical
-                                                Summaries</h5>
-                                            <small class="text-muted">Gaya Mehenni and Amal Zouaq</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">16:00 - 16:15</h6>
-                                            <h5 class="mb-1">PeGazUs: A knowledge graph based approach to build
-                                                multiscale historical/perpetual gazetteers</h5>
-                                            <small class="text-muted">Nathalie Abadie, Solenn Tual, Charly Bernard,
-                                                Julien Perret, Bertrand Duménieu and Joseph Chazalon</small>
-                                        </div>
-                                        <hr class="colored-break">
-
-                                        <div class="mb-3">
-                                            <h6 class="mb-1">16:15 - 16:30</h6>
-                                            <h5 class="mb-1">ORKA: An Ontology for Robotic Knowledge Acquisition</h5>
-                                            <small class="text-muted">Mark Adamik, Romana Pernisch, Ilaria Tiddi and
-                                                Stefan Schlobach</small>
-                                        </div>
-                                    </div>
-                                    <hr class="colored-break">
-
-                                    <div class="bg-primary-subtle bg-opacity-10 rounded mb-2">
-                                        <div class="d-inline-block p-3">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/opening.png" alt="Doors icon" class="me-3"
-                                                    style="min-width: 2vw; max-height: 4vh;">
-                                                <h2 class="h4 mb-0">Closing Ceremony</h2>
-                                            </div>
-                                            <p class="ms-5 mt-2 mb-0">16:30 - 17:00</p>
-                                        </div>
-
+                                        <p class="ms-5 mt-2 mb-0">18:30-22:00</p>
                                     </div>
 
                                 </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="day2" role="tabpanel" aria-labelledby="day2-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-8">
+                                        <div class="bg-warning-subtle bg-opacity-10 p-4 rounded mb-2">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="images/keynote.png" alt="Keynote icon" class="me-3"
+                                                    style="min-width: 2vw; max-height: 4vh;">
+                                                <h2 class="h4 mb-0">Keynote</h2>
+                                            </div>
+                                            <div class="mb-3">
+                                                <h6 class="mb-1">09:30 - 10:30</h6>
+                                                <h5 class="mb-1">Hitchhiker's Guide to Ontology</h5>
+                                                <small class="text-muted">Fabian M. Suchanek</small>
+                                            </div>
+                                            <div class="mt-3">
+                                                <a href="keynotes.html#fabian-suchanek" class="btn btn-warning">Keynote
+                                                    Abstract</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/coffee.png" alt="Coffee icon" class="me-3"
+                                                style="min-width: 2vw; max-height: 4vh;">
+                                            <h2 class="h4 mb-0">Coffee Break</h2>
+                                        </div>
+                                        <p class="ms-5 mt-2 mb-0">10:30 - 11:00</p>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4">Session 4: Language Models</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Session Chair: Enrico Daga</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">11:00 - 11:15</h6>
+                                        <h5 class="mb-1">LLM-Driven Knowledge Extraction in Temporal and Description
+                                            Logics</h5>
+                                        <small class="text-muted">Damiano Duranti, Paolo Giorgini, Andrea Mazzullo,
+                                            Marco Robol and Marco Roveri</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">11:15 - 11:30</h6>
+                                        <h5 class="mb-1">Human Evaluation of Procedural Knowledge Graph Extraction
+                                            from Text with Large Language Models</h5>
+                                        <small class="text-muted">Valentina Anita Carriero, Antonia Azzini, Ilaria
+                                            Baroni, Mario Scrocca and Irene Celino</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3 spotlight-paper">
+                                        <h6 class="mb-1">11:30 - 11:45</h6>
+                                        <h5 class="mb-1">Contextualizing Entity Representations for Zero-Shot
+                                            Relation Extraction with Masked Language Models <i
+                                                class="bi bi-star-fill star-icon"
+                                                style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
+                                        </h5>
+                                        <small class="text-muted">Riley Capshaw and Eva Blomqvist</small>
+                                        <small
+                                            class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight
+                                            Paper</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">11:45 - 12:00</h6>
+                                        <h5 class="mb-1">Scholarly Wikidata: Population and Exploration of
+                                            Conference Data in Wikidata using LLMs</h5>
+                                        <small class="text-muted">Nandana Mihindukulasooriya, Sanju Tiwari, Daniil
+                                            Dobriy, Finn Årup Nielsen, Tek Raj Chhetri and Axel Polleres</small>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/lunch.png" alt="Lunch icon" class="me-3"
+                                                style="min-width: 2vw; max-height: 4vh;">
+                                            <h2 class="h4 mb-0">Lunch + Posters</h2>
+                                        </div>
+                                        <p class="ms-4 mt-2 mb-0">12:00 - 14:00</p>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4">Session 5: Natural Language Processing</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Session Chair: Carlos Badenes</h6>
+                                    </div>
+                                    <div class="mb-3 spotlight-paper">
+                                        <h6 class="mb-1">14:00 - 14:15</h6>
+                                        <h6 class="mb-1">Empower CamemBERT Legal Entity Extraction With LLM
+                                            Boostraping <i class="bi bi-star-fill star-icon"
+                                                style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
+                                        </h6>
+                                        <small class="text-muted">Julien Breton, Mokhtar Boumedyen Billami, Max
+                                            Chevalier and Cassia Trojahn</small>
+                                        <small
+                                            class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight
+                                            Paper</small>
+
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3 spotlight-paper">
+                                        <h6 class="mb-1">14:15 - 14:30</h6>
+                                        <h5 class="mb-1">Capturing the Viewpoint Dynamics in the News Domain <i
+                                                class="bi bi-star-fill star-icon"
+                                                style="color: #ffd700; font-size: 1rem; margin-left: 0.5rem; vertical-align: middle; display: inline-block;"></i>
+                                        </h5>
+                                        <small class="text-muted">Enrico Motta, Francesco Osborne, Martino Pulici,
+                                            Angelo Salatino and Iman Naja</small>
+                                        <small
+                                            class="shadow-sm p-1 mt-2 mb-2 bg-body-tertiary rounded text-warning">Spotlight
+                                            Paper</small>
+
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:30 - 14:45</h6>
+                                        <h5 class="mb-1">Understanding the impact of entity linking on the topology
+                                            of entity co-occurrence networks for social media analysis</h5>
+                                        <small class="text-muted">James Nevin, Pengyu Zhang, Paul Groth, Michael
+                                            Lees, Dimitar Dimitrov and Stefan Dietze</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">14:45 - 15:00</h6>
+                                        <h5 class="mb-1">Structured Representations for Narratives</h5>
+                                        <small class="text-muted">Inès Blin, Annette Ten Teije, Frank Van Harmelen
+                                            and Ilaria Tiddi</small>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-success-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/coffee.png" alt="Coffee icon" class="me-3"
+                                                style="min-width: 2vw; max-height: 4vh;">
+                                            <h2 class="h4 mb-0">Coffee Break</h2>
+                                        </div>
+                                        <p class="ms-5 mt-2 mb-0">15:00 - 15:30</p>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-danger-subtle bg-opacity-10 p-4 rounded mb-2">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="images/session.png" alt="Session icon" class="me-3"
+                                            style="min-width: 2vw; max-height: 4vh;">
+                                        <h2 class="h4">Session 6: Domain Specific Knowledge Graphs</h2>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6>Session Chair: Lise Stork</h6>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">15:30 - 15:45</h6>
+                                        <h5 class="mb-1">Generating a Question Answering Dataset about Geographic
+                                            Changes in a Knowledge Graph</h5>
+                                        <small class="text-muted">Michael Mitsios, Dharmen Punjani, Sara Abdollahi,
+                                            Simon Gottschalk, Eleni Tsalapati, Elena Demidova and Manolis
+                                            Koubarakis</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">15:45 - 16:00</h6>
+                                        <h5 class="mb-1">Ontology-Constrained Generation of Domain-Specific Clinical
+                                            Summaries</h5>
+                                        <small class="text-muted">Gaya Mehenni and Amal Zouaq</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">16:00 - 16:15</h6>
+                                        <h5 class="mb-1">PeGazUs: A knowledge graph based approach to build
+                                            multiscale historical/perpetual gazetteers</h5>
+                                        <small class="text-muted">Nathalie Abadie, Solenn Tual, Charly Bernard,
+                                            Julien Perret, Bertrand Duménieu and Joseph Chazalon</small>
+                                    </div>
+                                    <hr class="colored-break">
+
+                                    <div class="mb-3">
+                                        <h6 class="mb-1">16:15 - 16:30</h6>
+                                        <h5 class="mb-1">ORKA: An Ontology for Robotic Knowledge Acquisition</h5>
+                                        <small class="text-muted">Mark Adamik, Romana Pernisch, Ilaria Tiddi and
+                                            Stefan Schlobach</small>
+                                    </div>
+                                </div>
+                                <hr class="colored-break">
+
+                                <div class="bg-primary-subtle bg-opacity-10 rounded mb-2">
+                                    <div class="d-inline-block p-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/opening.png" alt="Doors icon" class="me-3"
+                                                style="min-width: 2vw; max-height: 4vh;">
+                                            <h2 class="h4 mb-0">Closing Ceremony</h2>
+                                        </div>
+                                        <p class="ms-5 mt-2 mb-0">16:30 - 17:00</p>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -1336,7 +1440,7 @@
                     </div>
                     <hr class="colored-break">
                     <div class="m-1 p-1 bg-transparent text-justify">
-                        <div class="bg-light-subtle p-4 border rounded">
+                        <div class="bg-light-subtle p-2 border rounded">
                             <h5>Register to EKAW 2024</h5>
                             <p>Visit the <a href="registration.html" class="link-style">Registration and Attending</a>
                                 page for more information!</p>
@@ -1359,58 +1463,63 @@
                         <div class="bg-light-subtle p-4 border rounded mx-auto">
                             <h5>Our Sponsors</h5>
                             <figure class="sponsor-figure platinum">
-                              <a href="https://haltia.ai/" target="_blank">
-                                <img src="images/sponsors/Haltia_logo.png" alt="Haltia AI Logo" class="responsive-image">
-                              </a>
-                              <figcaption>Platinum Sponsor</figcaption>
+                                <a href="https://haltia.ai/" target="_blank">
+                                    <img src="images/sponsors/Haltia_logo.png" alt="Haltia AI Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
                             </figure>
                             <hr>
-              
+
                             <figure class="sponsor-figure platinum">
-                              <a href="https://discoverylab.ai/" target="_blank">
-                                <img src="images/sponsors/discoverylab_logo.png" alt="DiscoveryLab AI Logo" class="responsive-image">
-                              </a>
-                              <figcaption>Platinum Sponsor</figcaption>
+                                <a href="https://discoverylab.ai/" target="_blank">
+                                    <img src="images/sponsors/discoverylab_logo.png" alt="DiscoveryLab AI Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
                             </figure>
                             <hr>
-              
+
                             <figure class="sponsor-figure platinum">
-                              <a href="https://metaphacts.com/" target="_blank">
-                                <img src="images/sponsors/Metaphacts_logo.png" alt="Metaphacts Logo" class="responsive-image">
-                              </a>
-                              <figcaption>Platinum Sponsor</figcaption>
+                                <a href="https://metaphacts.com/" target="_blank">
+                                    <img src="images/sponsors/Metaphacts_logo.png" alt="Metaphacts Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
                             </figure>
-              
+
                             <hr>
                             <figure class="sponsor-figure platinum">
-                              <a href="https://aij.ijcai.org/" target="_blank">
-                                <img src="images/sponsors/artint-logo.jpg" alt="Artificial Intelligence Journal Logo"
-                                  class="responsive-image">
-                              </a>
-                              <figcaption>Platinum Sponsor</figcaption>
+                                <a href="https://aij.ijcai.org/" target="_blank">
+                                    <img src="images/sponsors/artint-logo.jpg"
+                                        alt="Artificial Intelligence Journal Logo" class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
                             </figure>
                             <hr>
                             <figure class="sponsor-figure platinum">
-                              <a href="https://triplydb.com/" target="_blank">
-                                <img src="images/sponsors/triply_logo.png" alt="TriplyDB Logo" class="responsive-image">
-                              </a>
-                              <figcaption>Platinum Sponsor</figcaption>
+                                <a href="https://triplydb.com/" target="_blank">
+                                    <img src="images/sponsors/triply_logo.png" alt="TriplyDB Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Platinum Sponsor</figcaption>
                             </figure>
                             <hr>
                             <figure class="sponsor-figure gold">
-                              <a href="https://www.ontotext.com/" target="_blank">
-                                <img src="images/sponsors/Ontotext_logo.png" alt="Graphwise Logo" class="responsive-image">
-                              </a>
-                              <figcaption>Golden Sponsor</figcaption>
+                                <a href="https://www.ontotext.com/" target="_blank">
+                                    <img src="images/sponsors/Ontotext_logo.png" alt="Graphwise Logo"
+                                        class="responsive-image">
+                                </a>
+                                <figcaption>Golden Sponsor</figcaption>
                             </figure>
                             <hr>
                             <figure class="sponsor-figure silver">
                                 <a href="http://iisg.amsterdam/kg" target="_blank">
-                                  <img src="images/sponsors/iish_logo.png" alt="IISH Logo" class="responsive-image">
+                                    <img src="images/sponsors/iish_logo.png" alt="IISH Logo" class="responsive-image">
                                 </a>
                                 <figcaption>Silver Sponsor</figcaption>
-                              </figure>
-                          </div>
+                            </figure>
+                        </div>
                     </div>
                     <hr class="colored-break">
                     <div class="m-1 p-1 bg-transparent text-justify">
@@ -1466,14 +1575,65 @@
             <path fill-rule="evenodd"
                 d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5m-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5" />
         </svg> </button>
+
+    <script>
+        // Add this after your existing script tags
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if alert has been shown before
+            if (!localStorage.getItem('boatTourAlertShown')) {
+                // Create alert container
+                const alertContainer = document.createElement('div');
+                alertContainer.className = 'alert alert-info alert-dismissible fade show position-fixed';
+                alertContainer.style.cssText = `
+                    top: 80px;
+                    right: 20px;
+                    max-width: 400px;
+                    z-index: 1050;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    border-left: 5px solid #17a2b8;
+                `;
+
+                // Add alert content
+                alertContainer.innerHTML = `
+                    <h5 class="alert-heading">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        Boat Tour Information
+                    </h5>
+                    <p class="mb-0">Join us for the evening canal tour on November 26th! Important details about the boat tour are available in the News section.</p>
+                    <hr>
+                    <p class="mb-0"><small>The tour starts at 18:00 sharp from Amsterdam Central Station.</small></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+
+                // Add to document
+                document.body.appendChild(alertContainer);
+
+                // Mark as shown in localStorage
+                localStorage.setItem('boatTourAlertShown', 'true');
+
+                // Setup fade out after 10 seconds
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertContainer);
+                    bsAlert.close();
+                }, 10000);
+
+                // Add event listener for manual close
+                alertContainer.querySelector('.btn-close').addEventListener('click', () => {
+                    const bsAlert = new bootstrap.Alert(alertContainer);
+                    bsAlert.close();
+                });
+            }
+        });
+    </script>
+
     <script src="./js/script.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script>
+    <script>
 
     </script>
-    </body>
+</body>
 
 
 
